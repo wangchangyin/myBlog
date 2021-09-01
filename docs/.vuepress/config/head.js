@@ -19,4 +19,8 @@ module.exports = [
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     },
   ], // 网站关联Google AdSense 与 html格式广告支持
+  [
+    // 引入自定义js 搜索的配置
+    ["script", {"language": "javascript", "type": "text/javascript", "src": "/js/pgmanor-self.js"}]
+  ],
 ]

@@ -19,9 +19,10 @@ module.exports = [
       {
         text: 'Spring全家桶',
         items: [
-          { text: 'Spring', link: '/pages/486416/' },
+          { text: 'Spring', link: '/pages/9f1398/' },
+		  { text: 'mybatis', link: '/pages/e3c3e5/' },
           { text: 'SpringBoot', link: '/pages/9af6ea/' },
-          { text: 'SpringCloud', link: '/07.java/10.spring全家桶/00.spring/' },
+          { text: 'SpringCloud', link: '/pages/5ca4e4/' },
         ],
       },
     ],
@@ -42,10 +43,6 @@ module.exports = [
       { text: '面试笔记', link: '/interview/' },
       { text: '环境搭建', link: '/pages/9fef0c/' },
       { text: '项目笔记', link: '/pages/0d18d5/' },
-
-      { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-      { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-      { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
     ],
   },
   {
