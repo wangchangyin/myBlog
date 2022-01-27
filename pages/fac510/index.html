@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker基础 - 一个web应用实例 | CY blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/myBlogimg/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script,[object Object]></script,[object Object]>
+    <meta name="description" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="keywords" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/myBlog/assets/css/0.styles.713dba05.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.6034fc33.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.ecdec458.js" as="script"><link rel="preload" href="/myBlog/assets/js/98.75156849.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.7b0bdbd0.js"><link rel="prefetch" href="/myBlog/assets/js/100.5416bab4.js"><link rel="prefetch" href="/myBlog/assets/js/101.322c2725.js"><link rel="prefetch" href="/myBlog/assets/js/102.6b37be73.js"><link rel="prefetch" href="/myBlog/assets/js/103.6a821d54.js"><link rel="prefetch" href="/myBlog/assets/js/104.553a15b2.js"><link rel="prefetch" href="/myBlog/assets/js/105.f50b9a58.js"><link rel="prefetch" href="/myBlog/assets/js/106.439dbb4c.js"><link rel="prefetch" href="/myBlog/assets/js/107.550a13d3.js"><link rel="prefetch" href="/myBlog/assets/js/108.4fc6267e.js"><link rel="prefetch" href="/myBlog/assets/js/109.b0edf676.js"><link rel="prefetch" href="/myBlog/assets/js/11.5afa7e04.js"><link rel="prefetch" href="/myBlog/assets/js/110.e3256446.js"><link rel="prefetch" href="/myBlog/assets/js/111.f44da157.js"><link rel="prefetch" href="/myBlog/assets/js/112.cf2b7ccf.js"><link rel="prefetch" href="/myBlog/assets/js/113.ce23b62b.js"><link rel="prefetch" href="/myBlog/assets/js/114.a4efd687.js"><link rel="prefetch" href="/myBlog/assets/js/115.f37c3244.js"><link rel="prefetch" href="/myBlog/assets/js/116.a466bcbc.js"><link rel="prefetch" href="/myBlog/assets/js/117.f3ed6df6.js"><link rel="prefetch" href="/myBlog/assets/js/118.4019db0d.js"><link rel="prefetch" href="/myBlog/assets/js/119.2050eed3.js"><link rel="prefetch" href="/myBlog/assets/js/12.208e8480.js"><link rel="prefetch" href="/myBlog/assets/js/120.ce1004d6.js"><link rel="prefetch" href="/myBlog/assets/js/121.056aa58e.js"><link rel="prefetch" href="/myBlog/assets/js/122.ef174806.js"><link rel="prefetch" href="/myBlog/assets/js/123.af09e00a.js"><link rel="prefetch" href="/myBlog/assets/js/124.ff9f9b8b.js"><link rel="prefetch" href="/myBlog/assets/js/125.e426eee1.js"><link rel="prefetch" href="/myBlog/assets/js/126.0f67baf6.js"><link rel="prefetch" href="/myBlog/assets/js/127.d67b38ff.js"><link rel="prefetch" href="/myBlog/assets/js/128.44180ed5.js"><link rel="prefetch" href="/myBlog/assets/js/129.04983d17.js"><link rel="prefetch" href="/myBlog/assets/js/13.091a9ce4.js"><link rel="prefetch" href="/myBlog/assets/js/130.7521f0a4.js"><link rel="prefetch" href="/myBlog/assets/js/131.a1a68795.js"><link rel="prefetch" href="/myBlog/assets/js/132.07b70dd7.js"><link rel="prefetch" href="/myBlog/assets/js/133.cb6080fb.js"><link rel="prefetch" href="/myBlog/assets/js/134.d06e708e.js"><link rel="prefetch" href="/myBlog/assets/js/135.601c5b41.js"><link rel="prefetch" href="/myBlog/assets/js/136.4fb4f7cb.js"><link rel="prefetch" href="/myBlog/assets/js/137.5dfd3b84.js"><link rel="prefetch" href="/myBlog/assets/js/138.5fa36b65.js"><link rel="prefetch" href="/myBlog/assets/js/139.7d480183.js"><link rel="prefetch" href="/myBlog/assets/js/14.7151b9d7.js"><link rel="prefetch" href="/myBlog/assets/js/140.7404d5f7.js"><link rel="prefetch" href="/myBlog/assets/js/141.d6640d22.js"><link rel="prefetch" href="/myBlog/assets/js/15.bb6acdb2.js"><link rel="prefetch" href="/myBlog/assets/js/16.6067bc94.js"><link rel="prefetch" href="/myBlog/assets/js/17.2ee3b538.js"><link rel="prefetch" href="/myBlog/assets/js/18.3f280d96.js"><link rel="prefetch" href="/myBlog/assets/js/19.0c0231bb.js"><link rel="prefetch" href="/myBlog/assets/js/20.03b49756.js"><link rel="prefetch" href="/myBlog/assets/js/21.a144ec70.js"><link rel="prefetch" href="/myBlog/assets/js/22.be5e0407.js"><link rel="prefetch" href="/myBlog/assets/js/23.4198eb77.js"><link rel="prefetch" href="/myBlog/assets/js/24.5e54e47d.js"><link rel="prefetch" href="/myBlog/assets/js/25.0c7199fe.js"><link rel="prefetch" href="/myBlog/assets/js/26.7a5291cd.js"><link rel="prefetch" href="/myBlog/assets/js/27.b83b7f1a.js"><link rel="prefetch" href="/myBlog/assets/js/28.5477d887.js"><link rel="prefetch" href="/myBlog/assets/js/29.6ec32ac6.js"><link rel="prefetch" href="/myBlog/assets/js/3.3c4324a9.js"><link rel="prefetch" href="/myBlog/assets/js/30.a9eb9b15.js"><link rel="prefetch" href="/myBlog/assets/js/31.a6496a14.js"><link rel="prefetch" href="/myBlog/assets/js/32.b5379dbf.js"><link rel="prefetch" href="/myBlog/assets/js/33.78a535a0.js"><link rel="prefetch" href="/myBlog/assets/js/34.e6d4ad66.js"><link rel="prefetch" href="/myBlog/assets/js/35.ff8631ac.js"><link rel="prefetch" href="/myBlog/assets/js/36.db442c21.js"><link rel="prefetch" href="/myBlog/assets/js/37.c1ba9523.js"><link rel="prefetch" href="/myBlog/assets/js/38.6768b09a.js"><link rel="prefetch" href="/myBlog/assets/js/39.c9f1fd72.js"><link rel="prefetch" href="/myBlog/assets/js/4.b0209c65.js"><link rel="prefetch" href="/myBlog/assets/js/40.35777943.js"><link rel="prefetch" href="/myBlog/assets/js/41.43e2f1d1.js"><link rel="prefetch" href="/myBlog/assets/js/42.9597c193.js"><link rel="prefetch" href="/myBlog/assets/js/43.ef6af607.js"><link rel="prefetch" href="/myBlog/assets/js/44.db0b54b7.js"><link rel="prefetch" href="/myBlog/assets/js/45.12cb4bef.js"><link rel="prefetch" href="/myBlog/assets/js/46.893e1c56.js"><link rel="prefetch" href="/myBlog/assets/js/47.52493713.js"><link rel="prefetch" href="/myBlog/assets/js/48.158af2b8.js"><link rel="prefetch" href="/myBlog/assets/js/49.0075d84b.js"><link rel="prefetch" href="/myBlog/assets/js/5.27284ffb.js"><link rel="prefetch" href="/myBlog/assets/js/50.8c3be9f5.js"><link rel="prefetch" href="/myBlog/assets/js/51.2cee7923.js"><link rel="prefetch" href="/myBlog/assets/js/52.49f65b56.js"><link rel="prefetch" href="/myBlog/assets/js/53.64bfd10a.js"><link rel="prefetch" href="/myBlog/assets/js/54.d29bf96b.js"><link rel="prefetch" href="/myBlog/assets/js/55.185dab47.js"><link rel="prefetch" href="/myBlog/assets/js/56.c9fd3894.js"><link rel="prefetch" href="/myBlog/assets/js/57.c0a0dfed.js"><link rel="prefetch" href="/myBlog/assets/js/58.ad8ca2f6.js"><link rel="prefetch" href="/myBlog/assets/js/59.efeae7ff.js"><link rel="prefetch" href="/myBlog/assets/js/6.57ebcb36.js"><link rel="prefetch" href="/myBlog/assets/js/60.1c31cf41.js"><link rel="prefetch" href="/myBlog/assets/js/61.da830dc9.js"><link rel="prefetch" href="/myBlog/assets/js/62.68ba7528.js"><link rel="prefetch" href="/myBlog/assets/js/63.7ca1f04a.js"><link rel="prefetch" href="/myBlog/assets/js/64.43e071a5.js"><link rel="prefetch" href="/myBlog/assets/js/65.55233d69.js"><link rel="prefetch" href="/myBlog/assets/js/66.d1b2c741.js"><link rel="prefetch" href="/myBlog/assets/js/67.f594913f.js"><link rel="prefetch" href="/myBlog/assets/js/68.02f2b732.js"><link rel="prefetch" href="/myBlog/assets/js/69.467048f6.js"><link rel="prefetch" href="/myBlog/assets/js/7.8ff1cc95.js"><link rel="prefetch" href="/myBlog/assets/js/70.b1045043.js"><link rel="prefetch" href="/myBlog/assets/js/71.42286b79.js"><link rel="prefetch" href="/myBlog/assets/js/72.46581568.js"><link rel="prefetch" href="/myBlog/assets/js/73.74e29ee5.js"><link rel="prefetch" href="/myBlog/assets/js/74.a797456b.js"><link rel="prefetch" href="/myBlog/assets/js/75.38d01bd0.js"><link rel="prefetch" href="/myBlog/assets/js/76.ad6eefc3.js"><link rel="prefetch" href="/myBlog/assets/js/77.663c63dd.js"><link rel="prefetch" href="/myBlog/assets/js/78.5f1858b7.js"><link rel="prefetch" href="/myBlog/assets/js/79.327b53e7.js"><link rel="prefetch" href="/myBlog/assets/js/8.63f9549b.js"><link rel="prefetch" href="/myBlog/assets/js/80.60deb9cb.js"><link rel="prefetch" href="/myBlog/assets/js/81.e6af767f.js"><link rel="prefetch" href="/myBlog/assets/js/82.37c4c554.js"><link rel="prefetch" href="/myBlog/assets/js/83.32b7b26f.js"><link rel="prefetch" href="/myBlog/assets/js/84.5fb5e87e.js"><link rel="prefetch" href="/myBlog/assets/js/85.25a29421.js"><link rel="prefetch" href="/myBlog/assets/js/86.b00447c9.js"><link rel="prefetch" href="/myBlog/assets/js/87.6b326a02.js"><link rel="prefetch" href="/myBlog/assets/js/88.adced1fc.js"><link rel="prefetch" href="/myBlog/assets/js/89.a59352d1.js"><link rel="prefetch" href="/myBlog/assets/js/9.566067df.js"><link rel="prefetch" href="/myBlog/assets/js/90.105072b7.js"><link rel="prefetch" href="/myBlog/assets/js/91.c1fd6382.js"><link rel="prefetch" href="/myBlog/assets/js/92.294df929.js"><link rel="prefetch" href="/myBlog/assets/js/93.85c3ce26.js"><link rel="prefetch" href="/myBlog/assets/js/94.9ef2cb4c.js"><link rel="prefetch" href="/myBlog/assets/js/95.521183de.js"><link rel="prefetch" href="/myBlog/assets/js/96.ba7fcc56.js"><link rel="prefetch" href="/myBlog/assets/js/97.1db11d02.js"><link rel="prefetch" href="/myBlog/assets/js/99.ce5f296b.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.713dba05.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><img src="/myBlogimg/EB-logo.png" alt="CY blog" class="logo"> <span class="site-name can-hide">CY blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/119-working.png"> <div class="blogger-info"><h3>Changyin Wang</h3> <span>后端界的学习者</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具使用</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/e931bb/" class="sidebar-link">Git</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/myBlog/pages/fa218a/" class="sidebar-link">Idea的使用</a></li><li><a href="/myBlog/pages/1632a8/" class="sidebar-link">ES的使用</a></li><li><a href="/myBlog/pages/e09ac3/" class="sidebar-link">Typora的使用</a></li><li><a href="/myBlog/pages/c7e33c/" class="sidebar-link">PLSQL的使用</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/96abfe/" class="sidebar-link">Docker - Overview</a></li><li><a href="/myBlog/pages/1163f9/" class="sidebar-link">虚拟化技术</a></li><li><a href="/myBlog/pages/910866/" class="sidebar-link">Docker基础 - 入门基础和Helloworld</a></li><li><a href="/myBlog/pages/3c17ac/" class="sidebar-link">Docker基础 - 仓库，镜像，容器详解</a></li><li><a href="/myBlog/pages/fac510/" aria-current="page" class="active sidebar-link">Docker基础 - 一个web应用实例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#一个web-应用运行和访问" class="sidebar-link">一个web 应用运行和访问</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#运行一个-web-应用" class="sidebar-link">运行一个 web 应用</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#访问webapp" class="sidebar-link">访问webapp</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#设置自定义映射端口" class="sidebar-link">设置自定义映射端口</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#其它常用功能" class="sidebar-link">其它常用功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#查看web-应用网络端口" class="sidebar-link">查看web 应用网络端口</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#查看-web-应用程序日志" class="sidebar-link">查看 WEB 应用程序日志</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#查看web应用程序容器的进程" class="sidebar-link">查看WEB应用程序容器的进程</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#检查-web-应用程序" class="sidebar-link">检查 WEB 应用程序</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#停止-web-应用容器" class="sidebar-link">停止 WEB 应用容器</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#重启web应用容器" class="sidebar-link">重启WEB应用容器</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#移除web应用容器" class="sidebar-link">移除WEB应用容器</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#与其它容器-db容器-互联" class="sidebar-link">与其它容器（DB容器）互联</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#与数据库容器互联" class="sidebar-link">与数据库容器互联</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/fac510/#容器公开的连接信息" class="sidebar-link">容器公开的连接信息</a></li></ul></li></ul></li><li><a href="/myBlog/pages/4cbf7b/" class="sidebar-link">Dockerfile 指令详解</a></li><li><a href="/myBlog/pages/4cf767/" class="sidebar-link">构建镜像</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>环境搭建</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>谷歌插件</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/myBlog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/myBlog/technology" title="技术-目录页" data-v-1cd794fe>技术</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#工具使用" title="技术#工具使用" data-v-1cd794fe>工具使用</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#docker" title="技术#docker" data-v-1cd794fe>docker</a></li></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/wangchangyin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>changyin.Wang</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-10-20</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Docker基础 - 一个web应用实例
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="docker基础-一个web应用实例"><a href="#docker基础-一个web应用实例" class="header-anchor">#</a> Docker基础 - 一个web应用实例</h1> <blockquote><p>通过上文我们已经基本了解了docker的结构（仓库，镜像，容器）以及跑docker应用了；本文将通过介绍一个web应用：向你展示如何进行主机与web容器之间的通信，这是web开发者常用的；第二，贯穿上文中内容, 且为我们后续讲解网络提供基础。</p></blockquote> <h2 id="一个web-应用运行和访问"><a href="#一个web-应用运行和访问" class="header-anchor">#</a> 一个web 应用运行和访问</h2> <h3 id="运行一个-web-应用"><a href="#运行一个-web-应用" class="header-anchor">#</a> 运行一个 web 应用</h3> <blockquote><p>我们只需要找一个webapp的镜像即可，无需自己再写个程序啥的。接下来让我们尝试使用 docker 构建一个 web 应用程序。</p></blockquote> <p>这里找了一个<code>training/webapp</code>，它是将在docker容器中运行一个 Python Flask web应用。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker pull training/webapp
+Using default tag: latest
+latest: Pulling from training/webapp
+Image docker.io/training/webapp:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+e190868d63f8: Pull complete
+909cd34c6fd7: Pull complete
+0b9bfabab7c1: Pull complete
+a3ed95caeb02: Pull complete
+10bbbc0fc0ff: Pull complete
+fca59b508e9f: Pull complete
+e7ae2541b15b: Pull complete
+9dd97ef58ce9: Pull complete
+a4c1b0cb7af7: Pull complete
+Digest: sha256:06e9c1983bd6d5db5fba376ccd63bfa529e8d02f23d5079b8f74a616308fb11d
+Status: Downloaded newer image for training/webapp:latest
+docker.io/training/webapp:latest
+[root@pdai ~]# docker images | grep webapp
+training/webapp     latest              6fae60ef3446        4 years ago         349MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>紧接着，我们启动这个webapp</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -d -P training/webapp python app.py
+ec3eb9ae218494d5aa5902c1ca4435733567b5e81319f02e5d2509d45cbc25da
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+ec3eb9ae2184        training/webapp     &quot;python app.py&quot;     18 seconds ago      Up 17 seconds       0.0.0.0:32768-&gt;5000/tcp   gifted_agnesi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>参数说明:</p> <ul><li><code>-d</code>:让容器在后台运行。</li> <li><code>-P</code>:将容器内部使用的网络端口映射到我们使用的主机上。</li></ul> <h3 id="访问webapp"><a href="#访问webapp" class="header-anchor">#</a> 访问webapp</h3> <blockquote><p>我们注意看上述PORTS部分为0.0.0.0:32769-&gt;5000/tcp</p></blockquote> <p>Docker 开放了 5000 端口（默认 Python Flask 端口）映射到主机端口 32768 上。</p> <ul><li><strong>从主机上看</strong>，它应该暴露了<strong>端口32768</strong></li></ul> <p>所以我们来验证下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# netstat | grep 32768
+[root@pdai ~]# netstat -nltp | grep 32768
+tcp6       0      0 :::32768                :::*                    LISTEN      2227/docker-proxy
+[root@pdai ~]# curl localhost:32768
+Hello world!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>这意味着，你浏览器你可以输入<code>localhost:32768</code>访问这个页面。</p> <ul><li><strong>从容器内部看</strong>，它应该有一个<strong>端口5000</strong></li></ul> <p>我们再进容器验证下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker exec -it ec3eb9ae2184 /bin/bash
+root@ec3eb9ae2184:/opt/webapp# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:5000            0.0.0.0:*               LISTEN      1/python
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>所以我们的理解是对的。</p> <h3 id="设置自定义映射端口"><a href="#设置自定义映射端口" class="header-anchor">#</a> 设置自定义映射端口</h3> <blockquote><p>我们发现，通过 <code>-P</code>参数映射到主机上的端口是随机，能否自定义端口呢？</p></blockquote> <p>我们可以通过 -p 参数来设置不一样的端口；为了对比，我们再起一个容器实例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -d -p 5001:5000 training/webapp python app.py
+5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+5da3588d5bc4        training/webapp     &quot;python app.py&quot;     33 seconds ago      Up 31 seconds       0.0.0.0:5001-&gt;5000/tcp    hopeful_bardeen
+ec3eb9ae2184        training/webapp     &quot;python app.py&quot;     22 minutes ago      Up 22 minutes       0.0.0.0:32768-&gt;5000/tcp   gifted_agnesi
+[root@pdai ~]# netstat -nltp | grep 5001
+tcp6       0      0 :::5001                 :::*                    LISTEN      2591/docker-proxy
+[root@pdai ~]# curl localhost:5001
+Hello world!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>所以你看到跑了两个内部端口都是5000的web实例，新的容器内部的 5000 端口映射到我们本地主机的 5001 端口上。</p> <h2 id="其它常用功能"><a href="#其它常用功能" class="header-anchor">#</a> 其它常用功能</h2> <h3 id="查看web-应用网络端口"><a href="#查看web-应用网络端口" class="header-anchor">#</a> 查看web 应用网络端口</h3> <blockquote><p>通过 docker ps 命令可以查看到容器的端口映射，docker 还提供了另一个快捷方式 docker port，使用 docker port 可以查看指定 （ID 或者名字）容器的某个确定端口映射到宿主机的端口号。</p></blockquote> <p>上面我们创建的 web 应用容器 ID 为 5da3588d5bc4 名字为 hopeful_bardeen。</p> <p>我可以这样查看容器端口的映射情况：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker port 5da3588d5bc4
+5000/tcp -&gt; 0.0.0.0:5001
+[root@pdai ~]# docker port hopeful_bardeen
+5000/tcp -&gt; 0.0.0.0:5001
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="查看-web-应用程序日志"><a href="#查看-web-应用程序日志" class="header-anchor">#</a> 查看 WEB 应用程序日志</h3> <blockquote><p>docker logs [ID或者名字] 可以查看容器内部的标准输出。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker port hopeful_bardeen
+5000/tcp -&gt; 0.0.0.0:5001
+[root@pdai ~]# docker logs -f hopeful_bardeen
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+172.17.0.1 - - [18/Feb/2020 09:08:31] &quot;GET / HTTP/1.1&quot; 200 -
+^C
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>参数说明：</p> <ul><li><code>-f</code>: 让 docker logs 像使用 tail -f 一样来输出容器内部的标准输出。</li></ul> <p>从上面，我们可以看到应用程序使用的是 5000 端口并且能够查看到应用程序的访问日志。</p> <h3 id="查看web应用程序容器的进程"><a href="#查看web应用程序容器的进程" class="header-anchor">#</a> 查看WEB应用程序容器的进程</h3> <p>我们还可以使用 docker top 来查看容器内部运行的进程</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker top hopeful_bardeen
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                2614                2597                0                   17:07               ?                   00:00:00            python app.py
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="检查-web-应用程序"><a href="#检查-web-应用程序" class="header-anchor">#</a> 检查 WEB 应用程序</h3> <p>使用 docker inspect 来查看 Docker 的底层信息。它会返回一个 JSON 文件记录着 Docker 容器的配置和状态信息。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker inspect hopeful_bardeen
+[
+    {
+        &quot;Id&quot;: &quot;5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a&quot;,
+        &quot;Created&quot;: &quot;2020-02-18T09:07:32.827193286Z&quot;,
+        &quot;Path&quot;: &quot;python&quot;,
+        &quot;Args&quot;: [
+            &quot;app.py&quot;
+        ],
+        &quot;State&quot;: {
+            &quot;Status&quot;: &quot;running&quot;,
+            &quot;Running&quot;: true,
+            &quot;Paused&quot;: false,
+            &quot;Restarting&quot;: false,
+            &quot;OOMKilled&quot;: false,
+            &quot;Dead&quot;: false,
+            &quot;Pid&quot;: 2614,
+            &quot;ExitCode&quot;: 0,
+            &quot;Error&quot;: &quot;&quot;,
+            &quot;StartedAt&quot;: &quot;2020-02-18T09:07:33.374368448Z&quot;,
+            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;
+        },
+        &quot;Image&quot;: &quot;sha256:6fae60ef344644649a39240b94d73b8ba9c67f898ede85cf8e947a887b3e6557&quot;,
+        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a/resolv.conf&quot;,
+        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a/hostname&quot;,
+        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a/hosts&quot;,
+        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a/5da3588d5bc43a9ed3aa61fb87f98220c9719d2879b616404d443aaae6cee77a-json.log&quot;,
+        &quot;Name&quot;: &quot;/hopeful_bardeen&quot;,
+        &quot;RestartCount&quot;: 0,
+        &quot;Driver&quot;: &quot;overlay2&quot;,
+        &quot;Platform&quot;: &quot;linux&quot;,
+        &quot;MountLabel&quot;: &quot;&quot;,
+        &quot;ProcessLabel&quot;: &quot;&quot;,
+        &quot;AppArmorProfile&quot;: &quot;&quot;,
+        &quot;ExecIDs&quot;: null,
+        &quot;HostConfig&quot;: {
+            &quot;Binds&quot;: null,
+            &quot;ContainerIDFile&quot;: &quot;&quot;,
+            &quot;LogConfig&quot;: {
+                &quot;Type&quot;: &quot;json-file&quot;,
+                &quot;Config&quot;: {}
+            },
+            &quot;NetworkMode&quot;: &quot;default&quot;,
+            &quot;PortBindings&quot;: {
+                &quot;5000/tcp&quot;: [
+                    {
+                        &quot;HostIp&quot;: &quot;&quot;,
+                        &quot;HostPort&quot;: &quot;5001&quot;
+                    }
+                ]
+            },
+            &quot;RestartPolicy&quot;: {
+                &quot;Name&quot;: &quot;no&quot;,
+                &quot;MaximumRetryCount&quot;: 0
+            },
+            &quot;AutoRemove&quot;: false,
+            &quot;VolumeDriver&quot;: &quot;&quot;,
+            &quot;VolumesFrom&quot;: null,
+            &quot;CapAdd&quot;: null,
+            &quot;CapDrop&quot;: null,
+            &quot;Capabilities&quot;: null,
+            &quot;Dns&quot;: [],
+            &quot;DnsOptions&quot;: [],
+            &quot;DnsSearch&quot;: [],
+            &quot;ExtraHosts&quot;: null,
+            &quot;GroupAdd&quot;: null,
+            &quot;IpcMode&quot;: &quot;private&quot;,
+            &quot;Cgroup&quot;: &quot;&quot;,
+            &quot;Links&quot;: null,
+            &quot;OomScoreAdj&quot;: 0,
+            &quot;PidMode&quot;: &quot;&quot;,
+            &quot;Privileged&quot;: false,
+            &quot;PublishAllPorts&quot;: false,
+            &quot;ReadonlyRootfs&quot;: false,
+            &quot;SecurityOpt&quot;: null,
+            &quot;UTSMode&quot;: &quot;&quot;,
+            &quot;UsernsMode&quot;: &quot;&quot;,
+            &quot;ShmSize&quot;: 67108864,
+            &quot;Runtime&quot;: &quot;runc&quot;,
+            &quot;ConsoleSize&quot;: [
+                0,
+                0
+            ],
+            &quot;Isolation&quot;: &quot;&quot;,
+            &quot;CpuShares&quot;: 0,
+            &quot;Memory&quot;: 0,
+            &quot;NanoCpus&quot;: 0,
+            &quot;CgroupParent&quot;: &quot;&quot;,
+            &quot;BlkioWeight&quot;: 0,
+            &quot;BlkioWeightDevice&quot;: [],
+            &quot;BlkioDeviceReadBps&quot;: null,
+            &quot;BlkioDeviceWriteBps&quot;: null,
+            &quot;BlkioDeviceReadIOps&quot;: null,
+            &quot;BlkioDeviceWriteIOps&quot;: null,
+            &quot;CpuPeriod&quot;: 0,
+            &quot;CpuQuota&quot;: 0,
+            &quot;CpuRealtimePeriod&quot;: 0,
+            &quot;CpuRealtimeRuntime&quot;: 0,
+            &quot;CpusetCpus&quot;: &quot;&quot;,
+            &quot;CpusetMems&quot;: &quot;&quot;,
+            &quot;Devices&quot;: [],
+            &quot;DeviceCgroupRules&quot;: null,
+            &quot;DeviceRequests&quot;: null,
+            &quot;KernelMemory&quot;: 0,
+            &quot;KernelMemoryTCP&quot;: 0,
+            &quot;MemoryReservation&quot;: 0,
+            &quot;MemorySwap&quot;: 0,
+            &quot;MemorySwappiness&quot;: null,
+            &quot;OomKillDisable&quot;: false,
+            &quot;PidsLimit&quot;: null,
+            &quot;Ulimits&quot;: null,
+            &quot;CpuCount&quot;: 0,
+            &quot;CpuPercent&quot;: 0,
+            &quot;IOMaximumIOps&quot;: 0,
+            &quot;IOMaximumBandwidth&quot;: 0,
+            &quot;MaskedPaths&quot;: [
+                &quot;/proc/asound&quot;,
+                &quot;/proc/acpi&quot;,
+                &quot;/proc/kcore&quot;,
+                &quot;/proc/keys&quot;,
+                &quot;/proc/latency_stats&quot;,
+                &quot;/proc/timer_list&quot;,
+                &quot;/proc/timer_stats&quot;,
+                &quot;/proc/sched_debug&quot;,
+                &quot;/proc/scsi&quot;,
+                &quot;/sys/firmware&quot;
+            ],
+            &quot;ReadonlyPaths&quot;: [
+                &quot;/proc/bus&quot;,
+                &quot;/proc/fs&quot;,
+                &quot;/proc/irq&quot;,
+                &quot;/proc/sys&quot;,
+                &quot;/proc/sysrq-trigger&quot;
+            ]
+        },
+        &quot;GraphDriver&quot;: {
+            &quot;Data&quot;: {
+                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/c6594e5b70feca02eb4b90ac75aba711f36378d5cb9853ffca1ec92f9d0c3e14-init/diff:/var/lib/docker/overlay2/d4690a06236a3857a2a51ab84c61992e50ea3e1a613f4793334916604ea0dfa0/diff:/var/lib/docker/overlay2/c45d0215cd2076174f38fea5003c3ff11a5ba2df2141d9d069f4bf32dac9a22a/diff:/var/lib/docker/overlay2/1cf63068912234a1f4c861f58f155423c87193c6e438948db493687d4da4f0a0/diff:/var/lib/docker/overlay2/55e4ecb04b1ff8d048bc75bb8698c782c813d45caa6f0d82ac6c49adec24bead/diff:/var/lib/docker/overlay2/27fa0dc314b851b8d2f0386d230a725f57117f9f1ccdb49ca27f5ad424cb4a90/diff:/var/lib/docker/overlay2/65a5a082188d9e0b9aaf09c2e9c3b3f8141f74c781996680dfaca63d81672cdf/diff:/var/lib/docker/overlay2/658a33c92cf114ee4cbc10f117207a0c813e39a908acc014fbce1783a28bc654/diff:/var/lib/docker/overlay2/e5b5c9e0abc43ff2750dcd33decc65d90d733b18f2626b91c500d803d7fe189b/diff:/var/lib/docker/overlay2/0b5181e429a89f6ab291e090b972e11718e4f63158ed60af1fce18095d0352a6/diff:/var/lib/docker/overlay2/f7c0405739bb58fdfa9af402a72507b78bc2a48b0d74356dad59495906b6e0e5/diff:/var/lib/docker/overlay2/073c45ae4a6ff27950a1dd969a675d3dcdc18392bb205ddde5913fcc10a751ef/diff:/var/lib/docker/overlay2/f92534844c8cc5b950ea36369b8e4a7dd7f7749e73483908e5d129bf5c26442f/diff:/var/lib/docker/overlay2/477378381d03c4b347d7b9224c4c9023b5dfbfde32022c7eb8af32e7a01b88b2/diff&quot;,
+                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/c6594e5b70feca02eb4b90ac75aba711f36378d5cb9853ffca1ec92f9d0c3e14/merged&quot;,
+                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/c6594e5b70feca02eb4b90ac75aba711f36378d5cb9853ffca1ec92f9d0c3e14/diff&quot;,
+                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/c6594e5b70feca02eb4b90ac75aba711f36378d5cb9853ffca1ec92f9d0c3e14/work&quot;
+            },
+            &quot;Name&quot;: &quot;overlay2&quot;
+        },
+        &quot;Mounts&quot;: [],
+        &quot;Config&quot;: {
+            &quot;Hostname&quot;: &quot;5da3588d5bc4&quot;,
+            &quot;Domainname&quot;: &quot;&quot;,
+            &quot;User&quot;: &quot;&quot;,
+            &quot;AttachStdin&quot;: false,
+            &quot;AttachStdout&quot;: false,
+            &quot;AttachStderr&quot;: false,
+            &quot;ExposedPorts&quot;: {
+                &quot;5000/tcp&quot;: {}
+            },
+            &quot;Tty&quot;: false,
+            &quot;OpenStdin&quot;: false,
+            &quot;StdinOnce&quot;: false,
+            &quot;Env&quot;: [
+                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+            ],
+            &quot;Cmd&quot;: [
+                &quot;python&quot;,
+                &quot;app.py&quot;
+            ],
+            &quot;Image&quot;: &quot;training/webapp&quot;,
+            &quot;Volumes&quot;: null,
+            &quot;WorkingDir&quot;: &quot;/opt/webapp&quot;,
+            &quot;Entrypoint&quot;: null,
+            &quot;OnBuild&quot;: null,
+            &quot;Labels&quot;: {}
+        },
+        &quot;NetworkSettings&quot;: {
+            &quot;Bridge&quot;: &quot;&quot;,
+            &quot;SandboxID&quot;: &quot;66e1f111a5d7acca71f0e9e24516a6945bca428f55ac1eab1576c99bde16190c&quot;,
+            &quot;HairpinMode&quot;: false,
+            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,
+            &quot;LinkLocalIPv6PrefixLen&quot;: 0,
+            &quot;Ports&quot;: {
+                &quot;5000/tcp&quot;: [
+                    {
+                        &quot;HostIp&quot;: &quot;0.0.0.0&quot;,
+                        &quot;HostPort&quot;: &quot;5001&quot;
+                    }
+                ]
+            },
+            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/66e1f111a5d7&quot;,
+            &quot;SecondaryIPAddresses&quot;: null,
+            &quot;SecondaryIPv6Addresses&quot;: null,
+            &quot;EndpointID&quot;: &quot;794d5e97cd3bbb62c8a7a850f125404d174ecc45df4e704dbee403b1be7a2835&quot;,
+            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+            &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+            &quot;GlobalIPv6PrefixLen&quot;: 0,
+            &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,
+            &quot;IPPrefixLen&quot;: 16,
+            &quot;IPv6Gateway&quot;: &quot;&quot;,
+            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,
+            &quot;Networks&quot;: {
+                &quot;bridge&quot;: {
+                    &quot;IPAMConfig&quot;: null,
+                    &quot;Links&quot;: null,
+                    &quot;Aliases&quot;: null,
+                    &quot;NetworkID&quot;: &quot;b8c5abdb0becacfa1bfa1d72e2e663fb0157b62a9b8bee37e2607211722713cc&quot;,
+                    &quot;EndpointID&quot;: &quot;794d5e97cd3bbb62c8a7a850f125404d174ecc45df4e704dbee403b1be7a2835&quot;,
+                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,
+                    &quot;IPPrefixLen&quot;: 16,
+                    &quot;IPv6Gateway&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6PrefixLen&quot;: 0,
+                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,
+                    &quot;DriverOpts&quot;: null
+                }
+            }
+        }
+    }
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br></div></div><h3 id="停止-web-应用容器"><a href="#停止-web-应用容器" class="header-anchor">#</a> 停止 WEB 应用容器</h3> <p>再复习下docker的停止</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker stop hopeful_bardeen
+hopeful_bardeen
+[root@pdai ~]# docker ps -a | grep 'hopeful_bardeen'
+5da3588d5bc4        training/webapp      &quot;python app.py&quot;      13 minutes ago      Exited (137) 12 seconds ago                             hopeful_bardeen
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="重启web应用容器"><a href="#重启web应用容器" class="header-anchor">#</a> 重启WEB应用容器</h3> <p>已经停止的容器，我们可以使用命令 docker start 或者docker restart 来启动。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker restart hopeful_bardeen
+hopeful_bardeen
+[root@pdai ~]# docker ps -a | grep hopeful_bardeen
+5da3588d5bc4        training/webapp      &quot;python app.py&quot;      14 minutes ago      Up 10 seconds            0.0.0.0:5001-&gt;5000/tcp    hopeful_bardeen
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="移除web应用容器"><a href="#移除web应用容器" class="header-anchor">#</a> 移除WEB应用容器</h3> <p>我们可以使用 docker rm 命令来删除不需要的容器</p> <p>我们上文也讲过，如果是启动着的docker实例，需要加-f，强制（force）删除。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps -a | grep hopeful_bardeen
+5da3588d5bc4        training/webapp      &quot;python app.py&quot;      14 minutes ago      Up 10 seconds            0.0.0.0:5001-&gt;5000/tcp    hopeful_bardeen
+[root@pdai ~]# docker rm -f hopeful_bardeen
+hopeful_bardeen
+[root@pdai ~]# docker ps -a | grep hopeful_bardeen
+[root@pdai ~]#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="与其它容器-db容器-互联"><a href="#与其它容器-db容器-互联" class="header-anchor">#</a> 与其它容器（DB容器）互联</h2> <blockquote><p>上述是一个web单一容器通过端口映射，可以通过主机端口访问容器；那么如果需要访问数据库，就涉及到容器互联。</p></blockquote> <h3 id="与数据库容器互联"><a href="#与数据库容器互联" class="header-anchor">#</a> 与数据库容器互联</h3> <ul><li>先停止上述的web容器, 且清理所有不用的容器</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE                COMMAND              CREATED             STATUS                    PORTS                     NAMES
+ec3eb9ae2184        training/webapp      &quot;python app.py&quot;      18 hours ago        Up 18 hours               0.0.0.0:32768-&gt;5000/tcp   gifted_agnesi
+11de9755a084        pdai/ubuntu:v2.0.2   &quot;/bin/bash&quot;          24 hours ago        Exited (0) 24 hours ago                             pdai-ubuntu-202
+57bd797570b6        pdai/ubuntu:v2.0.2   &quot;--name pdai-test&quot;   24 hours ago        Created                                             sharp_brahmagupta
+[root@pdai ~]# docker stop ec3eb9ae2184
+ec3eb9ae2184
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE                COMMAND              CREATED             STATUS                        PORTS               NAMES
+ec3eb9ae2184        training/webapp      &quot;python app.py&quot;      18 hours ago        Exited (137) 29 seconds ago                       gifted_agnesi
+11de9755a084        pdai/ubuntu:v2.0.2   &quot;/bin/bash&quot;          24 hours ago        Exited (0) 24 hours ago                           pdai-ubuntu-202
+57bd797570b6        pdai/ubuntu:v2.0.2   &quot;--name pdai-test&quot;   24 hours ago        Created                                           sharp_brahmagupta
+[root@pdai ~]# docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+ec3eb9ae218494d5aa5902c1ca4435733567b5e81319f02e5d2509d45cbc25da
+11de9755a08402d963d263a559a7daf48f4a2188398f258641240b5eb50fbc89
+57bd797570b68b6587b16809889e6e8f710ec7a934229aa6391add02f758e036
+
+Total reclaimed space: 89B
+[root@pdai ~]#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li>创建一个新的数据库容器。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -d --name db training/postgres
+Unable to find image 'training/postgres:latest' locally
+latest: Pulling from training/postgres
+Image docker.io/training/postgres:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+a3ed95caeb02: Pull complete
+6e71c809542e: Pull complete
+2978d9af87ba: Pull complete
+e1bca35b062f: Pull complete
+500b6decf741: Pull complete
+74b14ef2151f: Pull complete
+7afd5ed3826e: Pull complete
+3c69bb244f5e: Pull complete
+d86f9ec5aedf: Pull complete
+010fabf20157: Pull complete
+Digest: sha256:a945dc6dcfbc8d009c3d972931608344b76c2870ce796da00a827bd50791907e
+Status: Downloaded newer image for training/postgres:latest
+d992e3c761e00649eb436b88c737adc54093b76119af0fb7878596b523f743ca
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+d992e3c761e0        training/postgres   &quot;su postgres -c '/us…&quot;   9 seconds ago       Up 7 seconds        5432/tcp            db
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><ul><li>db 容器和 web 容器建立互联关系</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -d -p 5001:5000 --name web --link db:db training/webapp python app.py
+1cbc9aeba2a8a826d460ecb49de17ddf8ac336e150c752a3c762fd38a3e15254
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+1cbc9aeba2a8        training/webapp     &quot;python app.py&quot;          5 seconds ago       Up 4 seconds        0.0.0.0:5001-&gt;5000/tcp   web
+d992e3c761e0        training/postgres   &quot;su postgres -c '/us…&quot;   7 minutes ago       Up 7 minutes        5432/tcp                 db
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>--link 参数的格式为 --link name:alias，其中 name 是要链接的容器的名称，alias 是这个连接的别名。</p> <blockquote><p>Docker 在两个互联的容器之间创建了一个安全隧道，而且不用映射它们的端口到宿主主机上。在启动 db 容器的时候并没有使用 -p 和 -P 标记，从而避免了暴露数据库端口到外部网络上。</p></blockquote> <h3 id="容器公开的连接信息"><a href="#容器公开的连接信息" class="header-anchor">#</a> 容器公开的连接信息</h3> <p>Docker 通过 2 种方式为容器公开连接信息：</p> <ul><li>环境变量</li> <li>更新 /etc/hosts 文件</li></ul> <h4 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h4> <p>使用 env 命令来查看 web 容器的环境变量</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker exec -it web /bin/bash
+root@1cbc9aeba2a8:/opt/webapp# env
+HOSTNAME=1cbc9aeba2a8
+DB_NAME=/web/db
+DB_PORT_5432_TCP_ADDR=172.17.0.2
+DB_PORT=tcp://172.17.0.2:5432
+DB_PORT_5432_TCP=tcp://172.17.0.2:5432
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/opt/webapp
+DB_PORT_5432_TCP_PORT=5432
+SHLVL=1
+HOME=/root
+DB_PORT_5432_TCP_PROTO=tcp
+DB_ENV_PG_VERSION=9.3
+_=/usr/bin/env
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>其中 DB_ 开头的环境变量是供 web 容器连接 db 容器使用，前缀采用大写的连接别名。</p> <h4 id="hosts-文件"><a href="#hosts-文件" class="header-anchor">#</a> hosts 文件</h4> <p>除了环境变量，Docker 还添加 host 信息到父容器的 /etc/hosts 的文件。下面是父容器 web 的 hosts 文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>root@1cbc9aeba2a8:/opt/webapp# cat /etc/hosts
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+172.17.0.2      db d992e3c761e0
+172.17.0.3      1cbc9aeba2a8
+root@1cbc9aeba2a8:/opt/webapp#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>这里有 2 个 hosts:</p> <ul><li>第一个, <code>172.17.0.2 db d992e3c761e0</code> 表示 db 容器的 ip, ID和Name</li> <li>第二个，<code>172.17.0.3 1cbc9aeba2a8</code> 表示 web 容器的 ip, ID</li></ul> <p>可以在 web 容器中安装 ping 命令来测试跟db容器的连通。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>root@1cbc9aeba2a8:/opt/webapp# apt-get install -yqq inetutils-ping
+(Reading database ... 18233 files and directories currently installed.)
+Removing ubuntu-minimal (1.325) ...
+Removing iputils-ping (3:20121221-4ubuntu1.1) ...
+Selecting previously unselected package inetutils-ping.
+(Reading database ... 18221 files and directories currently installed.)
+Preparing to unpack .../inetutils-ping_2%3a1.9.2-1_amd64.deb ...
+Unpacking inetutils-ping (2:1.9.2-1) ...
+Setting up inetutils-ping (2:1.9.2-1) ...
+root@1cbc9aeba2a8:/opt/webapp# ping db
+PING db (172.17.0.2): 56 data bytes
+64 bytes from 172.17.0.2: icmp_seq=0 ttl=64 time=0.110 ms
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.092 ms
+64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.094 ms
+64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.104 ms
+64 bytes from 172.17.0.2: icmp_seq=4 ttl=64 time=0.111 ms
+64 bytes from 172.17.0.2: icmp_seq=5 ttl=64 time=0.093 ms
+64 bytes from 172.17.0.2: icmp_seq=6 ttl=64 time=0.095 ms
+^C--- db ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.092/0.100/0.111/0.000 ms
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>用 ping 来测试db容器，它会解析成 172.17.0.2。</p> <p>当然，你还可以ping db容器的ID或者内部IP, 结果是一样的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>root@1cbc9aeba2a8:/opt/webapp# ping -t 4 d992e3c761e0
+ping: unsupported packet type: 4
+root@1cbc9aeba2a8:/opt/webapp# ping d992e3c761e0
+PING db (172.17.0.2): 56 data bytes
+64 bytes from 172.17.0.2: icmp_seq=0 ttl=64 time=0.089 ms
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.093 ms
+^C--- db ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.089/0.091/0.093/0.000 ms
+root@1cbc9aeba2a8:/opt/webapp# ping 172.17.0.2
+PING 172.17.0.2 (172.17.0.2): 56 data bytes
+64 bytes from 172.17.0.2: icmp_seq=0 ttl=64 time=0.094 ms
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.103 ms
+^C--- 172.17.0.2 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.094/0.099/0.103/0.000 ms
+root@1cbc9aeba2a8:/opt/webapp#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>用户可以链接多个父容器到子容器，比如可以链接多个 web 到 db 容器上。</p></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/wangchangyin/myBlog/edit/master/docs/03.技术/06.工具使用/10.docker/04.Docker基础_一个web应用实例.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <!----></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myBlog/pages/3c17ac/" class="prev">Docker基础 - 仓库，镜像，容器详解</a></span> <span class="next"><a href="/myBlog/pages/4cbf7b/">Dockerfile 指令详解</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myBlog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myBlog/pages/1adf94/"><div>阿里云增加虚拟内存</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/myBlog/pages/78011c/"><div>oracle锁表</div></a> <span>12-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/myBlog/pages/658e4c/"><div>模式二：URL重定向传播会话</div></a> <span>12-14</span></dt></dl> <dl><dd></dd> <dt><a href="/myBlog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:2452952178@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/wangchangyin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>Changyin Wang | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#282c34" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/myBlog/assets/js/app.6034fc33.js" defer></script><script src="/myBlog/assets/js/2.ecdec458.js" defer></script><script src="/myBlog/assets/js/98.75156849.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker基础 - 仓库，镜像，容器详解 | CY blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/myBlogimg/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script,[object Object]></script,[object Object]>
+    <meta name="description" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="keywords" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/myBlog/assets/css/0.styles.713dba05.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.6034fc33.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.ecdec458.js" as="script"><link rel="preload" href="/myBlog/assets/js/97.1db11d02.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.7b0bdbd0.js"><link rel="prefetch" href="/myBlog/assets/js/100.5416bab4.js"><link rel="prefetch" href="/myBlog/assets/js/101.322c2725.js"><link rel="prefetch" href="/myBlog/assets/js/102.6b37be73.js"><link rel="prefetch" href="/myBlog/assets/js/103.6a821d54.js"><link rel="prefetch" href="/myBlog/assets/js/104.553a15b2.js"><link rel="prefetch" href="/myBlog/assets/js/105.f50b9a58.js"><link rel="prefetch" href="/myBlog/assets/js/106.439dbb4c.js"><link rel="prefetch" href="/myBlog/assets/js/107.550a13d3.js"><link rel="prefetch" href="/myBlog/assets/js/108.4fc6267e.js"><link rel="prefetch" href="/myBlog/assets/js/109.b0edf676.js"><link rel="prefetch" href="/myBlog/assets/js/11.5afa7e04.js"><link rel="prefetch" href="/myBlog/assets/js/110.e3256446.js"><link rel="prefetch" href="/myBlog/assets/js/111.f44da157.js"><link rel="prefetch" href="/myBlog/assets/js/112.cf2b7ccf.js"><link rel="prefetch" href="/myBlog/assets/js/113.ce23b62b.js"><link rel="prefetch" href="/myBlog/assets/js/114.a4efd687.js"><link rel="prefetch" href="/myBlog/assets/js/115.f37c3244.js"><link rel="prefetch" href="/myBlog/assets/js/116.a466bcbc.js"><link rel="prefetch" href="/myBlog/assets/js/117.f3ed6df6.js"><link rel="prefetch" href="/myBlog/assets/js/118.4019db0d.js"><link rel="prefetch" href="/myBlog/assets/js/119.2050eed3.js"><link rel="prefetch" href="/myBlog/assets/js/12.208e8480.js"><link rel="prefetch" href="/myBlog/assets/js/120.ce1004d6.js"><link rel="prefetch" href="/myBlog/assets/js/121.056aa58e.js"><link rel="prefetch" href="/myBlog/assets/js/122.ef174806.js"><link rel="prefetch" href="/myBlog/assets/js/123.af09e00a.js"><link rel="prefetch" href="/myBlog/assets/js/124.ff9f9b8b.js"><link rel="prefetch" href="/myBlog/assets/js/125.e426eee1.js"><link rel="prefetch" href="/myBlog/assets/js/126.0f67baf6.js"><link rel="prefetch" href="/myBlog/assets/js/127.d67b38ff.js"><link rel="prefetch" href="/myBlog/assets/js/128.44180ed5.js"><link rel="prefetch" href="/myBlog/assets/js/129.04983d17.js"><link rel="prefetch" href="/myBlog/assets/js/13.091a9ce4.js"><link rel="prefetch" href="/myBlog/assets/js/130.7521f0a4.js"><link rel="prefetch" href="/myBlog/assets/js/131.a1a68795.js"><link rel="prefetch" href="/myBlog/assets/js/132.07b70dd7.js"><link rel="prefetch" href="/myBlog/assets/js/133.cb6080fb.js"><link rel="prefetch" href="/myBlog/assets/js/134.d06e708e.js"><link rel="prefetch" href="/myBlog/assets/js/135.601c5b41.js"><link rel="prefetch" href="/myBlog/assets/js/136.4fb4f7cb.js"><link rel="prefetch" href="/myBlog/assets/js/137.5dfd3b84.js"><link rel="prefetch" href="/myBlog/assets/js/138.5fa36b65.js"><link rel="prefetch" href="/myBlog/assets/js/139.7d480183.js"><link rel="prefetch" href="/myBlog/assets/js/14.7151b9d7.js"><link rel="prefetch" href="/myBlog/assets/js/140.7404d5f7.js"><link rel="prefetch" href="/myBlog/assets/js/141.d6640d22.js"><link rel="prefetch" href="/myBlog/assets/js/15.bb6acdb2.js"><link rel="prefetch" href="/myBlog/assets/js/16.6067bc94.js"><link rel="prefetch" href="/myBlog/assets/js/17.2ee3b538.js"><link rel="prefetch" href="/myBlog/assets/js/18.3f280d96.js"><link rel="prefetch" href="/myBlog/assets/js/19.0c0231bb.js"><link rel="prefetch" href="/myBlog/assets/js/20.03b49756.js"><link rel="prefetch" href="/myBlog/assets/js/21.a144ec70.js"><link rel="prefetch" href="/myBlog/assets/js/22.be5e0407.js"><link rel="prefetch" href="/myBlog/assets/js/23.4198eb77.js"><link rel="prefetch" href="/myBlog/assets/js/24.5e54e47d.js"><link rel="prefetch" href="/myBlog/assets/js/25.0c7199fe.js"><link rel="prefetch" href="/myBlog/assets/js/26.7a5291cd.js"><link rel="prefetch" href="/myBlog/assets/js/27.b83b7f1a.js"><link rel="prefetch" href="/myBlog/assets/js/28.5477d887.js"><link rel="prefetch" href="/myBlog/assets/js/29.6ec32ac6.js"><link rel="prefetch" href="/myBlog/assets/js/3.3c4324a9.js"><link rel="prefetch" href="/myBlog/assets/js/30.a9eb9b15.js"><link rel="prefetch" href="/myBlog/assets/js/31.a6496a14.js"><link rel="prefetch" href="/myBlog/assets/js/32.b5379dbf.js"><link rel="prefetch" href="/myBlog/assets/js/33.78a535a0.js"><link rel="prefetch" href="/myBlog/assets/js/34.e6d4ad66.js"><link rel="prefetch" href="/myBlog/assets/js/35.ff8631ac.js"><link rel="prefetch" href="/myBlog/assets/js/36.db442c21.js"><link rel="prefetch" href="/myBlog/assets/js/37.c1ba9523.js"><link rel="prefetch" href="/myBlog/assets/js/38.6768b09a.js"><link rel="prefetch" href="/myBlog/assets/js/39.c9f1fd72.js"><link rel="prefetch" href="/myBlog/assets/js/4.b0209c65.js"><link rel="prefetch" href="/myBlog/assets/js/40.35777943.js"><link rel="prefetch" href="/myBlog/assets/js/41.43e2f1d1.js"><link rel="prefetch" href="/myBlog/assets/js/42.9597c193.js"><link rel="prefetch" href="/myBlog/assets/js/43.ef6af607.js"><link rel="prefetch" href="/myBlog/assets/js/44.db0b54b7.js"><link rel="prefetch" href="/myBlog/assets/js/45.12cb4bef.js"><link rel="prefetch" href="/myBlog/assets/js/46.893e1c56.js"><link rel="prefetch" href="/myBlog/assets/js/47.52493713.js"><link rel="prefetch" href="/myBlog/assets/js/48.158af2b8.js"><link rel="prefetch" href="/myBlog/assets/js/49.0075d84b.js"><link rel="prefetch" href="/myBlog/assets/js/5.27284ffb.js"><link rel="prefetch" href="/myBlog/assets/js/50.8c3be9f5.js"><link rel="prefetch" href="/myBlog/assets/js/51.2cee7923.js"><link rel="prefetch" href="/myBlog/assets/js/52.49f65b56.js"><link rel="prefetch" href="/myBlog/assets/js/53.64bfd10a.js"><link rel="prefetch" href="/myBlog/assets/js/54.d29bf96b.js"><link rel="prefetch" href="/myBlog/assets/js/55.185dab47.js"><link rel="prefetch" href="/myBlog/assets/js/56.c9fd3894.js"><link rel="prefetch" href="/myBlog/assets/js/57.c0a0dfed.js"><link rel="prefetch" href="/myBlog/assets/js/58.ad8ca2f6.js"><link rel="prefetch" href="/myBlog/assets/js/59.efeae7ff.js"><link rel="prefetch" href="/myBlog/assets/js/6.57ebcb36.js"><link rel="prefetch" href="/myBlog/assets/js/60.1c31cf41.js"><link rel="prefetch" href="/myBlog/assets/js/61.da830dc9.js"><link rel="prefetch" href="/myBlog/assets/js/62.68ba7528.js"><link rel="prefetch" href="/myBlog/assets/js/63.7ca1f04a.js"><link rel="prefetch" href="/myBlog/assets/js/64.43e071a5.js"><link rel="prefetch" href="/myBlog/assets/js/65.55233d69.js"><link rel="prefetch" href="/myBlog/assets/js/66.d1b2c741.js"><link rel="prefetch" href="/myBlog/assets/js/67.f594913f.js"><link rel="prefetch" href="/myBlog/assets/js/68.02f2b732.js"><link rel="prefetch" href="/myBlog/assets/js/69.467048f6.js"><link rel="prefetch" href="/myBlog/assets/js/7.8ff1cc95.js"><link rel="prefetch" href="/myBlog/assets/js/70.b1045043.js"><link rel="prefetch" href="/myBlog/assets/js/71.42286b79.js"><link rel="prefetch" href="/myBlog/assets/js/72.46581568.js"><link rel="prefetch" href="/myBlog/assets/js/73.74e29ee5.js"><link rel="prefetch" href="/myBlog/assets/js/74.a797456b.js"><link rel="prefetch" href="/myBlog/assets/js/75.38d01bd0.js"><link rel="prefetch" href="/myBlog/assets/js/76.ad6eefc3.js"><link rel="prefetch" href="/myBlog/assets/js/77.663c63dd.js"><link rel="prefetch" href="/myBlog/assets/js/78.5f1858b7.js"><link rel="prefetch" href="/myBlog/assets/js/79.327b53e7.js"><link rel="prefetch" href="/myBlog/assets/js/8.63f9549b.js"><link rel="prefetch" href="/myBlog/assets/js/80.60deb9cb.js"><link rel="prefetch" href="/myBlog/assets/js/81.e6af767f.js"><link rel="prefetch" href="/myBlog/assets/js/82.37c4c554.js"><link rel="prefetch" href="/myBlog/assets/js/83.32b7b26f.js"><link rel="prefetch" href="/myBlog/assets/js/84.5fb5e87e.js"><link rel="prefetch" href="/myBlog/assets/js/85.25a29421.js"><link rel="prefetch" href="/myBlog/assets/js/86.b00447c9.js"><link rel="prefetch" href="/myBlog/assets/js/87.6b326a02.js"><link rel="prefetch" href="/myBlog/assets/js/88.adced1fc.js"><link rel="prefetch" href="/myBlog/assets/js/89.a59352d1.js"><link rel="prefetch" href="/myBlog/assets/js/9.566067df.js"><link rel="prefetch" href="/myBlog/assets/js/90.105072b7.js"><link rel="prefetch" href="/myBlog/assets/js/91.c1fd6382.js"><link rel="prefetch" href="/myBlog/assets/js/92.294df929.js"><link rel="prefetch" href="/myBlog/assets/js/93.85c3ce26.js"><link rel="prefetch" href="/myBlog/assets/js/94.9ef2cb4c.js"><link rel="prefetch" href="/myBlog/assets/js/95.521183de.js"><link rel="prefetch" href="/myBlog/assets/js/96.ba7fcc56.js"><link rel="prefetch" href="/myBlog/assets/js/98.75156849.js"><link rel="prefetch" href="/myBlog/assets/js/99.ce5f296b.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.713dba05.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><img src="/myBlogimg/EB-logo.png" alt="CY blog" class="logo"> <span class="site-name can-hide">CY blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/119-working.png"> <div class="blogger-info"><h3>Changyin Wang</h3> <span>后端界的学习者</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具使用</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/e931bb/" class="sidebar-link">Git</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/myBlog/pages/fa218a/" class="sidebar-link">Idea的使用</a></li><li><a href="/myBlog/pages/1632a8/" class="sidebar-link">ES的使用</a></li><li><a href="/myBlog/pages/e09ac3/" class="sidebar-link">Typora的使用</a></li><li><a href="/myBlog/pages/c7e33c/" class="sidebar-link">PLSQL的使用</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/96abfe/" class="sidebar-link">Docker - Overview</a></li><li><a href="/myBlog/pages/1163f9/" class="sidebar-link">虚拟化技术</a></li><li><a href="/myBlog/pages/910866/" class="sidebar-link">Docker基础 - 入门基础和Helloworld</a></li><li><a href="/myBlog/pages/3c17ac/" aria-current="page" class="active sidebar-link">Docker基础 - 仓库，镜像，容器详解</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#仓库-镜像-容器的关系" class="sidebar-link">仓库，镜像，容器的关系</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#docker-镜像" class="sidebar-link">Docker 镜像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#镜像列表" class="sidebar-link">镜像列表</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#查找镜像" class="sidebar-link">查找镜像</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#拉取镜像" class="sidebar-link">拉取镜像</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#删除镜像" class="sidebar-link">删除镜像</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#更新镜像" class="sidebar-link">更新镜像</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#生成镜像" class="sidebar-link">生成镜像</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#镜像标签" class="sidebar-link">镜像标签</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#镜像导出和导入" class="sidebar-link">镜像导出和导入</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#docker-容器" class="sidebar-link">Docker 容器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器启动" class="sidebar-link">容器启动</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器查看" class="sidebar-link">容器查看</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器再启动" class="sidebar-link">容器再启动</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器停止和重启" class="sidebar-link">容器停止和重启</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#后台模式与进入" class="sidebar-link">后台模式与进入</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器导出和导入" class="sidebar-link">容器导出和导入</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#强制停止容器" class="sidebar-link">强制停止容器</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#清理停止的容器" class="sidebar-link">清理停止的容器</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器别名及操作" class="sidebar-link">容器别名及操作</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#容器错误日志" class="sidebar-link">容器错误日志</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#docker-仓库" class="sidebar-link">Docker 仓库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/3c17ac/#公有仓库" class="sidebar-link">公有仓库</a></li></ul></li></ul></li><li><a href="/myBlog/pages/fac510/" class="sidebar-link">Docker基础 - 一个web应用实例</a></li><li><a href="/myBlog/pages/4cbf7b/" class="sidebar-link">Dockerfile 指令详解</a></li><li><a href="/myBlog/pages/4cf767/" class="sidebar-link">构建镜像</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>环境搭建</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>谷歌插件</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/myBlog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/myBlog/technology" title="技术-目录页" data-v-1cd794fe>技术</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#工具使用" title="技术#工具使用" data-v-1cd794fe>工具使用</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#docker" title="技术#docker" data-v-1cd794fe>docker</a></li></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/wangchangyin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>changyin.Wang</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-10-19</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Docker基础 - 仓库，镜像，容器详解
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="docker基础-仓库-镜像-容器详解"><a href="#docker基础-仓库-镜像-容器详解" class="header-anchor">#</a> Docker基础 - 仓库，镜像，容器详解</h1> <blockquote><p>本文将从仓库，镜像，容器三个方面讲解常用的docker命令和使用等，对于开发而言这块使用的非常频繁，需要重点掌握。</p></blockquote> <h2 id="仓库-镜像-容器的关系"><a href="#仓库-镜像-容器的关系" class="header-anchor">#</a> 仓库，镜像，容器的关系</h2> <blockquote><p>仓库，镜像，容器的关系（这是官网的图）</p></blockquote> <p><img src="https://gitee.com/wcy_dch/images/raw/master/img/docker-architecture.svg" alt="img"></p> <h2 id="docker-镜像"><a href="#docker-镜像" class="header-anchor">#</a> Docker 镜像</h2> <p>当运行容器时，使用的镜像如果在本地中不存在，docker 就会自动从 docker 镜像仓库中下载，默认是从 Docker Hub 公共镜像源下载。</p> <p>下面我们来学 1、管理和使用本地 Docker 主机镜像 2、创建镜像</p> <h3 id="镜像列表"><a href="#镜像列表" class="header-anchor">#</a> 镜像列表</h3> <p>我们可以使用 docker images 来列出本地主机上的镜像</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+hello-world         latest              fce289e99eb9        13 months ago       1.84kB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>著作权归https://pdai.tech所有。 链接：https://www.pdai.tech/md/devops/docker/docker-03-basic2.html</p> <p>各个选项说明:</p> <ul><li>REPOSITORY：表示镜像的仓库源</li> <li>TAG：镜像的标签, 同一仓库源可以有多个 TAG，代表这个仓库源的不同个版本</li> <li>IMAGE ID：镜像ID</li> <li>CREATED：镜像创建时间</li> <li>SIZE：镜像大小</li></ul> <h3 id="查找镜像"><a href="#查找镜像" class="header-anchor">#</a> 查找镜像</h3> <blockquote><p>以查找MySQL的镜像为例：</p></blockquote> <ul><li><strong>通过Docker Hub 进行查找</strong>, 比如https://hub.docker.com/search?q=mysql&amp;type=image</li></ul> <p><img src="https://gitee.com/wcy_dch/images/raw/master/img/20211019172817.png" alt="img"></p> <ul><li><strong>使用 docker search 命令来搜索镜像</strong></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@pdai ~]# docker search mysql
+NAME                              DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+mysql                             MySQL is a widely used, open-source relation…   9132                [OK]
+mariadb                           MariaDB is a community-developed fork of MyS…   3233                [OK]
+mysql/mysql-server                Optimized MySQL Server Docker images. Create…   676                                     [OK]
+centos/mysql-57-centos7           MySQL 5.7 SQL database server                   68
+mysql/mysql-cluster               Experimental MySQL Cluster Docker images. Cr…   62
+centurylink/mysql                 Image containing mysql. Optimized to be link…   61                                      [OK]
+deitch/mysql-backup               REPLACED! Please use http://hub.docker.com/r…   41                                      [OK]
+bitnami/mysql                     Bitnami MySQL Docker Image                      35                                      [OK]
+tutum/mysql                       Base docker image to run a MySQL database se…   34
+schickling/mysql-backup-s3        Backup MySQL to S3 (supports periodic backup…   29                                      [OK]
+prom/mysqld-exporter                                                              26                                      [OK]
+linuxserver/mysql                 A Mysql container, brought to you by LinuxSe…   24
+centos/mysql-56-centos7           MySQL 5.6 SQL database server                   19
+circleci/mysql                    MySQL is a widely used, open-source relation…   18
+mysql/mysql-router                MySQL Router provides transparent routing be…   14
+arey/mysql-client                 Run a MySQL client from a docker container      13                                      [OK]
+databack/mysql-backup             Back up mysql databases to... anywhere!         10
+openshift/mysql-55-centos7        DEPRECATED: A Centos7 based MySQL v5.5 image…   6
+fradelg/mysql-cron-backup         MySQL/MariaDB database backup using cron tas…   5                                       [OK]
+genschsa/mysql-employees          MySQL Employee Sample Database                  4                                       [OK]
+devilbox/mysql                    Retagged MySQL, MariaDB and PerconaDB offici…   2
+ansibleplaybookbundle/mysql-apb   An APB which deploys RHSCL MySQL                2                                       [OK]
+jelastic/mysql                    An image of the MySQL database server mainta…   1
+monasca/mysql-init                A minimal decoupled init container for mysql    0
+widdpim/mysql-client              Dockerized MySQL Client (5.7) including Curl…   0                                       [OK]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><ul><li>NAME: 镜像仓库源的名称</li> <li>DESCRIPTION: 镜像的描述</li> <li>OFFICIAL: 是否 docker 官方发布</li> <li>STARS: 类似 Github 里面的 star，表示点赞、喜欢的意思。</li> <li>AUTOMATED: 自动构建。</li></ul> <h3 id="拉取镜像"><a href="#拉取镜像" class="header-anchor">#</a> 拉取镜像</h3> <blockquote><p>现在拉取搜索出的MySQL</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker pull mysql
+Using default tag: latest
+latest: Pulling from library/mysql
+619014d83c02: Pull complete
+9ced578c3a5f: Pull complete
+731f6e13d8ea: Pull complete
+3c183de42679: Pull complete
+6de69b5c2f3c: Pull complete
+00f0a4086406: Pull complete
+84d93aea836d: Pull complete
+f18efbfd8d76: Pull complete
+012b302865d1: Pull complete
+fe16fd240f59: Pull complete
+ca3e793e545e: Pull complete
+51d0f2cb2610: Pull complete
+Digest: sha256:6d0741319b6a2ae22c384a97f4bbee411b01e75f6284af0cce339fee83d7e314
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest
+[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+hello-world         latest              fce289e99eb9        13 months ago       1.84kB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="删除镜像"><a href="#删除镜像" class="header-anchor">#</a> 删除镜像</h3> <blockquote><p>是时候删除那个无聊的hello-world镜像了</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker rmi hello-world
+Error response from daemon: conflict: unable to remove repository reference &quot;hello-world&quot; (must force) - container c91b90b18884 is using its referenced image fce289e99eb9
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>发现报错了，这时候主要看两点：要么就是container实例存在，要么存在镜像依赖；</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+1a51d2f023c9        ubuntu:latest       &quot;/bin/sh -c 'while t…&quot;   2 hours ago         Exited (137) 2 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest       &quot;/bin/bash&quot;              2 hours ago         Exited (0) 2 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest       &quot;/bin/bash&quot;              2 hours ago         Exited (0) 2 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest       &quot;/bin/echo 'Hello wo…&quot;   2 hours ago         Exited (0) 2 hours ago                         affectionate_knuth
+c91b90b18884        hello-world         &quot;/hello&quot;                 3 hours ago         Exited (0) 3 hours ago                         admiring_pare
+[root@pdai ~]# docker image inspect --format='{{.RepoTags}} {{.Id}} {{.Parent}}' $(docker image ls -q )
+[mysql:latest] sha256:791b6e40940cd550af522eb4ffe995226798204504fe495743445b900e417a51
+[ubuntu:latest] sha256:ccc6e87d482b79dd1645affd958479139486e47191dfe7a997c862d89cd8b4c0
+[hello-world:latest] sha256:fce289e99eb9bca977dae136fbe2a82b6b7d4c372474c9235adc1741675f587e
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>显然，我们只要删除container即可：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker rm c91b90b18884
+c91b90b18884
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+1a51d2f023c9        ubuntu:latest       &quot;/bin/sh -c 'while t…&quot;   2 hours ago         Exited (137) 2 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest       &quot;/bin/bash&quot;              2 hours ago         Exited (0) 2 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest       &quot;/bin/bash&quot;              2 hours ago         Exited (0) 2 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest       &quot;/bin/echo 'Hello wo…&quot;   2 hours ago         Exited (0) 2 hours ago                         affectionate_knuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>最后再来删除镜像吧</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker rmi hello-world
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:9572f7cdcee8591948c2963463447a53466950b3fc15a247fcad1917ca215a2f
+Deleted: sha256:fce289e99eb9bca977dae136fbe2a82b6b7d4c372474c9235adc1741675f587e
+Deleted: sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="更新镜像"><a href="#更新镜像" class="header-anchor">#</a> 更新镜像</h3> <blockquote><p>针对上述ubuntu的镜像，我们能否在里面安装一些软件，然后重新生成一个镜像呢？这就是更新重新commit出一个新的镜像。</p></blockquote> <p>我们先跑一个ubuntu容器实例，同时在里面进行<code>apt-get update</code>更新</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -it ubuntu:latest
+root@0a1556ca3c27:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:5 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [817 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [27.5 kB]
+Get:11 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [7064 B]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [818 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [11.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1345 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [41.2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [1104 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4252 B]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [2496 B]
+Fetched 17.6 MB in 10s (1759 kB/s)
+Reading package lists... Done
+root@0a1556ca3c27:/# exit
+exit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>此时 ID 为 0a1556ca3c27 的容器，是按我们的需求更改的容器。我们可以通过命令 docker commit 来提交容器副本：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker commit -m=&quot;update test&quot; -a=&quot;pdai&quot; 0a1556ca3c27  pdai/ubuntu:v1.0.1
+sha256:b51e9f5f98cdb5b95c34181148ed7029f0150618aa8cd0e916b10b6aea1bd4c9
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>可以看到已经生成成功, 且镜像的大小不一样了：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu         v1.0.1              b51e9f5f98cd        5 seconds ago       92.1MB
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>著作权归https://pdai.tech所有。 链接：https://www.pdai.tech/md/devops/docker/docker-03-basic2.html</p> <h3 id="生成镜像"><a href="#生成镜像" class="header-anchor">#</a> 生成镜像</h3> <blockquote><p>那如果是生成一个全新的镜像呢？我们使用命令 docker build ，通过创建一个 Dockerfile 文件，其中包含一组指令来告诉 Docker 如何构建我们的镜像。</p></blockquote> <p>这里特意指定的Base镜像为上一步修改生成的<code>pdai/ubuntu:v1.0.1</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>FROM    pdai/ubuntu:v1.0.1
+MAINTAINER      pdai &quot;www.pdai.tech&quot;
+
+RUN     /bin/echo 'root:123456' |chpasswd
+RUN     useradd pdai
+RUN     /bin/echo 'pdai:123456' |chpasswd
+RUN     /bin/echo -e &quot;LANG=\&quot;en_US.UTF-8\&quot;&quot; &gt;/etc/default/local
+EXPOSE  22
+EXPOSE  80
+CMD     /usr/sbin/sshd -D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>稍微解释下</strong>：这一部分在开发中会用到比较多，所以单独一个章节详解：<a href="">Docker基础 - dockerfile详解</a></p> <ul><li>每一个指令都会在镜像上创建一个新的层，每一个指令的前缀都必须是大写的。</li> <li>第一条FROM，指定使用哪个镜像源</li> <li>RUN 指令告诉docker 在镜像内执行命令，安装了什么。。。</li> <li>我们使用 Dockerfile 文件，通过 docker build 命令来构建一个镜像。</li></ul> <p>接下来生成镜像：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai docker-test]# docker build -t pdai/ubuntu:v2.0.1 .
+Sending build context to Docker daemon  2.048kB
+Step 1/9 : FROM    pdai/ubuntu:v1.0.1
+ ---&gt; b51e9f5f98cd
+Step 2/9 : MAINTAINER      pdai &quot;www.pdai.tech&quot;
+ ---&gt; Running in af026ee229ea
+Removing intermediate container af026ee229ea
+ ---&gt; 0e961cb557c9
+Step 3/9 : RUN     /bin/echo 'root:123456' |chpasswd
+ ---&gt; Running in 96bd9c40c55e
+Removing intermediate container 96bd9c40c55e
+ ---&gt; 9e8549720043
+Step 4/9 : RUN     useradd pdai
+ ---&gt; Running in 0117278f243c
+Removing intermediate container 0117278f243c
+ ---&gt; 87c478df56da
+Step 5/9 : RUN     /bin/echo 'pdai:123456' |chpasswd
+ ---&gt; Running in e0381eabe71a
+Removing intermediate container e0381eabe71a
+ ---&gt; 84fd07f978ae
+Step 6/9 : RUN     /bin/echo -e &quot;LANG=\&quot;en_US.UTF-8\&quot;&quot; &gt;/etc/default/local
+ ---&gt; Running in 8d0052d9921f
+Removing intermediate container 8d0052d9921f
+ ---&gt; 3ed0b248224c
+Step 7/9 : EXPOSE  22
+ ---&gt; Running in 4b5d540567cd
+Removing intermediate container 4b5d540567cd
+ ---&gt; c0a72ad140dd
+Step 8/9 : EXPOSE  80
+ ---&gt; Running in c9620707d038
+Removing intermediate container c9620707d038
+ ---&gt; df42b714ecc1
+Step 9/9 : CMD     /usr/sbin/sshd -D
+ ---&gt; Running in e178826b43fe
+Removing intermediate container e178826b43fe
+ ---&gt; a733d5a264b5
+Successfully built a733d5a264b5
+Successfully tagged pdai/ubuntu:v2.0.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>参数说明：</p> <ul><li><code>-t</code> ：指定要创建的目标镜像名</li> <li><code>.</code> ：Dockerfile 文件所在目录，可以指定Dockerfile 的绝对路径</li></ul> <p>使用docker images 查看创建的镜像已经在列表中存在,镜像ID为a733d5a264b5</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai docker-test]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu         v2.0.1              a733d5a264b5        5 minutes ago       92.5MB
+pdai/ubuntu         v1.0.1              b51e9f5f98cd        15 hours ago        92.1MB
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>我们可以使用新的镜像来创建容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai docker-test]# docker run -it pdai/ubuntu:v2.0.1 /bin/bash
+root@f5332ebce695:/# id pdai
+uid=1000(pdai) gid=1000(pdai) groups=1000(pdai)
+root@f5332ebce695:/# exit
+exit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>从上面看到新镜像已经包含我们创建的用户 pdai。</p> <h3 id="镜像标签"><a href="#镜像标签" class="header-anchor">#</a> 镜像标签</h3> <blockquote><p>设置镜像的Tag，类似于Git中tag？我们可以使用 docker tag 命令，为镜像添加一个新的标签</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker tag a733d5a264b5 pdai/ubuntu:v3.0.1
+[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu         v2.0.1              a733d5a264b5        9 minutes ago       92.5MB
+pdai/ubuntu         v3.0.1              a733d5a264b5        9 minutes ago       92.5MB
+pdai/ubuntu         v1.0.1              b51e9f5f98cd        15 hours ago        92.1MB
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>注意：</p> <ul><li>docker tag 镜像ID，这里是 a733d5a264b5 ,用户名称、镜像源名(repository name)和新的标签名(tag)。</li> <li>使用 docker images 命令可以看到，ID为a733d5a264b5的镜像多一个v3.0.1标签。</li></ul> <h3 id="镜像导出和导入"><a href="#镜像导出和导入" class="header-anchor">#</a> 镜像导出和导入</h3> <blockquote><p>区别于容器的导出和导入</p></blockquote> <ul><li>镜像导出</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker images
+dockREPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu                  v2.0.2              57544a04cd1a        3 months ago        91.5MB
+[root@pdai ~]# docker save &gt; pdai-ubuntu-v2.0.2.tar 57544a04cd1a
+[root@pdai ~]# ll | grep pdai-u
+-rw-rw-r-- 1 root root 93898240 Jun  4 09:06 pdai-ubuntu-v2.0.2.tar
+[root@pdai ~]#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>镜像导入</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker load &lt; pdai-ubuntu-v2.0.2.tar
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>其中<code>-i</code>或者<code>&lt;</code>表示从文件输入。会成功导入镜像及相关元数据，包括tag信息</p> <blockquote><p>可以依据具体使用场景来选择命令</p></blockquote> <ul><li>若是只想备份images，使用save、load即可</li> <li>若是在启动容器后，容器内容有变化，需要备份，则使用export、import</li></ul> <h2 id="docker-容器"><a href="#docker-容器" class="header-anchor">#</a> Docker 容器</h2> <blockquote><p>上面已经展示了部分容器的使用命令了，这里会在此基础上进行拓展</p></blockquote> <h3 id="容器启动"><a href="#容器启动" class="header-anchor">#</a> 容器启动</h3> <p>首先我们是可以这样启动容器的：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai docker-test]# docker run -it pdai/ubuntu:v2.0.1 /bin/bash
+root@f5332ebce695:/# id pdai
+uid=1000(pdai) gid=1000(pdai) groups=1000(pdai)
+root@f5332ebce695:/# exit
+exit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li><code>-it</code> 可以连写的，表示 <code>-i -t</code></li> <li><code>-t</code>: 在新容器内指定一个伪终端或终端。</li> <li><code>-i</code>: 允许你对容器内的标准输入 (STDIN) 进行交互</li></ul> <h3 id="容器查看"><a href="#容器查看" class="header-anchor">#</a> 容器查看</h3> <ul><li><code>-a</code> 表示 all，所有的</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS                      PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;              20 minutes ago      Exited (0) 20 minutes ago                       jolly_kepler
+0a1556ca3c27        ubuntu:latest        &quot;/bin/bash&quot;              16 hours ago        Exited (0) 16 hours ago                         stoic_hodgkin
+1a51d2f023c9        ubuntu:latest        &quot;/bin/sh -c 'while t…&quot;   18 hours ago        Exited (137) 18 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest        &quot;/bin/bash&quot;              18 hours ago        Exited (0) 18 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest        &quot;/bin/bash&quot;              18 hours ago        Exited (0) 18 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest        &quot;/bin/echo 'Hello wo…&quot;   18 hours ago        Exited (0) 18 hours ago                         affectionate_knuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="容器再启动"><a href="#容器再启动" class="header-anchor">#</a> 容器再启动</h3> <blockquote><p>我们看到，刚才<code>pdai/ubuntu:v2.0.1</code>的实例<code>f5332ebce695</code>已经停止了<code>Exited (0) 20 minutes ago</code>，我们能否再启这个实例？</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker start f5332ebce695
+f5332ebce695
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;         32 minutes ago      Up 4 seconds        22/tcp, 80/tcp      jolly_kepler
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="容器停止和重启"><a href="#容器停止和重启" class="header-anchor">#</a> 容器停止和重启</h3> <blockquote><p>我们将上述容器停止，再重启</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker stop f5332ebce695
+f5332ebce695
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@pdai ~]# docker restart f5332ebce695
+f5332ebce695
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS                      PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;              33 minutes ago      Up 2 seconds                22/tcp, 80/tcp      jolly_kepler
+0a1556ca3c27        ubuntu:latest        &quot;/bin/bash&quot;              16 hours ago        Exited (0) 16 hours ago                         stoic_hodgkin
+1a51d2f023c9        ubuntu:latest        &quot;/bin/sh -c 'while t…&quot;   18 hours ago        Exited (137) 18 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest        &quot;/bin/bash&quot;              18 hours ago        Exited (0) 18 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest        &quot;/bin/bash&quot;              18 hours ago        Exited (0) 18 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest        &quot;/bin/echo 'Hello wo…&quot;   19 hours ago        Exited (0) 19 hours ago                         affectionate_knuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="后台模式与进入"><a href="#后台模式与进入" class="header-anchor">#</a> 后台模式与进入</h3> <blockquote><p>在使用 -d 参数时，容器启动后会进入后台, 如何进入容器呢？</p></blockquote> <ul><li>第一种：<code>docker attach</code></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;         38 minutes ago      Up 2 seconds        22/tcp, 80/tcp      jolly_kepler
+[root@pdai ~]# docker attach f5332ebce695
+root@f5332ebce695:/# echo 'pdai'
+pdai
+root@f5332ebce695:/# exit
+exit
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>看到没，使用<code>docker attach</code>进入后，exit便容器也停止了。</p> <ul><li>第二种：<code>docker exec</code></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker exec -it f5332ebce695 /bin/bash
+Error response from daemon: Container f5332ebce69520fba353f035ccddd4bd42055fbd1e595f916ba7233e26476464 is not running
+[root@pdai ~]# docker restart f5332ebce695
+f5332ebce695
+[root@pdai ~]# docker exec -it f5332ebce695 /bin/bash
+root@f5332ebce695:/# exit
+exit
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;         42 minutes ago      Up 8 seconds        22/tcp, 80/tcp      jolly_kepler
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>注意：</p> <ul><li>我特意在容器停止状态下执行了<code>docker exec</code>，是让你看到<code>docker exec</code>是在容器启动状态下用的，且注意下错误信息；</li> <li>推荐大家使用 <code>docker exec</code> 命令，因为此退出容器终端，不会导致容器的停止。</li></ul> <h3 id="容器导出和导入"><a href="#容器导出和导入" class="header-anchor">#</a> 容器导出和导入</h3> <blockquote><p>在生产环境中，很多时候是无法连接外网的，所以有时候需要用到容器的导入和导出。</p></blockquote> <ul><li>容器的导出</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;         42 minutes ago      Up 8 seconds        22/tcp, 80/tcp      jolly_kepler
+[root@pdai ~]# docker export f5332ebce695 &gt; ubuntu-pdai-v2.tar
+[root@pdai ~]# ll
+-rw-rw-r-- 1 root root 93891072 Feb 18 09:42 ubuntu-pdai-v2.tar
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>同时你可以发现，导出容器的时候，容器无需关闭。</p> <ul><li>容器导入</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker import ubuntu-pdai-v2.tar pdai/ubuntu:v2.0.2
+sha256:57544a04cd1ad330371ca9142184ff031dc2b6df70df177994477c08fe547b25
+[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu         v2.0.2              57544a04cd1a        7 seconds ago       91.5MB
+pdai/ubuntu         v2.0.1              a733d5a264b5        About an hour ago   92.5MB
+pdai/ubuntu         v3.0.1              a733d5a264b5        About an hour ago   92.5MB
+pdai/ubuntu         v1.0.1              b51e9f5f98cd        16 hours ago        92.1MB
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>注意看，SIZE可能是不一样的。</p> <h3 id="强制停止容器"><a href="#强制停止容器" class="header-anchor">#</a> 强制停止容器</h3> <blockquote><p>能否强制删除一个正在运行的容器呢？</p></blockquote> <p>显然，加上<code>-f</code>之后是允许的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+f5332ebce695        pdai/ubuntu:v2.0.1   &quot;/bin/bash&quot;         About an hour ago   Up 24 minutes       22/tcp, 80/tcp      jolly_kepler
+[root@pdai ~]# docker rm -f f5332ebce695
+f5332ebce695
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+0a1556ca3c27        ubuntu:latest       &quot;/bin/bash&quot;              17 hours ago        Exited (0) 17 hours ago                         stoic_hodgkin
+1a51d2f023c9        ubuntu:latest       &quot;/bin/sh -c 'while t…&quot;   19 hours ago        Exited (137) 19 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest       &quot;/bin/bash&quot;              19 hours ago        Exited (0) 19 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest       &quot;/bin/bash&quot;              19 hours ago        Exited (0) 19 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest       &quot;/bin/echo 'Hello wo…&quot;   19 hours ago        Exited (0) 19 hours ago                         affectionate_knuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="清理停止的容器"><a href="#清理停止的容器" class="header-anchor">#</a> 清理停止的容器</h3> <blockquote><p>我们看到上面还有好几个容器出于停止状态，能不能删除它们呢？</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+0a1556ca3c27        ubuntu:latest       &quot;/bin/bash&quot;              17 hours ago        Exited (0) 17 hours ago                         stoic_hodgkin
+1a51d2f023c9        ubuntu:latest       &quot;/bin/sh -c 'while t…&quot;   19 hours ago        Exited (137) 19 hours ago                       gifted_brown
+414bf796cbe4        ubuntu:latest       &quot;/bin/bash&quot;              19 hours ago        Exited (0) 19 hours ago                         pedantic_galileo
+512061ebfa4c        ubuntu:latest       &quot;/bin/bash&quot;              19 hours ago        Exited (0) 19 hours ago                         wizardly_brown
+aa5e9ae5e5db        ubuntu:latest       &quot;/bin/echo 'Hello wo…&quot;   19 hours ago        Exited (0) 19 hours ago                         affectionate_knuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>清理停止的容器: <code>docker container prune</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+0a1556ca3c275cc692ecd6d19caed4c5be42578f81b3dfea52b24208790d160a
+1a51d2f023c947f2be2d9a78eb863e854ca302c89bf354654c409e23e7dd25d7
+414bf796cbe403e01b5414f2b6232c6a037af78deee4581f4935c94859b5164e
+512061ebfa4c340eb03833e54d77052e33fb62cd42ab7dd7e09bf0b02a761552
+aa5e9ae5e5db1760bdb8c7ddb92e4293cd7b4736be7e97314f3ef44a71bf8930
+
+Total reclaimed space: 27.93MB
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="容器别名及操作"><a href="#容器别名及操作" class="header-anchor">#</a> 容器别名及操作</h3> <blockquote><p>我们上述对容器的操作都是针对容器ID，这个ID是随机的，能否添加一个name对我们自己设置的name操作呢？</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker run -itd --name pdai-ubuntu-202 pdai/ubuntu:v2.0.2 /bin/bash
+11de9755a08402d963d263a559a7daf48f4a2188398f258641240b5eb50fbc89
+[root@pdai ~]# docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+11de9755a084        pdai/ubuntu:v2.0.2   &quot;/bin/bash&quot;         5 seconds ago       Up 4 seconds                            pdai-ubuntu-202
+[root@pdai ~]# docker stop pdai-ubuntu-202
+pdai-ubuntu-202
+[root@pdai ~]# docker ps -a
+CONTAINER ID        IMAGE                COMMAND              CREATED              STATUS                     PORTS               NAMES
+11de9755a084        pdai/ubuntu:v2.0.2   &quot;/bin/bash&quot;          26 seconds ago       Exited (0) 4 seconds ago                       pdai-ubuntu-202   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="容器错误日志"><a href="#容器错误日志" class="header-anchor">#</a> 容器错误日志</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>例：实时查看docker容器名为user-uat的最后10行日志
+docker logs -f -t --tail 10 user-uat
+
+例：查看指定时间后的日志，只显示最后100行：
+docker logs -f -t --since=&quot;2018-02-08&quot; --tail=100 user-uat
+
+例：查看最近30分钟的日志:
+docker logs --since 30m user-uat
+
+例：查看某时间之后的日志：
+docker logs -t --since=&quot;2018-02-08T13:23:37&quot; user-uat
+
+例：查看某时间段日志：
+docker logs -t --since=&quot;2018-02-08T13:23:37&quot; --until &quot;2018-02-09T12:23:37&quot; user-uat
+
+例：将错误日志写入文件：
+docker logs -f -t --since=&quot;2018-02-18&quot; user-uat | grep error &gt;&gt; logs_error.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="docker-仓库"><a href="#docker-仓库" class="header-anchor">#</a> Docker 仓库</h2> <p>仓库（Repository）是集中存放镜像的地方，它和我们的Maven仓库是一样的。以下介绍一下 Docker Hub。当然不止 docker hub，只是远程的服务商不一样，操作都是一样的。</p> <ul><li>可以采用共有的仓库，也可以自己搭建Docker Registry;</li> <li>如果之前有自己的Artifactory或者Nexus，它们同样可以支持Docker Registry功能;</li> <li>带界面的也可以使用Harbor等;</li></ul> <h3 id="公有仓库"><a href="#公有仓库" class="header-anchor">#</a> 公有仓库</h3> <blockquote><p>我们以官方的docker hub为例，进行注册和理解。很多人会说官方的速度极慢或者私有仓库上传慢，不试试你怎么知道呢？</p></blockquote> <ul><li><strong>注册官方docker hub</strong>，最新的名字叫docker cloud</li></ul> <p><a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">https://hub.docker.com/  (opens new window)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>我注册的用户名是 realpdai</p> <ul><li><strong>本地登录</strong>刚才注册的账户</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: realpdai
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ul><li><strong>镜像准备</strong></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker tag pdai/ubuntu:v2.0.2 realpdai/ubuntu:v2.0.2
+[root@pdai ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pdai/ubuntu         v2.0.2              57544a04cd1a        4 hours ago         91.5MB
+realpdai/ubuntu     v2.0.2              57544a04cd1a        4 hours ago         91.5MB
+pdai/ubuntu         v2.0.1              a733d5a264b5        5 hours ago         92.5MB
+pdai/ubuntu         v3.0.1              a733d5a264b5        5 hours ago         92.5MB
+pdai/ubuntu         v1.0.1              b51e9f5f98cd        21 hours ago        92.1MB
+mysql               latest              791b6e40940c        2 weeks ago         465MB
+ubuntu              latest              ccc6e87d482b        4 weeks ago         64.2MB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>推送至Docker Hub服务器</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@pdai ~]# docker push realpdai/ubuntu:v2.0.2
+The push refers to repository [docker.io/realpdai/ubuntu]
+9a2c43cbe02a: Pushed
+v2.0.2: digest: sha256:4afd82dd05d0b4a340ae4f4129dcbd63136b5ec7ff92edf313108a41fb0947e0 size: 528
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>从推送的速度来看，大概是1.5MB/s。</p> <ul><li><p>服务器端查看</p> <p><img src="https://gitee.com/wcy_dch/images/raw/master/img/20211019173529.png" alt="img"></p></li></ul></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/wangchangyin/myBlog/edit/master/docs/03.技术/06.工具使用/10.docker/03.Docker基础_仓库镜像容器详解.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <!----></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myBlog/pages/910866/" class="prev">Docker基础 - 入门基础和Helloworld</a></span> <span class="next"><a href="/myBlog/pages/fac510/">Docker基础 - 一个web应用实例</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myBlog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myBlog/pages/1adf94/"><div>阿里云增加虚拟内存</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/myBlog/pages/78011c/"><div>oracle锁表</div></a> <span>12-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/myBlog/pages/658e4c/"><div>模式二：URL重定向传播会话</div></a> <span>12-14</span></dt></dl> <dl><dd></dd> <dt><a href="/myBlog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:2452952178@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/wangchangyin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>Changyin Wang | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#282c34" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/myBlog/assets/js/app.6034fc33.js" defer></script><script src="/myBlog/assets/js/2.ecdec458.js" defer></script><script src="/myBlog/assets/js/97.1db11d02.js" defer></script>
+  </body>
+</html>

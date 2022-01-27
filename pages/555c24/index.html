@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress搭建个人博客 | CY blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/myBlogimg/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script,[object Object]></script,[object Object]>
+    <meta name="description" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="keywords" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/myBlog/assets/css/0.styles.713dba05.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.6034fc33.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.ecdec458.js" as="script"><link rel="preload" href="/myBlog/assets/js/108.4fc6267e.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.7b0bdbd0.js"><link rel="prefetch" href="/myBlog/assets/js/100.5416bab4.js"><link rel="prefetch" href="/myBlog/assets/js/101.322c2725.js"><link rel="prefetch" href="/myBlog/assets/js/102.6b37be73.js"><link rel="prefetch" href="/myBlog/assets/js/103.6a821d54.js"><link rel="prefetch" href="/myBlog/assets/js/104.553a15b2.js"><link rel="prefetch" href="/myBlog/assets/js/105.f50b9a58.js"><link rel="prefetch" href="/myBlog/assets/js/106.439dbb4c.js"><link rel="prefetch" href="/myBlog/assets/js/107.550a13d3.js"><link rel="prefetch" href="/myBlog/assets/js/109.b0edf676.js"><link rel="prefetch" href="/myBlog/assets/js/11.5afa7e04.js"><link rel="prefetch" href="/myBlog/assets/js/110.e3256446.js"><link rel="prefetch" href="/myBlog/assets/js/111.f44da157.js"><link rel="prefetch" href="/myBlog/assets/js/112.cf2b7ccf.js"><link rel="prefetch" href="/myBlog/assets/js/113.ce23b62b.js"><link rel="prefetch" href="/myBlog/assets/js/114.a4efd687.js"><link rel="prefetch" href="/myBlog/assets/js/115.f37c3244.js"><link rel="prefetch" href="/myBlog/assets/js/116.a466bcbc.js"><link rel="prefetch" href="/myBlog/assets/js/117.f3ed6df6.js"><link rel="prefetch" href="/myBlog/assets/js/118.4019db0d.js"><link rel="prefetch" href="/myBlog/assets/js/119.2050eed3.js"><link rel="prefetch" href="/myBlog/assets/js/12.208e8480.js"><link rel="prefetch" href="/myBlog/assets/js/120.ce1004d6.js"><link rel="prefetch" href="/myBlog/assets/js/121.056aa58e.js"><link rel="prefetch" href="/myBlog/assets/js/122.ef174806.js"><link rel="prefetch" href="/myBlog/assets/js/123.af09e00a.js"><link rel="prefetch" href="/myBlog/assets/js/124.ff9f9b8b.js"><link rel="prefetch" href="/myBlog/assets/js/125.e426eee1.js"><link rel="prefetch" href="/myBlog/assets/js/126.0f67baf6.js"><link rel="prefetch" href="/myBlog/assets/js/127.d67b38ff.js"><link rel="prefetch" href="/myBlog/assets/js/128.44180ed5.js"><link rel="prefetch" href="/myBlog/assets/js/129.04983d17.js"><link rel="prefetch" href="/myBlog/assets/js/13.091a9ce4.js"><link rel="prefetch" href="/myBlog/assets/js/130.7521f0a4.js"><link rel="prefetch" href="/myBlog/assets/js/131.a1a68795.js"><link rel="prefetch" href="/myBlog/assets/js/132.07b70dd7.js"><link rel="prefetch" href="/myBlog/assets/js/133.cb6080fb.js"><link rel="prefetch" href="/myBlog/assets/js/134.d06e708e.js"><link rel="prefetch" href="/myBlog/assets/js/135.601c5b41.js"><link rel="prefetch" href="/myBlog/assets/js/136.4fb4f7cb.js"><link rel="prefetch" href="/myBlog/assets/js/137.5dfd3b84.js"><link rel="prefetch" href="/myBlog/assets/js/138.5fa36b65.js"><link rel="prefetch" href="/myBlog/assets/js/139.7d480183.js"><link rel="prefetch" href="/myBlog/assets/js/14.7151b9d7.js"><link rel="prefetch" href="/myBlog/assets/js/140.7404d5f7.js"><link rel="prefetch" href="/myBlog/assets/js/141.d6640d22.js"><link rel="prefetch" href="/myBlog/assets/js/15.bb6acdb2.js"><link rel="prefetch" href="/myBlog/assets/js/16.6067bc94.js"><link rel="prefetch" href="/myBlog/assets/js/17.2ee3b538.js"><link rel="prefetch" href="/myBlog/assets/js/18.3f280d96.js"><link rel="prefetch" href="/myBlog/assets/js/19.0c0231bb.js"><link rel="prefetch" href="/myBlog/assets/js/20.03b49756.js"><link rel="prefetch" href="/myBlog/assets/js/21.a144ec70.js"><link rel="prefetch" href="/myBlog/assets/js/22.be5e0407.js"><link rel="prefetch" href="/myBlog/assets/js/23.4198eb77.js"><link rel="prefetch" href="/myBlog/assets/js/24.5e54e47d.js"><link rel="prefetch" href="/myBlog/assets/js/25.0c7199fe.js"><link rel="prefetch" href="/myBlog/assets/js/26.7a5291cd.js"><link rel="prefetch" href="/myBlog/assets/js/27.b83b7f1a.js"><link rel="prefetch" href="/myBlog/assets/js/28.5477d887.js"><link rel="prefetch" href="/myBlog/assets/js/29.6ec32ac6.js"><link rel="prefetch" href="/myBlog/assets/js/3.3c4324a9.js"><link rel="prefetch" href="/myBlog/assets/js/30.a9eb9b15.js"><link rel="prefetch" href="/myBlog/assets/js/31.a6496a14.js"><link rel="prefetch" href="/myBlog/assets/js/32.b5379dbf.js"><link rel="prefetch" href="/myBlog/assets/js/33.78a535a0.js"><link rel="prefetch" href="/myBlog/assets/js/34.e6d4ad66.js"><link rel="prefetch" href="/myBlog/assets/js/35.ff8631ac.js"><link rel="prefetch" href="/myBlog/assets/js/36.db442c21.js"><link rel="prefetch" href="/myBlog/assets/js/37.c1ba9523.js"><link rel="prefetch" href="/myBlog/assets/js/38.6768b09a.js"><link rel="prefetch" href="/myBlog/assets/js/39.c9f1fd72.js"><link rel="prefetch" href="/myBlog/assets/js/4.b0209c65.js"><link rel="prefetch" href="/myBlog/assets/js/40.35777943.js"><link rel="prefetch" href="/myBlog/assets/js/41.43e2f1d1.js"><link rel="prefetch" href="/myBlog/assets/js/42.9597c193.js"><link rel="prefetch" href="/myBlog/assets/js/43.ef6af607.js"><link rel="prefetch" href="/myBlog/assets/js/44.db0b54b7.js"><link rel="prefetch" href="/myBlog/assets/js/45.12cb4bef.js"><link rel="prefetch" href="/myBlog/assets/js/46.893e1c56.js"><link rel="prefetch" href="/myBlog/assets/js/47.52493713.js"><link rel="prefetch" href="/myBlog/assets/js/48.158af2b8.js"><link rel="prefetch" href="/myBlog/assets/js/49.0075d84b.js"><link rel="prefetch" href="/myBlog/assets/js/5.27284ffb.js"><link rel="prefetch" href="/myBlog/assets/js/50.8c3be9f5.js"><link rel="prefetch" href="/myBlog/assets/js/51.2cee7923.js"><link rel="prefetch" href="/myBlog/assets/js/52.49f65b56.js"><link rel="prefetch" href="/myBlog/assets/js/53.64bfd10a.js"><link rel="prefetch" href="/myBlog/assets/js/54.d29bf96b.js"><link rel="prefetch" href="/myBlog/assets/js/55.185dab47.js"><link rel="prefetch" href="/myBlog/assets/js/56.c9fd3894.js"><link rel="prefetch" href="/myBlog/assets/js/57.c0a0dfed.js"><link rel="prefetch" href="/myBlog/assets/js/58.ad8ca2f6.js"><link rel="prefetch" href="/myBlog/assets/js/59.efeae7ff.js"><link rel="prefetch" href="/myBlog/assets/js/6.57ebcb36.js"><link rel="prefetch" href="/myBlog/assets/js/60.1c31cf41.js"><link rel="prefetch" href="/myBlog/assets/js/61.da830dc9.js"><link rel="prefetch" href="/myBlog/assets/js/62.68ba7528.js"><link rel="prefetch" href="/myBlog/assets/js/63.7ca1f04a.js"><link rel="prefetch" href="/myBlog/assets/js/64.43e071a5.js"><link rel="prefetch" href="/myBlog/assets/js/65.55233d69.js"><link rel="prefetch" href="/myBlog/assets/js/66.d1b2c741.js"><link rel="prefetch" href="/myBlog/assets/js/67.f594913f.js"><link rel="prefetch" href="/myBlog/assets/js/68.02f2b732.js"><link rel="prefetch" href="/myBlog/assets/js/69.467048f6.js"><link rel="prefetch" href="/myBlog/assets/js/7.8ff1cc95.js"><link rel="prefetch" href="/myBlog/assets/js/70.b1045043.js"><link rel="prefetch" href="/myBlog/assets/js/71.42286b79.js"><link rel="prefetch" href="/myBlog/assets/js/72.46581568.js"><link rel="prefetch" href="/myBlog/assets/js/73.74e29ee5.js"><link rel="prefetch" href="/myBlog/assets/js/74.a797456b.js"><link rel="prefetch" href="/myBlog/assets/js/75.38d01bd0.js"><link rel="prefetch" href="/myBlog/assets/js/76.ad6eefc3.js"><link rel="prefetch" href="/myBlog/assets/js/77.663c63dd.js"><link rel="prefetch" href="/myBlog/assets/js/78.5f1858b7.js"><link rel="prefetch" href="/myBlog/assets/js/79.327b53e7.js"><link rel="prefetch" href="/myBlog/assets/js/8.63f9549b.js"><link rel="prefetch" href="/myBlog/assets/js/80.60deb9cb.js"><link rel="prefetch" href="/myBlog/assets/js/81.e6af767f.js"><link rel="prefetch" href="/myBlog/assets/js/82.37c4c554.js"><link rel="prefetch" href="/myBlog/assets/js/83.32b7b26f.js"><link rel="prefetch" href="/myBlog/assets/js/84.5fb5e87e.js"><link rel="prefetch" href="/myBlog/assets/js/85.25a29421.js"><link rel="prefetch" href="/myBlog/assets/js/86.b00447c9.js"><link rel="prefetch" href="/myBlog/assets/js/87.6b326a02.js"><link rel="prefetch" href="/myBlog/assets/js/88.adced1fc.js"><link rel="prefetch" href="/myBlog/assets/js/89.a59352d1.js"><link rel="prefetch" href="/myBlog/assets/js/9.566067df.js"><link rel="prefetch" href="/myBlog/assets/js/90.105072b7.js"><link rel="prefetch" href="/myBlog/assets/js/91.c1fd6382.js"><link rel="prefetch" href="/myBlog/assets/js/92.294df929.js"><link rel="prefetch" href="/myBlog/assets/js/93.85c3ce26.js"><link rel="prefetch" href="/myBlog/assets/js/94.9ef2cb4c.js"><link rel="prefetch" href="/myBlog/assets/js/95.521183de.js"><link rel="prefetch" href="/myBlog/assets/js/96.ba7fcc56.js"><link rel="prefetch" href="/myBlog/assets/js/97.1db11d02.js"><link rel="prefetch" href="/myBlog/assets/js/98.75156849.js"><link rel="prefetch" href="/myBlog/assets/js/99.ce5f296b.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.713dba05.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><img src="/myBlogimg/EB-logo.png" alt="CY blog" class="logo"> <span class="site-name can-hide">CY blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/119-working.png"> <div class="blogger-info"><h3>Changyin Wang</h3> <span>后端界的学习者</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具使用</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>环境搭建</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/9fef0c/" class="sidebar-link">docker搭建halo博客</a></li><li><a href="/myBlog/pages/5cc41b/" class="sidebar-link">SpringBoot项目搭建成jar包</a></li><li><a href="/myBlog/pages/0a56c4/" class="sidebar-link">windows安装jekyll步骤及问题</a></li><li><a href="/myBlog/pages/63547b/" class="sidebar-link">教你如何使用github+jsDelivr搭建免费图床 - 副本</a></li><li><a href="/myBlog/pages/2daf7d/" class="sidebar-link">PLSQL的安装</a></li><li><a href="/myBlog/pages/370eba/" class="sidebar-link">docker安装rabbitmq</a></li><li><a href="/myBlog/pages/f4bf6d/" class="sidebar-link">docker搭建minio云盘</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>vuepress博客搭建</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/555c24/" aria-current="page" class="active sidebar-link">vuepress搭建个人博客</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_1-目录结构" class="sidebar-link">1.目录结构</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_1-路由配置" class="sidebar-link">1.路由配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_1-1-搭建vuepress环境" class="sidebar-link">1.1.搭建vuepress环境</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_2-导航栏" class="sidebar-link">2.导航栏</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_2-1-增加导航栏logo" class="sidebar-link">2.1.增加导航栏logo</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_2-2-导航栏链接" class="sidebar-link">2.2.导航栏链接</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_2-3-下拉导航栏" class="sidebar-link">2.3.下拉导航栏</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_2-4-某些页面禁用导航栏" class="sidebar-link">2.4.某些页面禁用导航栏</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_3-侧边栏" class="sidebar-link">3.侧边栏</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_3-1-默认自动开启侧边栏" class="sidebar-link">3.1.默认自动开启侧边栏</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_3-2-配置某个页面的侧边栏" class="sidebar-link">3.2.配置某个页面的侧边栏</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_4-sec-网站个人信息设置" class="sidebar-link">4.SEC（网站个人信息设置）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_5-开启博客内容更新时间" class="sidebar-link">5.开启博客内容更新时间</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_6-发布到gitee上" class="sidebar-link">6.发布到gitee上</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_6-1-修改base" class="sidebar-link">6.1.修改base</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_6-2-创建deploy-sh脚本" class="sidebar-link">6.2.创建deploy.sh脚本</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_6-3-执行脚本即可" class="sidebar-link">6.3.执行脚本即可</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_7-绑定域名" class="sidebar-link">7.绑定域名</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_7-1-关闭base配置" class="sidebar-link">7.1.关闭base配置</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_7-2-域名解析" class="sidebar-link">7.2.域名解析</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_7-3-编辑后的静态文件推送到github上-并设置域名" class="sidebar-link">7.3.编辑后的静态文件推送到github上，并设置域名</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_8-启用pwa-离线访问等等" class="sidebar-link">8.启用PWA(离线访问等等)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_8-1-安装pwa插件" class="sidebar-link">8.1.安装pwa插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_8-2-导入插件" class="sidebar-link">8.2.导入插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_8-3-导入manifest-json和icons" class="sidebar-link">8.3.导入manifest.json和icons</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_8-4-vuepress-config-js导入头文件meta" class="sidebar-link">8.4.vuepress/config.js导入头文件meta</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_9-vssue评论" class="sidebar-link">9.vssue评论</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_9-1-安装vssue" class="sidebar-link">9.1.安装vssue</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_9-2-添加插件" class="sidebar-link">9.2.添加插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_9-3-对应页面加上html代码" class="sidebar-link">9.3.对应页面加上html代码</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_9-4-不在每个md文件中加入的方法" class="sidebar-link">9.4.不在每个MD文件中加入的方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_10-back-to-top滚动回顶部" class="sidebar-link">10.back-to-top滚动回顶部</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_10-1-安装插件" class="sidebar-link">10.1.安装插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_10-2-添加插件" class="sidebar-link">10.2.添加插件</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_11-google-analytics谷歌分析-需翻墙" class="sidebar-link">11.google analytics谷歌分析（需翻墙）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_11-1-安装插件" class="sidebar-link">11.1.安装插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_11-2-使用插件" class="sidebar-link">11.2.使用插件</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_12-配置文件分割-方便管理" class="sidebar-link">12.配置文件分割（方便管理）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_13-隐藏配置文件的私密信息" class="sidebar-link">13.隐藏配置文件的私密信息</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_13-1-添加文件-vuepress-config-secret-js" class="sidebar-link">13.1.添加文件.vuepress/config/Secret.js</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_13-2-vuepress-config-pluginsconfig-js修改内容" class="sidebar-link">13.2..vuepress/config/pluginsConfig.js修改内容</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/555c24/#_13-3-gitignore文件" class="sidebar-link">13.3..gitignore文件</a></li></ul></li></ul></li><li><a href="/myBlog/pages/9cfdf3/" class="sidebar-link">vdoing主题搭建</a></li><li><a href="/myBlog/pages/ae1444/" class="sidebar-link">引入全文搜索插件fulltext-sarch</a></li><li><a href="/myBlog/pages/7f54e3/" class="sidebar-link">引入gitalk评论</a></li><li><a href="/myBlog/pages/0bea88/" class="sidebar-link">引入meting音乐播放器</a></li><li><a href="/myBlog/pages/d3988d/" class="sidebar-link">引入dynamic-title离开标签显示文字</a></li><li><a href="/myBlog/pages/599c9d/" class="sidebar-link">Vdoing主题丰富自己的笔记</a></li><li><a href="/myBlog/pages/2c4811/" class="sidebar-link">vuepress编译时报错TypeError _normalized undefined的解决</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>谷歌插件</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/myBlog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/myBlog/technology" title="技术-目录页" data-v-1cd794fe>技术</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#环境搭建" title="技术#环境搭建" data-v-1cd794fe>环境搭建</a></li> <li data-v-1cd794fe><a href="/myBlog/technology/#vuepress博客搭建" title="技术#vuepress博客搭建" data-v-1cd794fe>vuepress博客搭建</a></li></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/wangchangyin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>changyin.Wang</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-07-09</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          vuepress搭建个人博客
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="vuepress搭建个人博客"><a href="#vuepress搭建个人博客" class="header-anchor">#</a> vuepress搭建个人博客</h1> <p>推荐视频：https://www.bilibili.com/video/BV1vb411m7NY?p=19&amp;spm_id_from=pageDriver</p> <h2 id="_1-目录结构"><a href="#_1-目录结构" class="header-anchor">#</a> 1.目录结构</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>.
+├── docs
+│   ├── .vuepress (可选的)
+│   │   ├── components (可选的)
+│   │   ├── theme (可选的)
+│   │   │   └── Layout.vue
+│   │   ├── public (可选的)
+│   │   ├── styles (可选的)
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── templates (可选的, 谨慎配置)
+│   │   │   ├── dev.html
+│   │   │   └── ssr.html
+│   │   ├── config.js (可选的)
+│   │   └── enhanceApp.js (可选的)
+│   │ 
+│   ├── README.md
+│   ├── guide
+│   │   └── README.md
+│   └── config.md
+│ 
+└── package.json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li><code>docs/.vuepress</code>: 用于存放全局的配置、组件、静态资源等。</li> <li><code>docs/.vuepress/components</code>: 该目录中的 Vue 组件将会被自动注册为全局组件。</li> <li><code>docs/.vuepress/theme</code>: 用于存放本地主题。</li> <li><code>docs/.vuepress/styles</code>: 用于存放样式相关的文件。</li> <li><code>docs/.vuepress/styles/index.styl</code>: 将会被自动应用的全局样式文件，会生成在最终的 CSS 文件结尾，具有比默认样式更高的优先级。</li> <li><code>docs/.vuepress/styles/palette.styl</code>: 用于重写默认颜色常量，或者设置新的 stylus 颜色常量。</li> <li><code>docs/.vuepress/public</code>: 静态资源目录。</li> <li><code>docs/.vuepress/templates</code>: 存储 HTML 模板文件。</li> <li><code>docs/.vuepress/templates/dev.html</code>: 用于开发环境的 HTML 模板文件。</li> <li><code>docs/.vuepress/templates/ssr.html</code>: 构建时基于 Vue SSR 的 HTML 模板文件。</li> <li><code>docs/.vuepress/config.js</code>: 配置文件的入口文件，也可以是 <code>YML</code> 或 <code>toml</code>。</li> <li><code>docs/.vuepress/enhanceApp.js</code>: 客户端应用的增强。</li></ul> <h2 id="_1-路由配置"><a href="#_1-路由配置" class="header-anchor">#</a> 1.路由配置</h2> <p>默认在docs/文件下面，通过README.md来配置路由设置，记得后面有个/</p> <table><thead><tr><th>文件的相对路径</th> <th>页面路由地址</th></tr></thead> <tbody><tr><td><code>/README.md</code></td> <td><code>/</code></td></tr> <tr><td><code>/guide/README.md</code></td> <td><code>/guide/</code></td></tr> <tr><td><code>/config.md</code></td> <td><code>/config.html</code></td></tr></tbody></table> <h3 id="_1-1-搭建vuepress环境"><a href="#_1-1-搭建vuepress环境" class="header-anchor">#</a> 1.1.搭建vuepress环境</h3> <p>https://vuepress.vuejs.org/zh/guide/getting-started.html</p> <h2 id="_2-导航栏"><a href="#_2-导航栏" class="header-anchor">#</a> 2.导航栏</h2> <p>创建vuepress配置文件路径：/docs/docs/.vuepress/config.js</p> <h3 id="_2-1-增加导航栏logo"><a href="#_2-1-增加导航栏logo" class="header-anchor">#</a> 2.1.增加导航栏logo</h3> <p>图片位置默认为公共路径：</p> <ul><li><code>docs/.vuepress/public</code>: 静态资源目录。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  themeConfig: {
+    logo: '/assets/img/logo.png',
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_2-2-导航栏链接"><a href="#_2-2-导航栏链接" class="header-anchor">#</a> 2.2.导航栏链接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    themeConfig: {
+      logo: '/assets/img/hero.png',
+      nav: [
+        { text: 'Home', link: '/' },
+        { text: '关于我', link: '/about/' },
+        { text: 'External', link: 'https://google.com' },
+      ]
+    }
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_2-3-下拉导航栏"><a href="#_2-3-下拉导航栏" class="header-anchor">#</a> 2.3.下拉导航栏</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    themeConfig: {
+      logo: '/assets/img/hero.png',
+      nav: [
+        { text: 'Home', link: '/' },
+        { text: '关于我', link: '/about/' },
+        { text: 'External', link: 'https://google.com' },
+        {
+          text: '后端',
+          items: [
+            { text: 'Spring Boot', items: 
+              [
+                { text: '服务注册', link: '/regist/' },
+                { text: '服务调用', link: '/fegin/' }
+              ] 
+            },
+            { text: 'Spring Cloud', items: 
+              [
+                { text: '服务注册', link: '/regist' },
+                { text: '服务调用', link: '/fegin/' }
+              ] 
+            }
+          ]
+        }
+      ]
+    }
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="_2-4-某些页面禁用导航栏"><a href="#_2-4-某些页面禁用导航栏" class="header-anchor">#</a> 2.4.某些页面禁用导航栏</h3> <p>直接在md文件加上<code>YAML front matter</code> 来禁用某个指定页面的导航栏：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>---
+navbar: false
+---
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_3-侧边栏"><a href="#_3-侧边栏" class="header-anchor">#</a> 3.侧边栏</h2> <blockquote><p>默认情况下，侧边栏会自动地显示由当前页面的标题（headers）组成的链接，并按照页面本身的结构进行嵌套，你可以通过 <code>themeConfig.sidebarDepth</code> 来修改它的行为。默认的深度是 <code>1</code>，它将提取到 <code>h2</code> 的标题，设置成 <code>0</code> 将会禁用标题（headers）链接，同时，最大的深度为 <code>2</code>，它将同时提取 <code>h2</code> 和 <code>h3</code> 标题。</p></blockquote> <h3 id="_3-1-默认自动开启侧边栏"><a href="#_3-1-默认自动开启侧边栏" class="header-anchor">#</a> 3.1.默认自动开启侧边栏</h3> <p>h2何h3标题自动开启侧边栏</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    themeConfig: {
+      sidebar: 'auto'
+    }
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_3-2-配置某个页面的侧边栏"><a href="#_3-2-配置某个页面的侧边栏" class="header-anchor">#</a> 3.2.配置某个页面的侧边栏</h3> <p>新建页面路径：</p> <blockquote><div class="language-text line-numbers-mode"><pre class="language-text"><code>.
+├─ README.md
+├─ contact.md
+├─ about.md
+├─ foo/
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar/
+   ├─ README.md
+   ├─ three.md
+   └─ four.md
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></blockquote> <p>全局配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>      sidebar: {
+        '/foo/': [
+          '',     /* /foo/ */
+          'one',  /* /foo/one.html */
+          'two'   /* /foo/two.html */
+        ],
+  
+        '/bar/': [
+          '',      /* /bar/ */
+          'three', /* /bar/three.html */
+          'four'   /* /bar/four.html */
+        ],
+  
+        // fallback
+        '/': [
+          '',        /* / */
+          'contact', /* /contact.html */
+          'about'    /* /about.html */
+        ]
+      }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_4-sec-网站个人信息设置"><a href="#_4-sec-网站个人信息设置" class="header-anchor">#</a> 4.SEC（网站个人信息设置）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    title:'CY的博客',
+    description:'CY的博客,王长印,个人博客',
+    head: [
+      ['link', { rel: 'icon', href: '/favicon.ico' }],
+      ['meta', { name: 'Keywords', href: 'CY的博客,王长印,个人博客' }],
+      ['meta', { name: 'author', href: '王长印' }]
+    ]
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_5-开启博客内容更新时间"><a href="#_5-开启博客内容更新时间" class="header-anchor">#</a> 5.开启博客内容更新时间</h2> <blockquote><p>使用须知</p> <p>由于 <code>lastUpdated</code> 是基于 <code>git</code> 的, 所以你只能在一个基于 <code>git</code> 的项目中启用它。此外，由于使用的时间戳来自 git commit，因此它将仅在给定页的第一次提交之后显示，并且仅在该页面后续提交更改时更新。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  themeConfig: {
+    lastUpdated: 'Last Updated', // string | boolean
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_6-发布到gitee上"><a href="#_6-发布到gitee上" class="header-anchor">#</a> 6.发布到gitee上</h2> <h3 id="_6-1-修改base"><a href="#_6-1-修改base" class="header-anchor">#</a> 6.1.修改base</h3> <blockquote><p>在 <code>docs/.vuepress/config.js</code> 中设置正确的 <code>base</code>。</p> <p>如果你打算发布到 <code>https://&lt;USERNAME&gt;.github.io/</code>，则可以省略这一步，因为 <code>base</code> 默认即是 <code>&quot;/&quot;</code>。</p> <p>如果你打算发布到 <code>https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;/</code>（也就是说你的仓库在 <code>https://github.com/&lt;USERNAME&gt;/&lt;REPO&gt;</code>），则将 <code>base</code> 设置为 <code>&quot;/&lt;REPO&gt;/&quot;</code>。</p></blockquote> <p>根据github上面创建的仓库名定义，方便后续通过github pages访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    base:'/docs/',  //网站base
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_6-2-创建deploy-sh脚本"><a href="#_6-2-创建deploy-sh脚本" class="header-anchor">#</a> 6.2.创建deploy.sh脚本</h3> <p>在你的项目中，创建一个如下的 <code>deploy.sh</code> 文件（请自行判断去掉高亮行的注释）:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 生成静态文件
+npm run docs:build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+# 如果是发布到自定义域名
+# echo 'www.example.com' &gt; CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果发布到 https://&lt;USERNAME&gt;.github.io
+# git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master
+
+# 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;  修改为自己的github页面
+git push -f git@github.com:wangchangyin/docs.git master:gh-pages
+
+cd -
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="_6-3-执行脚本即可"><a href="#_6-3-执行脚本即可" class="header-anchor">#</a> 6.3.执行脚本即可</h3> <p>执行方式：</p> <ol><li>双击deploy.sh</li> <li>在命令窗口执行脚本</li></ol> <h2 id="_7-绑定域名"><a href="#_7-绑定域名" class="header-anchor">#</a> 7.绑定域名</h2> <h3 id="_7-1-关闭base配置"><a href="#_7-1-关闭base配置" class="header-anchor">#</a> 7.1.关闭base配置</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    // base:'/docs/',  //网站base 填写了域名，不需要此配置
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_7-2-域名解析"><a href="#_7-2-域名解析" class="header-anchor">#</a> 7.2.域名解析</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/20210618/image-20210701142956606.png" alt="image-20210701142956606"></p> <h3 id="_7-3-编辑后的静态文件推送到github上-并设置域名"><a href="#_7-3-编辑后的静态文件推送到github上-并设置域名" class="header-anchor">#</a> 7.3.编辑后的静态文件推送到github上，并设置域名</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 生成静态文件
+npm run docs:build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+# 如果是发布到自定义域名
+echo 'temp.wangchangyin.xyz' &gt; CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果发布到 https://&lt;USERNAME&gt;.github.io
+# git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master
+
+# 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;
+git push -f git@github.com:wangchangyin/docs.git master:gh-pages
+
+cd -
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="_8-启用pwa-离线访问等等"><a href="#_8-启用pwa-离线访问等等" class="header-anchor">#</a> 8.启用PWA(离线访问等等)</h2> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/20210618/image-20210702165458509.png" alt="image-20210702165458509"></p> <h3 id="_8-1-安装pwa插件"><a href="#_8-1-安装pwa插件" class="header-anchor">#</a> 8.1.安装pwa插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install -D @vuepress/plugin-pwa
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_8-2-导入插件"><a href="#_8-2-导入插件" class="header-anchor">#</a> 8.2.导入插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>   plugins: [
+      [
+        '@vuepress/pwa', {
+            serviceWorker: true,
+            updatePopup: {
+              message: &quot;发现新内容可用&quot;,
+              buttonText: &quot;刷新&quot;
+            }
+        }
+      ]
+    ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_8-3-导入manifest-json和icons"><a href="#_8-3-导入manifest-json和icons" class="header-anchor">#</a> 8.3.导入manifest.json和icons</h3> <p>生成manifest.json文件地址：需翻墙</p> <p>https://app-manifest.firebaseapp.com/</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/20210618/image-20210702214427034.png" alt="image-20210702214427034"></p> <h3 id="_8-4-vuepress-config-js导入头文件meta"><a href="#_8-4-vuepress-config-js导入头文件meta" class="header-anchor">#</a> 8.4.vuepress/config.js导入头文件meta</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    head: [
+      ['link', { rel: 'icon', href: '/favicon.ico' }],//网页图片
+      ['meta', { name: 'Keywords', href: 'CY的博客,王长印,个人博客' }],
+      ['meta', { name: 'author', href: '王长印' }],
+      ['link', { rel: 'manifest', href: '/manifest.json' }],
+      ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+      ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+      ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+      ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+      ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+      ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+      ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ],
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="_9-vssue评论"><a href="#_9-vssue评论" class="header-anchor">#</a> 9.vssue评论</h2> <blockquote><p><code>vssue</code>官网：https://vssue.js.org/zh/</p></blockquote> <h3 id="_9-1-安装vssue"><a href="#_9-1-安装vssue" class="header-anchor">#</a> 9.1.安装vssue</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install @vssue/vuepress-plugin-vssue
+npm install @vssue/api-github-v3 或者npm install @vssue/api-github-v4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210708100836973.png" alt="image-20210708100836973"></p> <h3 id="_9-2-添加插件"><a href="#_9-2-添加插件" class="header-anchor">#</a> 9.2.添加插件</h3> <p>去https://vssue.js.org/zh/guide/github.html#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84-oauth-app申请github的clientId、clientSecret</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210708095357211.png" alt="image-20210708095357211"></p> <blockquote><p>复制 <code>Client ID</code> 和 <code>Client Secret</code>, 并设置 <code>owner</code> 和 <code>repo</code>。</p> <blockquote><p>Github repository 的 URL 模式为 <code>https://github.com/${owner}/${repo}</code></p></blockquote></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>      //设置vssue评论
+      '@vssue/vuepress-plugin-vssue': {
+          // 设置 `platform` 而不是 `api`
+          platform: 'github-v4',
+    
+          // 其他的 Vssue 配置
+          owner: 'wangchangyin',
+          repo: 'docs',
+          clientId: '55b623aafc4fbda41ebf',
+          clientSecret: '6af6c813a72b94fe3254dfd6b21b35ad4c07f24e',
+      },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_9-3-对应页面加上html代码"><a href="#_9-3-对应页面加上html代码" class="header-anchor">#</a> 9.3.对应页面加上html代码</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;Vssue /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_9-4-不在每个md文件中加入的方法"><a href="#_9-4-不在每个md文件中加入的方法" class="header-anchor">#</a> 9.4.不在每个MD文件中加入<Vssue></Vssue>的方法</h3> <blockquote><p>利用vuepress主题的继承的方式：参考</p> <p>https://vuepress.vuejs.org/zh/theme/inheritance.html#%E4%BD%BF%E7%94%A8</p></blockquote> <ol><li><p>新增文件.vuepress/theme/index.js，内容如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// .vuepress/theme/index.js
+module.exports = {
+  extend: '@vuepress/theme-default'
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>获取vuepress源码：把下面两个文件夹里的内容放入到.vuepress/theme/里</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210708105707386.png" alt="image-20210708105707386"></p></li> <li><p>修改.vuepress/theme/layouts/Layout.vue文件</p> <div class="language- extra-class"><pre><code>  &lt;template #top&gt;
+    &lt;slot name=&quot;page-top&quot; /&gt;
+  &lt;/template&gt;
+  &lt;template #bottom&gt;
+    &lt;!--添加评论模板--&gt;
+    &lt;div class=&quot;theme-default-content content__default&quot;&gt;
+      &lt;Vssue /&gt;
+    &lt;/div&gt;
+    &lt;slot name=&quot;page-bottom&quot; /&gt;
+  &lt;/template&gt;
+</code></pre></div></li></ol> <h2 id="_10-back-to-top滚动回顶部"><a href="#_10-back-to-top滚动回顶部" class="header-anchor">#</a> 10.back-to-top滚动回顶部</h2> <h3 id="_10-1-安装插件"><a href="#_10-1-安装插件" class="header-anchor">#</a> 10.1.安装插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install  @vuepress/plugin-back-to-top
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_10-2-添加插件"><a href="#_10-2-添加插件" class="header-anchor">#</a> 10.2.添加插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  plugins: ['@vuepress/back-to-top']
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_11-google-analytics谷歌分析-需翻墙"><a href="#_11-google-analytics谷歌分析-需翻墙" class="header-anchor">#</a> 11.google analytics谷歌分析（需翻墙）</h2> <h3 id="_11-1-安装插件"><a href="#_11-1-安装插件" class="header-anchor">#</a> 11.1.安装插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install @vuepress/plugin-google-analytics
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_11-2-使用插件"><a href="#_11-2-使用插件" class="header-anchor">#</a> 11.2.使用插件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>      '@vuepress/back-to-top':true,
+      '@vuepress/google-analytics':
+      {
+        'ga': 'G-PNZM9E937P' // UA-00000000-0
+      }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>去网页https://analytics.google.com/analytics/web/：</p> <p>创建账号=》创建媒体=》跟网站创建分析=》获取Ga</p></blockquote> <h2 id="_12-配置文件分割-方便管理"><a href="#_12-配置文件分割-方便管理" class="header-anchor">#</a> 12.配置文件分割（方便管理）</h2> <blockquote><p>配置文件过于多，不便于管理，所以拆分</p></blockquote> <p>把head配置提出来：创建文件/.vuepress/config/headConfig.js</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports=[
+    ['link', { rel: 'icon', href: '/favicon.ico' }],//网页图片
+    ['meta', { name: 'Keywords', href: 'CY的博客,王长印,个人博客' }],
+    ['meta', { name: 'author', href: '王长印' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>vuepress的配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//引入配置文件
+const headConfig=require(&quot;./config/headConfig&quot;);
+const pluginsConfig=require(&quot;./config/pluginsConfig&quot;);
+const navConfig=require(&quot;./config/navConfig&quot;);
+const sidebarConfig=require(&quot;./config/sidebarConfig&quot;);
+
+module.exports = {
+    // base:'/docs/',  //网站base 填写了域名，不需要此配置
+    title:'CY的博客',
+    description:'CY的博客,王长印,个人博客',
+    head: headConfig,
+    themeConfig: {
+      logo: '/assets/img/hero.png',
+      lastUpdated: '更新时间', // string | boolean
+      nav: navConfig,
+      // sidebar: 'auto'
+      sidebar:sidebarConfig 
+    },
+    plugins:pluginsConfig 
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_13-隐藏配置文件的私密信息"><a href="#_13-隐藏配置文件的私密信息" class="header-anchor">#</a> 13.隐藏配置文件的私密信息</h2> <blockquote><p>利用.gitignore文件不上传到github上方</p></blockquote> <h3 id="_13-1-添加文件-vuepress-config-secret-js"><a href="#_13-1-添加文件-vuepress-config-secret-js" class="header-anchor">#</a> 13.1.添加文件.vuepress/config/Secret.js</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    clientId: '55b623aafc4fbda41ebf', //注册的Client ID
+    clientSecret: '6af6c813a72b94fe3254dfd6b21b35ad4c07f24e', //注册的Client Secret
+    'ga': 'G-PNZM9E937P' // UA-00000000-0
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_13-2-vuepress-config-pluginsconfig-js修改内容"><a href="#_13-2-vuepress-config-pluginsconfig-js修改内容" class="header-anchor">#</a> 13.2..vuepress/config/pluginsConfig.js修改内容</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> secret<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./Secret&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//导入隐藏文件</span>
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token comment">//时间格式化</span>
+    <span class="token string">'@vuepress/last-updated'</span><span class="token operator">:</span> <span class="token comment">// &quot;上次更新&quot;时间格式</span>
+    <span class="token punctuation">{</span>
+      <span class="token function-variable function">transformer</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">timestamp<span class="token punctuation">,</span> lang</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span> <span class="token comment">// https://momentjs.com/</span>
+        <span class="token keyword">return</span> <span class="token function">moment</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYY/MM/DD, hh:mm:ss'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">//pwa离线访问</span>
+    <span class="token string">'@vuepress/pwa'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        serviceWorker<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        updatePopup<span class="token operator">:</span> <span class="token punctuation">{</span>
+          message<span class="token operator">:</span> <span class="token string">&quot;发现新内容可用&quot;</span><span class="token punctuation">,</span>
+          buttonText<span class="token operator">:</span> <span class="token string">&quot;刷新&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">//设置vssue评论</span>
+    <span class="token string">'@vssue/vuepress-plugin-vssue'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 设置 `platform` 而不是 `api`</span>
+        platform<span class="token operator">:</span> <span class="token string">'github-v4'</span><span class="token punctuation">,</span> <span class="token comment">//v3的platform是github，v4的是github-v4</span>
+  
+        <span class="token comment">// 其他的 Vssue 配置</span>
+        owner<span class="token operator">:</span> <span class="token string">'wangchangyin'</span><span class="token punctuation">,</span><span class="token comment">//github账户名</span>
+        repo<span class="token operator">:</span> <span class="token string">'docs'</span><span class="token punctuation">,</span><span class="token comment">//github一个项目的名称</span>
+        clientId<span class="token operator">:</span> secret<span class="token punctuation">.</span>clientId<span class="token punctuation">,</span><span class="token comment">//注册的Client ID</span>
+        clientSecret<span class="token operator">:</span> secret<span class="token punctuation">.</span>clientSecret<span class="token punctuation">,</span><span class="token comment">//注册的Client Secret</span>
+        autoCreateIssue<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token comment">// 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了。</span>
+        locale<span class="token operator">:</span><span class="token string">'zh-CN'</span> <span class="token comment">//语言</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">//back-to-top</span>
+    <span class="token string">'@vuepress/back-to-top'</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">'@vuepress/google-analytics'</span><span class="token operator">:</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">'ga'</span><span class="token operator">:</span> secret<span class="token punctuation">.</span>ga <span class="token comment">// UA-00000000-0</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="_13-3-gitignore文件"><a href="#_13-3-gitignore文件" class="header-anchor">#</a> 13.3..gitignore文件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>#隐藏密钥信息
+Secret.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>下次clone文件一定保存Secret.js文件</p></blockquote></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/wangchangyin/myBlog/edit/master/docs/03.技术/07.环境搭建/20.vuepress博客搭建/01.vuepress搭建个人博客.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/07/13, 18:28:04</span></div></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myBlog/pages/f4bf6d/" class="prev">docker搭建minio云盘</a></span> <span class="next"><a href="/myBlog/pages/9cfdf3/">vdoing主题搭建</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myBlog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myBlog/pages/1adf94/"><div>阿里云增加虚拟内存</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/myBlog/pages/78011c/"><div>oracle锁表</div></a> <span>12-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/myBlog/pages/658e4c/"><div>模式二：URL重定向传播会话</div></a> <span>12-14</span></dt></dl> <dl><dd></dd> <dt><a href="/myBlog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:2452952178@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/wangchangyin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>Changyin Wang | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#282c34" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/myBlog/assets/js/app.6034fc33.js" defer></script><script src="/myBlog/assets/js/2.ecdec458.js" defer></script><script src="/myBlog/assets/js/108.4fc6267e.js" defer></script>
+  </body>
+</html>

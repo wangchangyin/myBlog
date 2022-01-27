@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gateway网关 | CY blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/myBlogimg/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script,[object Object]></script,[object Object]>
+    <meta name="description" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="keywords" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/myBlog/assets/css/0.styles.713dba05.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.6034fc33.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.ecdec458.js" as="script"><link rel="preload" href="/myBlog/assets/js/41.43e2f1d1.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.7b0bdbd0.js"><link rel="prefetch" href="/myBlog/assets/js/100.5416bab4.js"><link rel="prefetch" href="/myBlog/assets/js/101.322c2725.js"><link rel="prefetch" href="/myBlog/assets/js/102.6b37be73.js"><link rel="prefetch" href="/myBlog/assets/js/103.6a821d54.js"><link rel="prefetch" href="/myBlog/assets/js/104.553a15b2.js"><link rel="prefetch" href="/myBlog/assets/js/105.f50b9a58.js"><link rel="prefetch" href="/myBlog/assets/js/106.439dbb4c.js"><link rel="prefetch" href="/myBlog/assets/js/107.550a13d3.js"><link rel="prefetch" href="/myBlog/assets/js/108.4fc6267e.js"><link rel="prefetch" href="/myBlog/assets/js/109.b0edf676.js"><link rel="prefetch" href="/myBlog/assets/js/11.5afa7e04.js"><link rel="prefetch" href="/myBlog/assets/js/110.e3256446.js"><link rel="prefetch" href="/myBlog/assets/js/111.f44da157.js"><link rel="prefetch" href="/myBlog/assets/js/112.cf2b7ccf.js"><link rel="prefetch" href="/myBlog/assets/js/113.ce23b62b.js"><link rel="prefetch" href="/myBlog/assets/js/114.a4efd687.js"><link rel="prefetch" href="/myBlog/assets/js/115.f37c3244.js"><link rel="prefetch" href="/myBlog/assets/js/116.a466bcbc.js"><link rel="prefetch" href="/myBlog/assets/js/117.f3ed6df6.js"><link rel="prefetch" href="/myBlog/assets/js/118.4019db0d.js"><link rel="prefetch" href="/myBlog/assets/js/119.2050eed3.js"><link rel="prefetch" href="/myBlog/assets/js/12.208e8480.js"><link rel="prefetch" href="/myBlog/assets/js/120.ce1004d6.js"><link rel="prefetch" href="/myBlog/assets/js/121.056aa58e.js"><link rel="prefetch" href="/myBlog/assets/js/122.ef174806.js"><link rel="prefetch" href="/myBlog/assets/js/123.af09e00a.js"><link rel="prefetch" href="/myBlog/assets/js/124.ff9f9b8b.js"><link rel="prefetch" href="/myBlog/assets/js/125.e426eee1.js"><link rel="prefetch" href="/myBlog/assets/js/126.0f67baf6.js"><link rel="prefetch" href="/myBlog/assets/js/127.d67b38ff.js"><link rel="prefetch" href="/myBlog/assets/js/128.44180ed5.js"><link rel="prefetch" href="/myBlog/assets/js/129.04983d17.js"><link rel="prefetch" href="/myBlog/assets/js/13.091a9ce4.js"><link rel="prefetch" href="/myBlog/assets/js/130.7521f0a4.js"><link rel="prefetch" href="/myBlog/assets/js/131.a1a68795.js"><link rel="prefetch" href="/myBlog/assets/js/132.07b70dd7.js"><link rel="prefetch" href="/myBlog/assets/js/133.cb6080fb.js"><link rel="prefetch" href="/myBlog/assets/js/134.d06e708e.js"><link rel="prefetch" href="/myBlog/assets/js/135.601c5b41.js"><link rel="prefetch" href="/myBlog/assets/js/136.4fb4f7cb.js"><link rel="prefetch" href="/myBlog/assets/js/137.5dfd3b84.js"><link rel="prefetch" href="/myBlog/assets/js/138.5fa36b65.js"><link rel="prefetch" href="/myBlog/assets/js/139.7d480183.js"><link rel="prefetch" href="/myBlog/assets/js/14.7151b9d7.js"><link rel="prefetch" href="/myBlog/assets/js/140.7404d5f7.js"><link rel="prefetch" href="/myBlog/assets/js/141.d6640d22.js"><link rel="prefetch" href="/myBlog/assets/js/15.bb6acdb2.js"><link rel="prefetch" href="/myBlog/assets/js/16.6067bc94.js"><link rel="prefetch" href="/myBlog/assets/js/17.2ee3b538.js"><link rel="prefetch" href="/myBlog/assets/js/18.3f280d96.js"><link rel="prefetch" href="/myBlog/assets/js/19.0c0231bb.js"><link rel="prefetch" href="/myBlog/assets/js/20.03b49756.js"><link rel="prefetch" href="/myBlog/assets/js/21.a144ec70.js"><link rel="prefetch" href="/myBlog/assets/js/22.be5e0407.js"><link rel="prefetch" href="/myBlog/assets/js/23.4198eb77.js"><link rel="prefetch" href="/myBlog/assets/js/24.5e54e47d.js"><link rel="prefetch" href="/myBlog/assets/js/25.0c7199fe.js"><link rel="prefetch" href="/myBlog/assets/js/26.7a5291cd.js"><link rel="prefetch" href="/myBlog/assets/js/27.b83b7f1a.js"><link rel="prefetch" href="/myBlog/assets/js/28.5477d887.js"><link rel="prefetch" href="/myBlog/assets/js/29.6ec32ac6.js"><link rel="prefetch" href="/myBlog/assets/js/3.3c4324a9.js"><link rel="prefetch" href="/myBlog/assets/js/30.a9eb9b15.js"><link rel="prefetch" href="/myBlog/assets/js/31.a6496a14.js"><link rel="prefetch" href="/myBlog/assets/js/32.b5379dbf.js"><link rel="prefetch" href="/myBlog/assets/js/33.78a535a0.js"><link rel="prefetch" href="/myBlog/assets/js/34.e6d4ad66.js"><link rel="prefetch" href="/myBlog/assets/js/35.ff8631ac.js"><link rel="prefetch" href="/myBlog/assets/js/36.db442c21.js"><link rel="prefetch" href="/myBlog/assets/js/37.c1ba9523.js"><link rel="prefetch" href="/myBlog/assets/js/38.6768b09a.js"><link rel="prefetch" href="/myBlog/assets/js/39.c9f1fd72.js"><link rel="prefetch" href="/myBlog/assets/js/4.b0209c65.js"><link rel="prefetch" href="/myBlog/assets/js/40.35777943.js"><link rel="prefetch" href="/myBlog/assets/js/42.9597c193.js"><link rel="prefetch" href="/myBlog/assets/js/43.ef6af607.js"><link rel="prefetch" href="/myBlog/assets/js/44.db0b54b7.js"><link rel="prefetch" href="/myBlog/assets/js/45.12cb4bef.js"><link rel="prefetch" href="/myBlog/assets/js/46.893e1c56.js"><link rel="prefetch" href="/myBlog/assets/js/47.52493713.js"><link rel="prefetch" href="/myBlog/assets/js/48.158af2b8.js"><link rel="prefetch" href="/myBlog/assets/js/49.0075d84b.js"><link rel="prefetch" href="/myBlog/assets/js/5.27284ffb.js"><link rel="prefetch" href="/myBlog/assets/js/50.8c3be9f5.js"><link rel="prefetch" href="/myBlog/assets/js/51.2cee7923.js"><link rel="prefetch" href="/myBlog/assets/js/52.49f65b56.js"><link rel="prefetch" href="/myBlog/assets/js/53.64bfd10a.js"><link rel="prefetch" href="/myBlog/assets/js/54.d29bf96b.js"><link rel="prefetch" href="/myBlog/assets/js/55.185dab47.js"><link rel="prefetch" href="/myBlog/assets/js/56.c9fd3894.js"><link rel="prefetch" href="/myBlog/assets/js/57.c0a0dfed.js"><link rel="prefetch" href="/myBlog/assets/js/58.ad8ca2f6.js"><link rel="prefetch" href="/myBlog/assets/js/59.efeae7ff.js"><link rel="prefetch" href="/myBlog/assets/js/6.57ebcb36.js"><link rel="prefetch" href="/myBlog/assets/js/60.1c31cf41.js"><link rel="prefetch" href="/myBlog/assets/js/61.da830dc9.js"><link rel="prefetch" href="/myBlog/assets/js/62.68ba7528.js"><link rel="prefetch" href="/myBlog/assets/js/63.7ca1f04a.js"><link rel="prefetch" href="/myBlog/assets/js/64.43e071a5.js"><link rel="prefetch" href="/myBlog/assets/js/65.55233d69.js"><link rel="prefetch" href="/myBlog/assets/js/66.d1b2c741.js"><link rel="prefetch" href="/myBlog/assets/js/67.f594913f.js"><link rel="prefetch" href="/myBlog/assets/js/68.02f2b732.js"><link rel="prefetch" href="/myBlog/assets/js/69.467048f6.js"><link rel="prefetch" href="/myBlog/assets/js/7.8ff1cc95.js"><link rel="prefetch" href="/myBlog/assets/js/70.b1045043.js"><link rel="prefetch" href="/myBlog/assets/js/71.42286b79.js"><link rel="prefetch" href="/myBlog/assets/js/72.46581568.js"><link rel="prefetch" href="/myBlog/assets/js/73.74e29ee5.js"><link rel="prefetch" href="/myBlog/assets/js/74.a797456b.js"><link rel="prefetch" href="/myBlog/assets/js/75.38d01bd0.js"><link rel="prefetch" href="/myBlog/assets/js/76.ad6eefc3.js"><link rel="prefetch" href="/myBlog/assets/js/77.663c63dd.js"><link rel="prefetch" href="/myBlog/assets/js/78.5f1858b7.js"><link rel="prefetch" href="/myBlog/assets/js/79.327b53e7.js"><link rel="prefetch" href="/myBlog/assets/js/8.63f9549b.js"><link rel="prefetch" href="/myBlog/assets/js/80.60deb9cb.js"><link rel="prefetch" href="/myBlog/assets/js/81.e6af767f.js"><link rel="prefetch" href="/myBlog/assets/js/82.37c4c554.js"><link rel="prefetch" href="/myBlog/assets/js/83.32b7b26f.js"><link rel="prefetch" href="/myBlog/assets/js/84.5fb5e87e.js"><link rel="prefetch" href="/myBlog/assets/js/85.25a29421.js"><link rel="prefetch" href="/myBlog/assets/js/86.b00447c9.js"><link rel="prefetch" href="/myBlog/assets/js/87.6b326a02.js"><link rel="prefetch" href="/myBlog/assets/js/88.adced1fc.js"><link rel="prefetch" href="/myBlog/assets/js/89.a59352d1.js"><link rel="prefetch" href="/myBlog/assets/js/9.566067df.js"><link rel="prefetch" href="/myBlog/assets/js/90.105072b7.js"><link rel="prefetch" href="/myBlog/assets/js/91.c1fd6382.js"><link rel="prefetch" href="/myBlog/assets/js/92.294df929.js"><link rel="prefetch" href="/myBlog/assets/js/93.85c3ce26.js"><link rel="prefetch" href="/myBlog/assets/js/94.9ef2cb4c.js"><link rel="prefetch" href="/myBlog/assets/js/95.521183de.js"><link rel="prefetch" href="/myBlog/assets/js/96.ba7fcc56.js"><link rel="prefetch" href="/myBlog/assets/js/97.1db11d02.js"><link rel="prefetch" href="/myBlog/assets/js/98.75156849.js"><link rel="prefetch" href="/myBlog/assets/js/99.ce5f296b.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.713dba05.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><img src="/myBlogimg/EB-logo.png" alt="CY blog" class="logo"> <span class="site-name can-hide">CY blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/119-working.png"> <div class="blogger-info"><h3>Changyin Wang</h3> <span>后端界的学习者</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" class="nav-link">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JUC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Spring全家桶</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Spring</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SpringBoot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Mybatis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SpringMVC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>SpringCloud</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/5ca4e4/" class="sidebar-link">SpingCloud导航</a></li><li><a href="/myBlog/pages/b5f6d0/" class="sidebar-link">什么是微服务</a></li><li><a href="/myBlog/pages/f1a77d/" class="sidebar-link">选择Boot和Cloud版本</a></li><li><a href="/myBlog/pages/8e2398/" class="sidebar-link">关于Cloud组件停更升级</a></li><li><a href="/myBlog/pages/ad4ca5/" class="sidebar-link">环境搭建</a></li><li><a href="/myBlog/pages/93e73f/" class="sidebar-link">Eureka基础篇</a></li><li><a href="/myBlog/pages/1b8908/" class="sidebar-link">Zookeeper</a></li><li><a href="/myBlog/pages/046d09/" class="sidebar-link">consul</a></li><li><a href="/myBlog/pages/7dbd36/" class="sidebar-link">三种服务注册的区别</a></li><li><a href="/myBlog/pages/a5d650/" class="sidebar-link">Ribbon</a></li><li><a href="/myBlog/pages/7348c0/" class="sidebar-link">OpenFeign</a></li><li><a href="/myBlog/pages/e3e514/" class="sidebar-link">Hystrix豪猪哥</a></li><li><a href="/myBlog/pages/1beabf/" aria-current="page" class="active sidebar-link">Gateway网关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_1-gateway网关介绍" class="sidebar-link">1.gateway网关介绍</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_2-gateway能干嘛" class="sidebar-link">2.gateway能干嘛</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_3-gateway的特性" class="sidebar-link">3.gateway的特性</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_4-spring-cloud-gateway-与-zuul的区别" class="sidebar-link">4.Spring Cloud Gateway 与 Zuul的区别</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_5-gateway的三大核心" class="sidebar-link">5.gateway的三大核心</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_6-整合gateway网关" class="sidebar-link">6.整合gateway网关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_1-新建模块-cloud-gateway-gateway9527" class="sidebar-link">1.新建模块：cloud-gateway-gateway9527</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_2-导入依赖" class="sidebar-link">2.导入依赖</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_3-添加yml" class="sidebar-link">3.添加yml</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_4-主启动类" class="sidebar-link">4.主启动类</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_7-配置路由规则" class="sidebar-link">7.配置路由规则</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_1-yml文件的方式" class="sidebar-link">1.yml文件的方式</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_2-java的方式" class="sidebar-link">2.java的方式</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_8-gateway实现负载均衡" class="sidebar-link">8.gateway实现负载均衡</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_9-predicate断言的使用" class="sidebar-link">9.Predicate断言的使用</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_10-filter的使用" class="sidebar-link">10.Filter的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_1-spring-cloud-gateway的filter生命周期" class="sidebar-link">1.Spring Cloud Gateway的Filter生命周期</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_2-spring-cloud-gateway的filter种类" class="sidebar-link">2.Spring Cloud Gateway的Filter种类</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_3-常用的过滤器" class="sidebar-link">3.常用的过滤器</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/1beabf/#_4-自定义全局过滤器" class="sidebar-link">4.自定义全局过滤器</a></li></ul></li></ul></li><li><a href="/myBlog/pages/fa46ca/" class="sidebar-link">config全局配置</a></li><li><a href="/myBlog/pages/c29287/" class="sidebar-link">Bus消息总线</a></li><li><a href="/myBlog/pages/79277f/" class="sidebar-link">Stream</a></li><li><a href="/myBlog/pages/080e29/" class="sidebar-link">Sleuth链路追踪</a></li><li><a href="/myBlog/pages/91c605/" class="sidebar-link">SpringCloud alibaba入门介绍</a></li><li><a href="/myBlog/pages/2eb82f/" class="sidebar-link">SpringCloud alibaba Nacos服务注册和配置中心</a></li><li><a href="/myBlog/pages/f97989/" class="sidebar-link">Sentinel</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>消息队列</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Sa-Token</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/myBlog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/myBlog/back-end" title="后端-目录页" data-v-1cd794fe>后端</a></li> <li data-v-1cd794fe><a href="/myBlog/back-end/#Spring全家桶" title="后端#Spring全家桶" data-v-1cd794fe>Spring全家桶</a></li> <li data-v-1cd794fe><a href="/myBlog/back-end/#SpringCloud" title="后端#SpringCloud" data-v-1cd794fe>SpringCloud</a></li></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/wangchangyin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>changyin.Wang</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-08-18</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Gateway网关
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="gateway网关"><a href="#gateway网关" class="header-anchor">#</a> Gateway网关</h1> <h2 id="_1-gateway网关介绍"><a href="#_1-gateway网关介绍" class="header-anchor">#</a> 1.gateway网关介绍</h2> <p><a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.1.RELEASE/reference/html/" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Cloud全家桶中有个很重要的组件就是网关，在1.x版本中都是采用的Zuul网关；
+但在2.x版本中，zuul的升级一直跳票，SpringCloud最后自己研发了一个网关替代Zuul，
+那就是SpringCloud Gateway一句话：gateway是原zuul1.x版的替代</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210818185536638.png" alt="image-20210818185536638"></p> <p>SpringCloud Gateway 使用的Webflux中的reactor-netty响应式编程组件，底层使用了Netty通讯框架（异步非阻塞）。</p> <h2 id="_2-gateway能干嘛"><a href="#_2-gateway能干嘛" class="header-anchor">#</a> 2.gateway能干嘛</h2> <ol><li>反向代理</li> <li>鉴权</li> <li>流量控制</li> <li>熔断</li> <li>日志监控</li> <li>....</li></ol> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210818185657975.png" alt="image-20210818185657975"></p> <p>前端请求通过Ngnix负载均衡到网关，网关再调用对用的微服务。</p> <h2 id="_3-gateway的特性"><a href="#_3-gateway的特性" class="header-anchor">#</a> 3.gateway的特性</h2> <div class="language- extra-class"><pre><code>基于Spring Framework 5, Project Reactor 和 Spring Boot 2.0 进行构建；
+</code></pre></div><p>动态路由：能够匹配任何请求属性；
+可以对路由指定 Predicate（断言）和 Filter（过滤器）；
+集成Hystrix的断路器功能；
+集成 Spring Cloud 服务发现功能；
+易于编写的 Predicate（断言）和 Filter（过滤器）；
+请求限流功能；
+支持路径重写。</p> <h2 id="_4-spring-cloud-gateway-与-zuul的区别"><a href="#_4-spring-cloud-gateway-与-zuul的区别" class="header-anchor">#</a> 4.Spring Cloud Gateway 与 Zuul的区别</h2> <p>在SpringCloud Finchley 正式版之前，Spring Cloud 推荐的网关是 Netflix 提供的Zuul：</p> <p>1、Zuul 1.x，是一个基于<strong>阻塞</strong> I/ O 的 API Gateway</p> <p>2、Zuul 1.x 基于Servlet 2. 5使用阻塞架构它不支持任何长连接(如 WebSocket) Zuul 的设计模式和Nginx较像，每次 I/ O 操作都是从工作线程中选择一个执行，请求线程被阻塞到工作线程完成，但是差别是Nginx 用C++ 实现，Zuul 用 Java 实现，而 JVM 本身会有第一次加载较慢的情况，使得Zuul 的性能相对较差。</p> <p>3、Zuul 2.x理念更先进，想基于Netty非阻塞和支持长连接，但SpringCloud目前还没有整合。 Zuul 2.x的性能较 Zuul 1.x 有较大提升。在性能方面，根据官方提供的基准测试， Spring Cloud Gateway 的 RPS（每秒请求数）是Zuul 的 1. 6 倍。</p> <p>4、Spring Cloud Gateway 建立 在 Spring Framework 5、 Project Reactor 和 Spring Boot 2 之上， 使用非阻塞 API。</p> <p>5、Spring Cloud Gateway 还 支持 WebSocket， 并且与Spring紧密集成拥有更好的开发体验</p> <h2 id="_5-gateway的三大核心"><a href="#_5-gateway的三大核心" class="header-anchor">#</a> 5.gateway的三大核心</h2> <ol><li>路由（Route）：路由是构建网关的基本模块，它由ID，目标URI，一系列的断言和过滤器组成，如果断言为true则匹配该路由</li> <li>断言（Predicate）：开发人员可以匹配HTTP请求中的所有内容(例如请求头或请求参数)，如果请求与断言相匹配则进行路由</li> <li>过滤（Filter）：指的是Spring框架中GatewayFilter的实例，使用过滤器，可以在请求被路由前或者之后对请求进行修改。</li></ol> <p>客户端向 Spring Cloud Gateway 发出请求。然后在 Gateway <code>Handler</code> Mapping 中找到与请求相匹配的路由，将其发送到 Gateway Web Handler。</p> <p>Handler 再通过指定的过滤器链来将请求发送到我们实际的服务执行业务逻辑，然后返回。
+过滤器之间用虚线分开是因为过滤器可能会在发送代理请求之前（“pre”）或之后（“post”）执行业务逻辑。</p> <p>Filter在“pre”类型的过滤器可以做参数校验、权限校验、流量监控、日志输出、协议转换等，
+在“post”类型的过滤器中可以做响应内容、响应头的修改，日志的输出，流量监控等有着非常重要的作用。</p> <h2 id="_6-整合gateway网关"><a href="#_6-整合gateway网关" class="header-anchor">#</a> 6.整合gateway网关</h2> <h3 id="_1-新建模块-cloud-gateway-gateway9527"><a href="#_1-新建模块-cloud-gateway-gateway9527" class="header-anchor">#</a> 1.新建模块：cloud-gateway-gateway9527</h3> <h3 id="_2-导入依赖"><a href="#_2-导入依赖" class="header-anchor">#</a> 2.导入依赖</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;CloudStudy&lt;/artifactId&gt;
+        &lt;groupId&gt;com.wcy.springcloud&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;artifactId&gt;cloud-gateway-gateway9527&lt;/artifactId&gt;
+
+    &lt;dependencies&gt;
+        &lt;!--gateway--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--eureka-client--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- 引入自己定义的api通用包，可以使用Payment支付Entity --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.wcy.springcloud&lt;/groupId&gt;
+            &lt;artifactId&gt;cloud-api-commons&lt;/artifactId&gt;
+            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!--一般基础配置类--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h3 id="_3-添加yml"><a href="#_3-添加yml" class="header-anchor">#</a> 3.添加yml</h3> <p>访问:http://localhost:8001/payment/1可以通过网关http://localhost:9527/payment/1访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:8001          #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+
+        - id: payment_routh2 #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:8002          #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client: #服务提供者provider注册进eureka服务列表内
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  # 集群版
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h3 id="_4-主启动类"><a href="#_4-主启动类" class="header-anchor">#</a> 4.主启动类</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.wcy.springcloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+@SpringBootApplication
+@EnableEurekaClient
+public class GateWayMain9527 {
+    public static void main(String[] args) {
+        SpringApplication.run(GateWayMain9527.class,args);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_7-配置路由规则"><a href="#_7-配置路由规则" class="header-anchor">#</a> 7.配置路由规则</h2> <h3 id="_1-yml文件的方式"><a href="#_1-yml文件的方式" class="header-anchor">#</a> 1.yml文件的方式</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:8001          #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+
+        - id: payment_routh2 #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:8002          #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_2-java的方式"><a href="#_2-java的方式" class="header-anchor">#</a> 2.java的方式</h3> <p>访问http://localhost:9527/guonei会访问http://news.baidu.com/guonei</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.wcy.springcloud.config;
+
+import org.springframework.cloud.gateway.route.Route;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.PredicateSpec;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.function.Function;
+
+@Configuration
+public class GateWayConfig {
+    /**
+     * 配置了一个id为route-name的路由规则，
+     * 当访问地址 http://localhost:9527/guonei时会自动转发到地址：http://news.baidu.com/guonei
+     * @return
+     */
+    @Bean
+    public RouteLocator customRouteLocator1(RouteLocatorBuilder builder){
+        RouteLocatorBuilder.Builder routes = builder.routes();
+        routes.route(&quot;path_route_wcy&quot;, new Function&lt;PredicateSpec, Route.AsyncBuilder&gt;() {
+            @Override
+            public Route.AsyncBuilder apply(PredicateSpec predicateSpec) {
+                return predicateSpec.path(&quot;/guonei&quot;).uri(&quot;http://news.baidu.com/guonei&quot;);
+            }
+        }).build();
+        return routes.build();
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="_8-gateway实现负载均衡"><a href="#_8-gateway实现负载均衡" class="header-anchor">#</a> 8.gateway实现负载均衡</h2> <p>以前80通过Feigin接口+Ribbon实现负载均衡；</p> <p>现在通过网关实现负载均衡；</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210820113619983.png" alt="image-20210820113619983"></p> <p>默认情况下Gateway会根据注册中心注册的服务列表，
+以注册中心上微服务名为路径创建动态路由进行转发，从而实现动态路由的功能</p> <p>修改yml文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+#          uri: http://localhost:8001          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+
+        - id: payment_routh2 #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+#          uri: http://localhost:8002          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/feign/**         # 断言，路径相匹配的进行路由
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client: #服务提供者provider注册进eureka服务列表内
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  # 集群版
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h2 id="_9-predicate断言的使用"><a href="#_9-predicate断言的使用" class="header-anchor">#</a> 9.Predicate断言的使用</h2> <ol><li><p>After Route Predicate：多少时间之后才可以访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+#          uri: http://localhost:8001          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+            - After=2021-08-20T15:00:03.685+08:00[Asia/Shanghai]         # 断言，路径相匹配的进行路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>时区可以通过jdk获取</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    public static void main(String[] args)
+    {
+        ZonedDateTime zbj = ZonedDateTime.now(); // 默认时区
+        System.out.println(zbj);
+//        ZonedDateTime zny = ZonedDateTime.now(ZoneId.of(&quot;America/New_York&quot;)); // 用指定时区获取当前时间
+//        System.out.println(zny);
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>Before Route Predicate：多少时间之前才能访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-Before=2020-02-05T15:10:03.685+08:00[Asia/Shanghai]         # 断言，路径相匹配的进行路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Between Route Predicate：时间之间</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Between=2020-02-02T17:45:06.206+08:00[Asia/Shanghai],2020-03-25T18:59:06.206+08:00[Asia/Shanghai]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Cookie Route Predicate：必须携带某个cookie，value支持正则表达式</p> <p>key，value的形式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Cookie=username,zzyy
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Header Route Predicate：头信息必须携带</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Header=X-Request-Id, \d+  # 请求头要有X-Request-Id属性并且值为整数的正则表达式
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Host Route Predicate：必须是某主机</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Host=**.atguigu.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Method Route Predicate：允许get、post方式请求</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Method=GET
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Path Route Predicate：有该路径匹配</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Path=/payment/lb/**         # 断言，路径相匹配的进行路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Query Route Predicate：帶某参数才可以访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- Query=username, \d+  # 要有参数名username并且值还要是整数才能路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <p>说白了，Predicate就是为了实现一组匹配规则，让请求过来找到对应的Route进行处理。</p> <h2 id="_10-filter的使用"><a href="#_10-filter的使用" class="header-anchor">#</a> 10.Filter的使用</h2> <h3 id="_1-spring-cloud-gateway的filter生命周期"><a href="#_1-spring-cloud-gateway的filter生命周期" class="header-anchor">#</a> 1.Spring Cloud Gateway的Filter生命周期</h3> <p>​	处理之前</p> <p>​	处理之后</p> <h3 id="_2-spring-cloud-gateway的filter种类"><a href="#_2-spring-cloud-gateway的filter种类" class="header-anchor">#</a> 2.Spring Cloud Gateway的Filter种类</h3> <p>GatewayFilter ：有31种，可以参考：https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.1.RELEASE/reference/html/#the-addrequestparameter-gatewayfilter-factory</p> <p>GlobalFilter：全局过滤器</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210820152005470.png" alt="image-20210820152005470"></p> <h3 id="_3-常用的过滤器"><a href="#_3-常用的过滤器" class="header-anchor">#</a> 3.常用的过滤器</h3> <p>AddRequestParameter：可以对请求增加参数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+#          uri: http://localhost:8001          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          filters:
+            - AddRequestParameter=X-Request-Id,1024 #过滤器工厂会在匹配的请求头加上一对请求头，名称为X-Request-Id值为1024
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_4-自定义全局过滤器"><a href="#_4-自定义全局过滤器" class="header-anchor">#</a> 4.自定义全局过滤器</h3> <p>自定义过滤器实现GlobalFilter, Ordered接口即可，记得注解@Component</p> <p>下面过滤器实现了只允许传入参数为wcy的才会放行，其他都被过滤掉。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.wcy.springcloud.filter;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.core.Ordered;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
+
+import java.util.Date;
+
+/**
+ * 自定义过滤器
+ * 记录日志
+ * 鉴权
+ * 。。。。
+ */
+@Component
+public class MyLogGateWayFilter implements GlobalFilter, Ordered {
+    private static Logger logger = LoggerFactory.getLogger(MyLogGateWayFilter.class);
+
+    @Override
+    public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        logger.info(&quot;time:&quot;+new Date()+&quot;\t 执行了自定义的全局过滤器: &quot;+&quot;MyLogGateWayFilter&quot;+&quot;hello&quot;);
+        String uname = exchange.getRequest().getQueryParams().getFirst(&quot;uname&quot;);
+        if(!&quot;wcy&quot;.equals(uname)){
+            //设置状态 并返回
+            logger.info(&quot;被拦截&quot;);
+            exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
+            return exchange.getResponse().setComplete();
+        }
+        //放行
+        return chain.filter(exchange);
+    }
+
+    /**
+     * 返回值越小该过滤器优先级越高
+     * @return
+     */
+    @Override
+    public int getOrder() {
+        return 0;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/wangchangyin/myBlog/edit/master/docs/01.后端/10.Spring全家桶/04.SpringCloud/12.Gateway网关.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/09/01, 16:30:41</span></div></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myBlog/pages/e3e514/" class="prev">Hystrix豪猪哥</a></span> <span class="next"><a href="/myBlog/pages/fa46ca/">config全局配置</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myBlog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myBlog/pages/1adf94/"><div>阿里云增加虚拟内存</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/myBlog/pages/78011c/"><div>oracle锁表</div></a> <span>12-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/myBlog/pages/658e4c/"><div>模式二：URL重定向传播会话</div></a> <span>12-14</span></dt></dl> <dl><dd></dd> <dt><a href="/myBlog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:2452952178@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/wangchangyin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>Changyin Wang | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#282c34" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/myBlog/assets/js/app.6034fc33.js" defer></script><script src="/myBlog/assets/js/2.ecdec458.js" defer></script><script src="/myBlog/assets/js/41.43e2f1d1.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring | CY blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/myBlogimg/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script,[object Object]></script,[object Object]>
+    <meta name="description" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="keywords" content="CY,长印,技术博客,java,Spring,SpringBoot,SpringCloud,git,github等技术文章。">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/myBlog/assets/css/0.styles.713dba05.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.6034fc33.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.ecdec458.js" as="script"><link rel="preload" href="/myBlog/assets/js/22.be5e0407.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.7b0bdbd0.js"><link rel="prefetch" href="/myBlog/assets/js/100.5416bab4.js"><link rel="prefetch" href="/myBlog/assets/js/101.322c2725.js"><link rel="prefetch" href="/myBlog/assets/js/102.6b37be73.js"><link rel="prefetch" href="/myBlog/assets/js/103.6a821d54.js"><link rel="prefetch" href="/myBlog/assets/js/104.553a15b2.js"><link rel="prefetch" href="/myBlog/assets/js/105.f50b9a58.js"><link rel="prefetch" href="/myBlog/assets/js/106.439dbb4c.js"><link rel="prefetch" href="/myBlog/assets/js/107.550a13d3.js"><link rel="prefetch" href="/myBlog/assets/js/108.4fc6267e.js"><link rel="prefetch" href="/myBlog/assets/js/109.b0edf676.js"><link rel="prefetch" href="/myBlog/assets/js/11.5afa7e04.js"><link rel="prefetch" href="/myBlog/assets/js/110.e3256446.js"><link rel="prefetch" href="/myBlog/assets/js/111.f44da157.js"><link rel="prefetch" href="/myBlog/assets/js/112.cf2b7ccf.js"><link rel="prefetch" href="/myBlog/assets/js/113.ce23b62b.js"><link rel="prefetch" href="/myBlog/assets/js/114.a4efd687.js"><link rel="prefetch" href="/myBlog/assets/js/115.f37c3244.js"><link rel="prefetch" href="/myBlog/assets/js/116.a466bcbc.js"><link rel="prefetch" href="/myBlog/assets/js/117.f3ed6df6.js"><link rel="prefetch" href="/myBlog/assets/js/118.4019db0d.js"><link rel="prefetch" href="/myBlog/assets/js/119.2050eed3.js"><link rel="prefetch" href="/myBlog/assets/js/12.208e8480.js"><link rel="prefetch" href="/myBlog/assets/js/120.ce1004d6.js"><link rel="prefetch" href="/myBlog/assets/js/121.056aa58e.js"><link rel="prefetch" href="/myBlog/assets/js/122.ef174806.js"><link rel="prefetch" href="/myBlog/assets/js/123.af09e00a.js"><link rel="prefetch" href="/myBlog/assets/js/124.ff9f9b8b.js"><link rel="prefetch" href="/myBlog/assets/js/125.e426eee1.js"><link rel="prefetch" href="/myBlog/assets/js/126.0f67baf6.js"><link rel="prefetch" href="/myBlog/assets/js/127.d67b38ff.js"><link rel="prefetch" href="/myBlog/assets/js/128.44180ed5.js"><link rel="prefetch" href="/myBlog/assets/js/129.04983d17.js"><link rel="prefetch" href="/myBlog/assets/js/13.091a9ce4.js"><link rel="prefetch" href="/myBlog/assets/js/130.7521f0a4.js"><link rel="prefetch" href="/myBlog/assets/js/131.a1a68795.js"><link rel="prefetch" href="/myBlog/assets/js/132.07b70dd7.js"><link rel="prefetch" href="/myBlog/assets/js/133.cb6080fb.js"><link rel="prefetch" href="/myBlog/assets/js/134.d06e708e.js"><link rel="prefetch" href="/myBlog/assets/js/135.601c5b41.js"><link rel="prefetch" href="/myBlog/assets/js/136.4fb4f7cb.js"><link rel="prefetch" href="/myBlog/assets/js/137.5dfd3b84.js"><link rel="prefetch" href="/myBlog/assets/js/138.5fa36b65.js"><link rel="prefetch" href="/myBlog/assets/js/139.7d480183.js"><link rel="prefetch" href="/myBlog/assets/js/14.7151b9d7.js"><link rel="prefetch" href="/myBlog/assets/js/140.7404d5f7.js"><link rel="prefetch" href="/myBlog/assets/js/141.d6640d22.js"><link rel="prefetch" href="/myBlog/assets/js/15.bb6acdb2.js"><link rel="prefetch" href="/myBlog/assets/js/16.6067bc94.js"><link rel="prefetch" href="/myBlog/assets/js/17.2ee3b538.js"><link rel="prefetch" href="/myBlog/assets/js/18.3f280d96.js"><link rel="prefetch" href="/myBlog/assets/js/19.0c0231bb.js"><link rel="prefetch" href="/myBlog/assets/js/20.03b49756.js"><link rel="prefetch" href="/myBlog/assets/js/21.a144ec70.js"><link rel="prefetch" href="/myBlog/assets/js/23.4198eb77.js"><link rel="prefetch" href="/myBlog/assets/js/24.5e54e47d.js"><link rel="prefetch" href="/myBlog/assets/js/25.0c7199fe.js"><link rel="prefetch" href="/myBlog/assets/js/26.7a5291cd.js"><link rel="prefetch" href="/myBlog/assets/js/27.b83b7f1a.js"><link rel="prefetch" href="/myBlog/assets/js/28.5477d887.js"><link rel="prefetch" href="/myBlog/assets/js/29.6ec32ac6.js"><link rel="prefetch" href="/myBlog/assets/js/3.3c4324a9.js"><link rel="prefetch" href="/myBlog/assets/js/30.a9eb9b15.js"><link rel="prefetch" href="/myBlog/assets/js/31.a6496a14.js"><link rel="prefetch" href="/myBlog/assets/js/32.b5379dbf.js"><link rel="prefetch" href="/myBlog/assets/js/33.78a535a0.js"><link rel="prefetch" href="/myBlog/assets/js/34.e6d4ad66.js"><link rel="prefetch" href="/myBlog/assets/js/35.ff8631ac.js"><link rel="prefetch" href="/myBlog/assets/js/36.db442c21.js"><link rel="prefetch" href="/myBlog/assets/js/37.c1ba9523.js"><link rel="prefetch" href="/myBlog/assets/js/38.6768b09a.js"><link rel="prefetch" href="/myBlog/assets/js/39.c9f1fd72.js"><link rel="prefetch" href="/myBlog/assets/js/4.b0209c65.js"><link rel="prefetch" href="/myBlog/assets/js/40.35777943.js"><link rel="prefetch" href="/myBlog/assets/js/41.43e2f1d1.js"><link rel="prefetch" href="/myBlog/assets/js/42.9597c193.js"><link rel="prefetch" href="/myBlog/assets/js/43.ef6af607.js"><link rel="prefetch" href="/myBlog/assets/js/44.db0b54b7.js"><link rel="prefetch" href="/myBlog/assets/js/45.12cb4bef.js"><link rel="prefetch" href="/myBlog/assets/js/46.893e1c56.js"><link rel="prefetch" href="/myBlog/assets/js/47.52493713.js"><link rel="prefetch" href="/myBlog/assets/js/48.158af2b8.js"><link rel="prefetch" href="/myBlog/assets/js/49.0075d84b.js"><link rel="prefetch" href="/myBlog/assets/js/5.27284ffb.js"><link rel="prefetch" href="/myBlog/assets/js/50.8c3be9f5.js"><link rel="prefetch" href="/myBlog/assets/js/51.2cee7923.js"><link rel="prefetch" href="/myBlog/assets/js/52.49f65b56.js"><link rel="prefetch" href="/myBlog/assets/js/53.64bfd10a.js"><link rel="prefetch" href="/myBlog/assets/js/54.d29bf96b.js"><link rel="prefetch" href="/myBlog/assets/js/55.185dab47.js"><link rel="prefetch" href="/myBlog/assets/js/56.c9fd3894.js"><link rel="prefetch" href="/myBlog/assets/js/57.c0a0dfed.js"><link rel="prefetch" href="/myBlog/assets/js/58.ad8ca2f6.js"><link rel="prefetch" href="/myBlog/assets/js/59.efeae7ff.js"><link rel="prefetch" href="/myBlog/assets/js/6.57ebcb36.js"><link rel="prefetch" href="/myBlog/assets/js/60.1c31cf41.js"><link rel="prefetch" href="/myBlog/assets/js/61.da830dc9.js"><link rel="prefetch" href="/myBlog/assets/js/62.68ba7528.js"><link rel="prefetch" href="/myBlog/assets/js/63.7ca1f04a.js"><link rel="prefetch" href="/myBlog/assets/js/64.43e071a5.js"><link rel="prefetch" href="/myBlog/assets/js/65.55233d69.js"><link rel="prefetch" href="/myBlog/assets/js/66.d1b2c741.js"><link rel="prefetch" href="/myBlog/assets/js/67.f594913f.js"><link rel="prefetch" href="/myBlog/assets/js/68.02f2b732.js"><link rel="prefetch" href="/myBlog/assets/js/69.467048f6.js"><link rel="prefetch" href="/myBlog/assets/js/7.8ff1cc95.js"><link rel="prefetch" href="/myBlog/assets/js/70.b1045043.js"><link rel="prefetch" href="/myBlog/assets/js/71.42286b79.js"><link rel="prefetch" href="/myBlog/assets/js/72.46581568.js"><link rel="prefetch" href="/myBlog/assets/js/73.74e29ee5.js"><link rel="prefetch" href="/myBlog/assets/js/74.a797456b.js"><link rel="prefetch" href="/myBlog/assets/js/75.38d01bd0.js"><link rel="prefetch" href="/myBlog/assets/js/76.ad6eefc3.js"><link rel="prefetch" href="/myBlog/assets/js/77.663c63dd.js"><link rel="prefetch" href="/myBlog/assets/js/78.5f1858b7.js"><link rel="prefetch" href="/myBlog/assets/js/79.327b53e7.js"><link rel="prefetch" href="/myBlog/assets/js/8.63f9549b.js"><link rel="prefetch" href="/myBlog/assets/js/80.60deb9cb.js"><link rel="prefetch" href="/myBlog/assets/js/81.e6af767f.js"><link rel="prefetch" href="/myBlog/assets/js/82.37c4c554.js"><link rel="prefetch" href="/myBlog/assets/js/83.32b7b26f.js"><link rel="prefetch" href="/myBlog/assets/js/84.5fb5e87e.js"><link rel="prefetch" href="/myBlog/assets/js/85.25a29421.js"><link rel="prefetch" href="/myBlog/assets/js/86.b00447c9.js"><link rel="prefetch" href="/myBlog/assets/js/87.6b326a02.js"><link rel="prefetch" href="/myBlog/assets/js/88.adced1fc.js"><link rel="prefetch" href="/myBlog/assets/js/89.a59352d1.js"><link rel="prefetch" href="/myBlog/assets/js/9.566067df.js"><link rel="prefetch" href="/myBlog/assets/js/90.105072b7.js"><link rel="prefetch" href="/myBlog/assets/js/91.c1fd6382.js"><link rel="prefetch" href="/myBlog/assets/js/92.294df929.js"><link rel="prefetch" href="/myBlog/assets/js/93.85c3ce26.js"><link rel="prefetch" href="/myBlog/assets/js/94.9ef2cb4c.js"><link rel="prefetch" href="/myBlog/assets/js/95.521183de.js"><link rel="prefetch" href="/myBlog/assets/js/96.ba7fcc56.js"><link rel="prefetch" href="/myBlog/assets/js/97.1db11d02.js"><link rel="prefetch" href="/myBlog/assets/js/98.75156849.js"><link rel="prefetch" href="/myBlog/assets/js/99.ce5f296b.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.713dba05.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><img src="/myBlogimg/EB-logo.png" alt="CY blog" class="logo"> <span class="site-name can-hide">CY blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/119-working.png"> <div class="blogger-info"><h3>Changyin Wang</h3> <span>后端界的学习者</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/myBlog/back-end/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/4400b9/" class="nav-link">java</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/31cb74/" class="nav-link">数据库</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/44c61f/" class="nav-link">linux</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/261ec0/" class="nav-link">数据结构</a></li></ul></li><li class="dropdown-item"><h4>Spring全家桶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myBlog/pages/9f1398/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Spring</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/e3c3e5/" class="nav-link">mybatis</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/9af6ea/" class="nav-link">SpringBoot</a></li><li class="dropdown-subitem"><a href="/myBlog/pages/5ca4e4/" class="nav-link">SpringCloud</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/myBlog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/1f749b/" class="nav-link">JS</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9ff38f/" class="nav-link">Layui</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/myBlog/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/tool/" class="nav-link">工具使用</a></li><li class="dropdown-item"><!----> <a href="/myBlog/interview/" class="nav-link">面试笔记</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/9fef0c/" class="nav-link">环境搭建</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/0d18d5/" class="nav-link">项目笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/myBlog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/myBlog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/myBlog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/myBlog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/myBlog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/myBlog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/myBlog/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/wangchangyin/myBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JUC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Spring全家桶</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Spring</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/pages/486416/" class="sidebar-link">过滤器、拦截器、AOP切面</a></li><li><a href="/myBlog/pages/9f1398/" aria-current="page" class="active sidebar-link">Spring</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_1-ioc底层原理" class="sidebar-link">1.IOC底层原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_1-1-以前对象中使用另一个对象的方式" class="sidebar-link">1.1.以前对象中使用另一个对象的方式</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_1-2-升级版-工厂模式" class="sidebar-link">1.2.升级版（工厂模式）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_1-3-ioc中调用对象" class="sidebar-link">1.3.IOC中调用对象</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_2-ioc中的接口" class="sidebar-link">2.IOC中的接口</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-bean管理" class="sidebar-link">3.Bean管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-1-基于xml管理bean-手动装配" class="sidebar-link">3.1.基于XML管理bean（手动装配）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-2-工厂bean" class="sidebar-link">3.2.工厂Bean</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-3-bean的作用域" class="sidebar-link">3.3.bean的作用域</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-4-bean的生命周期" class="sidebar-link">3.4.bean的生命周期</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-5-自动装配" class="sidebar-link">3.5.自动装配</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-6-引入外部配置文件-properties文件" class="sidebar-link">3.6.引入外部配置文件（properties文件）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-7-基于注解管理bean" class="sidebar-link">3.7.基于注解管理bean</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-4-全注解开发" class="sidebar-link">3.4.全注解开发</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_4-aop" class="sidebar-link">4.AOP</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_1-jdk动态代理-需要接口" class="sidebar-link">1.JDK动态代理（需要接口）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_2-cglib动态代理-会创建子类" class="sidebar-link">2.CGlib动态代理（会创建子类）</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_3-jdk动态代理和cglib字节码生成的区别" class="sidebar-link">3.JDK动态代理和CGLIB字节码生成的区别？</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_4-aop的术语" class="sidebar-link">4.AOP的术语</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_5-spring中使用aop" class="sidebar-link">5.Spring中使用AOP</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_5-spring操作jdbc-不推荐" class="sidebar-link">5.Spring操作JDBC(不推荐)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_5-1-添加依赖" class="sidebar-link">5.1.添加依赖</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_5-2-spring的配置" class="sidebar-link">5.2.Spring的配置</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_5-3-测试" class="sidebar-link">5.3.测试</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-spirng事务" class="sidebar-link">6.Spirng事务</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-1-什么是事务" class="sidebar-link">6.1.什么是事务？</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-2-事务特性" class="sidebar-link">6.2.事务特性</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-3-spring中进行事务管理" class="sidebar-link">6.3.Spring中进行事务管理</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-4-基于注解的方式" class="sidebar-link">6.4.基于注解的方式</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-5-事务传播行为" class="sidebar-link">6.5.事务传播行为</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-6-spring中七大事务传播" class="sidebar-link">6.6.spring中七大事务传播：</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-7-spring中隔离级别" class="sidebar-link">6.7.Spring中隔离级别</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-8-transactional其他参数设置" class="sidebar-link">6.8.@Transactional其他参数设置</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-9-注解的方式实现" class="sidebar-link">6.9.注解的方式实现</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-10-xml文件的方式实现" class="sidebar-link">6.10.XML文件的方式实现</a></li><li class="sidebar-sub-header"><a href="/myBlog/pages/9f1398/#_6-11-完全注解开发" class="sidebar-link">6.11.完全注解开发</a></li></ul></li></ul></li><li><a href="/myBlog/pages/7f80ea/" class="sidebar-link">SSM环境搭建</a></li><li><a href="/myBlog/pages/1f16ed/" class="sidebar-link">SSM的问题</a></li><li><a href="/myBlog/pages/04d292/" class="sidebar-link">SpringSecurity</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SpringBoot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Mybatis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SpringMVC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>SpringCloud</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>消息队列</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Sa-Token</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/myBlog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/myBlog/back-end" title="后端-目录页" data-v-1cd794fe>后端</a></li> <li data-v-1cd794fe><a href="/myBlog/back-end/#Spring全家桶" title="后端#Spring全家桶" data-v-1cd794fe>Spring全家桶</a></li> <li data-v-1cd794fe><a href="/myBlog/back-end/#Spring" title="后端#Spring" data-v-1cd794fe>Spring</a></li></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/wangchangyin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>changyin.Wang</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-07-19</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Spring
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="spring笔记"><a href="#spring笔记" class="header-anchor">#</a> Spring笔记</h1> <h2 id="_1-ioc底层原理"><a href="#_1-ioc底层原理" class="header-anchor">#</a> 1.IOC底层原理</h2> <blockquote><p>IOC底层原理设计：XML解析、工厂模式、反射</p></blockquote> <h3 id="_1-1-以前对象中使用另一个对象的方式"><a href="#_1-1-以前对象中使用另一个对象的方式" class="header-anchor">#</a> 1.1.以前对象中使用另一个对象的方式</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719111232144.png" alt="image-20210719111232144"></p> <h3 id="_1-2-升级版-工厂模式"><a href="#_1-2-升级版-工厂模式" class="header-anchor">#</a> 1.2.升级版（工厂模式）</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719111401913.png" alt="image-20210719111401913"></p> <h3 id="_1-3-ioc中调用对象"><a href="#_1-3-ioc中调用对象" class="header-anchor">#</a> 1.3.IOC中调用对象</h3> <ol><li>XML文件，注册Bean</li> <li>创建工程，解析XML文件，获取类路径</li> <li>通过反射获取对象</li></ol> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719111740435.png" alt="image-20210719111740435"></p> <h2 id="_2-ioc中的接口"><a href="#_2-ioc中的接口" class="header-anchor">#</a> 2.IOC中的接口</h2> <p>IOC思想基于IOC容器完成，ICO容器底层就是对象工厂；</p> <p>IOC中提供两大接口：</p> <ol><li><p>BeanFactory：IOC容器底层使用的就是该接口，不提供开发人员进行使用；在加载配置文件的时候不会创建对象，在获取对象（getBean()）才会去创建对象；</p></li> <li><p>ApplicationContext：BeanFactory的子接口，提供更强大的功能，一般由开发人员进行使用；加载配置文件时就会创建对象。（推荐使用，Tomcat启动就会去创建对象）</p> <p>ApplicationContext接口的实现：</p> <ul><li>FileSystemXmlApplicationContext：在磁盘了寻找（完整路径）</li> <li>ClassPathXmlApplicationContext：在项目的类路径寻找XML文件</li></ul> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719113009180.png" alt="image-20210719113009180"></p></li></ol> <h2 id="_3-bean管理"><a href="#_3-bean管理" class="header-anchor">#</a> 3.Bean管理</h2> <h3 id="_3-1-基于xml管理bean-手动装配"><a href="#_3-1-基于xml管理bean-手动装配" class="header-anchor">#</a> 3.1.基于XML管理bean（手动装配）</h3> <h4 id="_3-1-1-基于xml文件创建对象"><a href="#_3-1-1-基于xml文件创建对象" class="header-anchor">#</a> 3.1.1.基于XML文件创建对象</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+    &lt;bean id=&quot;PersonService&quot; class=&quot;com.hand.service.impl.PersonServiceImpl&quot;&gt;&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719144119398.png" alt="image-20210719144119398"></p> <h4 id="_3-1-2-基于xml文件注入属性-di"><a href="#_3-1-2-基于xml文件注入属性-di" class="header-anchor">#</a> 3.1.2.基于XML文件注入属性（DI）</h4> <ul><li><p>构造器注入：</p> <p>提供对象、List、Set、Map、propertys等类型</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+    &lt;bean id=&quot;User2&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;constructor-arg name=&quot;name&quot; value=&quot;李四&quot;&gt;&lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;age&quot; value=&quot;22&quot;&gt;&lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;testList&quot; &gt;
+            &lt;list&gt;
+                &lt;value&gt;list1&lt;/value&gt;
+                &lt;value&gt;list2&lt;/value&gt;
+                &lt;value&gt;list3&lt;/value&gt;
+            &lt;/list&gt;
+        &lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;testSet&quot;&gt;
+            &lt;set&gt;
+                &lt;value&gt;set1&lt;/value&gt;
+                &lt;value&gt;set2&lt;/value&gt;
+                &lt;value&gt;set3&lt;/value&gt;
+            &lt;/set&gt;
+        &lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;testArrays&quot;&gt;
+            &lt;array&gt;
+                &lt;value&gt;array1&lt;/value&gt;
+                &lt;value&gt;array2&lt;/value&gt;
+                &lt;value&gt;array3&lt;/value&gt;
+            &lt;/array&gt;
+        &lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;testMap&quot;&gt;
+            &lt;map&gt;
+                &lt;entry key=&quot;key1&quot; value=&quot;val1&quot;&gt;&lt;/entry&gt;
+                &lt;entry key=&quot;key2&quot; value=&quot;val2&quot;&gt;&lt;/entry&gt;
+                &lt;entry key=&quot;key3&quot; value=&quot;val3&quot;&gt;&lt;/entry&gt;
+            &lt;/map&gt;
+        &lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;testProperties&quot;&gt;
+            &lt;props&gt;
+                &lt;prop key=&quot;key1&quot;&gt;val1&lt;/prop&gt;
+                &lt;prop key=&quot;key2&quot;&gt;val2&lt;/prop&gt;
+                &lt;prop key=&quot;key3&quot;&gt;val3&lt;/prop&gt;
+            &lt;/props&gt;
+        &lt;/constructor-arg&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div></li> <li><p>Set注入</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+    &lt;bean id=&quot;User&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;property name=&quot;name&quot; value=&quot;李四&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;age&quot; value=&quot;21&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;testList&quot;&gt;
+            &lt;list&gt;
+                &lt;value&gt;list1&lt;/value&gt;
+                &lt;value&gt;list2&lt;/value&gt;
+                &lt;value&gt;list3&lt;/value&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;testArrays&quot;&gt;
+            &lt;array&gt;
+                &lt;value&gt;array1&lt;/value&gt;
+                &lt;value&gt;array2&lt;/value&gt;
+                &lt;value&gt;array3&lt;/value&gt;
+            &lt;/array&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;testSet&quot;&gt;
+            &lt;set&gt;
+                &lt;value&gt;set1&lt;/value&gt;
+                &lt;value&gt;set2&lt;/value&gt;
+                &lt;value&gt;set3&lt;/value&gt;
+            &lt;/set&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;testMap&quot;&gt;
+            &lt;map&gt;
+                &lt;entry key=&quot;key1&quot; value=&quot;val1&quot;&gt;&lt;/entry&gt;
+                &lt;entry key=&quot;key2&quot; value=&quot;val2&quot;&gt;&lt;/entry&gt;
+                &lt;entry key=&quot;key3&quot; value=&quot;val3&quot;&gt;&lt;/entry&gt;
+            &lt;/map&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;testProperties&quot;&gt;
+            &lt;props&gt;
+                &lt;prop key=&quot;key1&quot;&gt;val1&lt;/prop&gt;
+                &lt;prop key=&quot;key2&quot;&gt;val2&lt;/prop&gt;
+                &lt;prop key=&quot;key3&quot;&gt;val3&lt;/prop&gt;
+            &lt;/props&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div></li> <li><p>P命名空间注入（其实就是简化set注入）</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719145421142.png" alt="image-20210719145421142"></p></li></ul> <h4 id="_3-1-3-注入特殊符号"><a href="#_3-1-3-注入特殊符号" class="header-anchor">#</a> 3.1.3.注入特殊符号</h4> <ol><li><p>注入空值</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;bean id=&quot;User2&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;property name=&quot;name&quot;&gt;
+            &lt;null&gt;&lt;/null&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>注入特殊符号</p> <p>方法一：通过转义&lt;&gt;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;bean id=&quot;User2&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;property name=&quot;name&quot; value=&quot;&amp;lt;南京&amp;gt;&quot;&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>方法二:CDATA的方式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;bean id=&quot;User2&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;property name=&quot;name&quot; value=&quot;&amp;lt;南京&amp;gt;&quot;&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;age&quot; value=&quot;&lt;![CDATA[&lt;南京&gt;]]&gt;&quot;&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h4 id="_3-1-4-导入外部bean"><a href="#_3-1-4-导入外部bean" class="header-anchor">#</a> 3.1.4.导入外部bean</h4> <p>通过ref导入</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719150554784.png" alt="image-20210719150554784"></p> <h4 id="_3-1-5-注入内部bean"><a href="#_3-1-5-注入内部bean" class="header-anchor">#</a> 3.1.5.注入内部bean</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+	&lt;!--注入内部bean--&gt;
+    &lt;bean id=&quot;User&quot; class=&quot;com.hand.dto.User&quot;&gt;
+        &lt;property name=&quot;objectTest&quot;&gt;
+            &lt;bean&gt;
+                &lt;property name=&quot;name&quot; value=&quot;测试&quot;&gt;&lt;/property&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_3-2-工厂bean"><a href="#_3-2-工厂bean" class="header-anchor">#</a> 3.2.工厂Bean</h3> <blockquote><p>返回类型与定义的类型可以不一致</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.factory;
+
+import com.hand.dto.User;
+import org.springframework.beans.factory.FactoryBean;
+
+public class MyBean implements FactoryBean&lt;User&gt; {
+    //定义返回的类型
+    @Override
+    public User getObject() throws Exception {
+        User user=new User();
+        return user;
+    }
+
+    @Override
+    public Class&lt;?&gt; getObjectType() {
+        return null;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return false;
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+
+    &lt;bean id=&quot;mybean&quot; class=&quot;com.hand.factory.MyBean&quot;&gt;&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>测试</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand;
+
+import com.hand.factory.MyBean;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test1 {
+    @Test
+    public void test1(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        MyBean myBean = (MyBean)applicationContext.getBean(MyBean.class);
+        System.out.println(myBean);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_3-3-bean的作用域"><a href="#_3-3-bean的作用域" class="header-anchor">#</a> 3.3.bean的作用域</h3> <ol><li>singleton：单例（默认），启动项目后，就会创建bean</li> <li>prototype：原型，每次使用都会创建新的对象</li> <li>request：一次请求中</li> <li>session：一次回话中</li></ol> <h3 id="_3-4-bean的生命周期"><a href="#_3-4-bean的生命周期" class="header-anchor">#</a> 3.4.bean的生命周期</h3> <ol><li><strong>通过构造方法创建bean的实例</strong></li> <li>为bean设置属性值和对其他的bean的引用（调用set方法）</li> <li>前置通知，在初始化之前执行（需要自己创建）</li> <li>bean的初始化的方法（需要自己创建初始化的方法）</li> <li>后置通知，在初始化之后执行（需要自己创建）</li> <li><strong>bean就可以使用了（获取到对象）</strong></li> <li>销毁bean（也需要自己创建）</li></ol> <p>实现：</p> <blockquote><ol><li><strong>通过构造方法创建bean的实例</strong></li> <li>为bean设置属性值和对其他的bean的引用（调用set方法）</li> <li>前置通知，在初始化之前执行（需要自己创建）</li> <li>bean的初始化的方法（需要自己创建初始化的方法）</li> <li>后置通知，在初始化之后执行（需要自己创建）</li> <li><strong>bean就可以使用了（获取到对象）</strong></li> <li>销毁bean（也需要自己创建）</li></ol></blockquote> <ol><li><p>创建bean</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.bean;
+
+/**
+ * bean的生命周期
+ */
+public class BeanCycle {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        System.out.println(&quot;第二步：bean设置值&quot;);
+        this.name = name;
+    }
+
+    public BeanCycle() {
+        System.out.println(&quot;第一步：构造方法执行&quot;);
+    }
+
+    public void initMethod(){
+        System.out.println(&quot;第四步：初始化方法&quot;);
+    }
+
+    public void destroyMethod(){
+        System.out.println(&quot;第七部：bean销毁方法&quot;);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div></li> <li><p>创建后置bean</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.bean;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+/**
+ * bean的后置处理
+ */
+public class BeanProcess implements BeanPostProcessor {
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println(&quot;第三部：后置方法之前&quot;);
+        return bean;
+    }
+
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println(&quot;第五部：后置方法之后&quot;);
+        return bean;
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></li> <li><p>注册bean，</p> <blockquote><p>注意注意：后置方法 会作用于该文件的所有bean，也就是说所有的bean都会执行该方法</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd&quot;&gt;
+    &lt;!--bean生命周期--&gt;
+    &lt;bean id=&quot;beanCycle&quot; class=&quot;com.hand.bean.BeanCycle&quot; init-method=&quot;initMethod&quot; destroy-method=&quot;destroyMethod&quot;&gt;
+        &lt;property name=&quot;name&quot; value=&quot;测试&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;!--后置方法 该配置文件的所有bean都会执行该后置方法--&gt;
+    &lt;bean id=&quot;beanProcess&quot; class=&quot;com.hand.bean.BeanProcess&quot;&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>测试：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand;
+
+import com.hand.bean.BeanCycle;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test1 {
+    @Test
+    public void test1(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        BeanCycle myBean = (BeanCycle)applicationContext.getBean(BeanCycle.class);
+        System.out.println(&quot;第六步：可以使用bean了&quot;);
+        applicationContext.close();
+        System.out.println(&quot;第七步：销毁bean了&quot;);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></li> <li><p>输出：</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719192841312.png" alt="image-20210719192841312"></p></li></ol> <h3 id="_3-5-自动装配"><a href="#_3-5-自动装配" class="header-anchor">#</a> 3.5.自动装配</h3> <blockquote><p>手动装配：注册一个bean时，通过property进行赋值</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;bean id=&quot;beanCycle&quot; class=&quot;com.hand.bean.BeanCycle&quot;&gt;
+        &lt;property name=&quot;name&quot; ref=&quot;beanProcess&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;beanProcess&quot; class=&quot;com.hand.bean.BeanProcess&quot;&gt;
+    &lt;/bean&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>自动装配：</p> <ol><li>autowire=&quot;byName&quot;：bean的属性名和注册的bean的ID要一致</li> <li>autowire=&quot;byType&quot;：根据bean的类型匹配</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;bean id=&quot;beanCycle&quot; class=&quot;com.hand.bean.BeanCycle&quot; autowire=&quot;byName&quot;&gt;
+        &lt;property name=&quot;name&quot; ref=&quot;beanProcess&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;beanProcess&quot; class=&quot;com.hand.bean.BeanProcess&quot;&gt;
+    &lt;/bean&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></blockquote> <h3 id="_3-6-引入外部配置文件-properties文件"><a href="#_3-6-引入外部配置文件-properties文件" class="header-anchor">#</a> 3.6.引入外部配置文件（properties文件）</h3> <blockquote><p>常见的就是引入数据库连接池</p></blockquote> <h5 id="_3-6-1-以前配置连接池信息"><a href="#_3-6-1-以前配置连接池信息" class="header-anchor">#</a> 3.6.1.以前配置连接池信息：</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                       http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+    &lt;bean id=&quot;dataSource&quot; class=&quot;com.alibaba.druid.pool.DruidDataSource&quot;&gt;
+        &lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/userDB&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;username&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;password&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h5 id="_3-6-2-新版写法引入外部文件"><a href="#_3-6-2-新版写法引入外部文件" class="header-anchor">#</a> 3.6.2.新版写法引入外部文件</h5> <p>配置文件：jdbc.properties</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/userDB
+jdbc.username=root
+jdbc.password=root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>applicationContext.xml的配置</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+    &lt;!--新版写法--&gt;
+    &lt;!--引入外部配置文件--&gt;
+    &lt;context:property-placeholder location=&quot;jdbc.properties&quot;/&gt;
+    &lt;bean id=&quot;dataSource&quot; class=&quot;com.alibaba.druid.pool.DruidDataSource&quot;&gt;
+        &lt;property name=&quot;driverClassName&quot; value=&quot;${jdbc.driverClassName}&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;url&quot; value=&quot;${jdbc.url}&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;username&quot; value=&quot;${jdbc.username}&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;password&quot; value=&quot;${jdbc.password}&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h3 id="_3-7-基于注解管理bean"><a href="#_3-7-基于注解管理bean" class="header-anchor">#</a> 3.7.基于注解管理bean</h3> <h4 id="_3-7-1-创建bean"><a href="#_3-7-1-创建bean" class="header-anchor">#</a> 3.7.1.创建bean</h4> <ol><li><p>导入依赖</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>开启组件扫描</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+    &lt;!--开启包扫描，多个包用逗号隔开--&gt;
+	&lt;context:component-scan base-package=&quot;com.hand&quot;&gt;&lt;/context:component-scan&gt;--&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>扩展：</p> <p>示例一：扫描com.hand包，但是不使用默认的过滤器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;context: component-scan base-package=&quot;com.hand&quot; use-default-filters=&quot;false&quot;&gt;
+   &lt;!--只扫描注解是Controller的类--&gt;
+   &lt;context:include-filter type=&quot;annotation&quot;
+    expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;
+&lt;/context:component-scan&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>示例二：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!--下面配置扫描包所有内容,context:exclude-filter:设置哪些内容不进行扫描--&gt;
+&lt;context:component-scan base package=&quot;com.hand&quot;&gt;
+    &lt;context:exclude-filter type=&quot;annotation&quot;
+    expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;
+&lt;/context:component-scan&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>通过@Componet、@service、@Controller、@Repository注入到Spirng中</p></li></ol> <h4 id="_3-7-2-属性注入"><a href="#_3-7-2-属性注入" class="header-anchor">#</a> 3.7.2.属性注入</h4> <ol><li><p>@Autowired：根据属性类型注入</p> <p>直接引入对象，内部封装了set方法</p></li> <li><p>@Qualifier：根据名称注入</p> <p>必须配合@Autowired使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Repository(value=&quot;userdaodaodao&quot;)
+public UserDao{
+	public void add(){
+		...
+	}
+}
+
+引用：
+public UserService{
+	@Autowired
+	@Qualifier(&quot;userdaodaodao&quot;)
+	private UserDao userDao;
+	public void add(){
+		userDao.add();
+		...
+	}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></li> <li><p>@Resourse：可以根据类型注入，也可以根据名称注入</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Repository(value=&quot;userdaodaodao&quot;)
+public UserDao{
+	public void add(){
+		...
+	}
+}
+
+引用：
+public UserService{
+	@Resourse(&quot;userdaodaodao&quot;)
+	private UserDao userDao;
+	public void add(){
+		userDao.add();
+		...
+	}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></li> <li><p>@Value</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>public UserService{
+	@Value(&quot;abc&quot;)
+	private String name;
+	@Resourse(&quot;userdaodaodao&quot;)
+	private UserDao userDao;
+	public void add(){
+		userDao.add();
+		...
+	}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li></ol> <h3 id="_3-4-全注解开发"><a href="#_3-4-全注解开发" class="header-anchor">#</a> 3.4.全注解开发</h3> <p>配置文件改为配置类：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@ComponentScan(&quot;com.hand&quot;)  //扫包
+@EnableAspectJAutoProxy(proxyTargetClass=true) //开启AOP
+public class AopConfig {
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>测试：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    @Test
+    public void test2(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AopConfig.class);
+        BeanCycle myBean = (BeanCycle)applicationContext.getBean(BeanCycle.class);
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_4-aop"><a href="#_4-aop" class="header-anchor">#</a> 4.AOP</h2> <p>AOP：面向切面编程，是OOP的补充；比如我们可以把权限控制、事务控制、日志管理把这些重复的业务代码抽离出来，通过配置的方式（或注解）引入到需要的地方。</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719153955006.png" alt="image-20210719153955006"></p> <h3 id="_1-jdk动态代理-需要接口"><a href="#_1-jdk动态代理-需要接口" class="header-anchor">#</a> 1.JDK动态代理（需要接口）</h3> <p>通过接口创建代理实现类，增强类的方法</p> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719154614500.png" alt="image-20210719154614500"></p> <h4 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现：</h4> <ol><li><p>service、serviceimpl方法，需要植入到该类的方法中</p></li> <li><p>定义切面</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aspect;
+
+public class MyAspect {
+    public void before(){
+        System.out.println(&quot;方法执行前。。。。&quot;);
+    }
+    public void after(){
+        System.out.println(&quot;方法执行后。。。。&quot;);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li> <li><p>代理类</p></li> <li><p>Proxy.newProxyInstance(类加载器，接口，InvocationHandler对象)方法获取代理对象</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aspect;
+
+import com.hand.service.IPersonService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class JdkProxy implements InvocationHandler {
+    private Object target ;//需要代理的目标对象
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        MyAspect myAspect=new MyAspect();
+        myAspect.before();//方法执行前
+        Object result = method.invoke(target, args);
+        myAspect.after();//方法执行后
+        return result;
+    }
+    //定义获取代理对象方法
+    private Object getJDKProxy(Object targetObject){
+        //为目标对象target赋值
+        this.target = targetObject;
+        //JDK动态代理只能针对实现了接口的类进行代理，newProxyInstance 函数所需参数就可看出
+        return Proxy.newProxyInstance(targetObject.getClass().getClassLoader(),
+                targetObject.getClass().getInterfaces(),
+                this);
+    }
+
+    public static void main(String[] args) {
+        JdkProxy jdkProxy = new JdkProxy();//实例化JDKProxy对象
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        IPersonService personService = (UserManagerImpl)jdkProxy.getJDKProxy((UserManagerImpl) applicationContext.getBean(&quot;UserManagerImpl&quot;));
+        personService.add();
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div></li></ol> <h3 id="_2-cglib动态代理-会创建子类"><a href="#_2-cglib动态代理-会创建子类" class="header-anchor">#</a> 2.CGlib动态代理（会创建子类）</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719154903807.png" alt="image-20210719154903807"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aspect;
+
+import com.hand.service.IPersonService;
+import org.springframework.cglib.proxy.Enhancer;
+import org.springframework.cglib.proxy.MethodInterceptor;
+import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.lang.reflect.Method;
+
+public class CglibProxy implements MethodInterceptor {
+    private Object target ;//需要代理的目标对象
+    @Override
+    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+        MyAspect myAspect=new MyAspect();
+        myAspect.before();//方法执行前
+        Object invoke = method.invoke(target, objects);
+        myAspect.after();//方法执行后
+        return invoke;
+    }
+    //定义获取代理对象方法
+    public Object getCglibProxy(Object objectTarget){
+        //为目标对象target赋值
+        this.target = objectTarget;
+        Enhancer enhancer = new Enhancer();
+        //设置父类,因为Cglib是针对指定的类生成一个子类，所以需要指定父类
+        enhancer.setSuperclass(objectTarget.getClass());
+        enhancer.setCallback(this);// 设置回调
+        Object result = enhancer.create();//创建并返回代理对象
+        return result;
+    }
+    public static void main(String[] args) {
+        CglibProxy cglibProxy = new CglibProxy();//实例化JDKProxy对象
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        IPersonService personService = (IPersonService)cglibProxy.getCglibProxy((IPersonService) applicationContext.getBean(&quot;PersonService&quot;));
+        personService.add();
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h3 id="_3-jdk动态代理和cglib字节码生成的区别"><a href="#_3-jdk动态代理和cglib字节码生成的区别" class="header-anchor">#</a> 3.JDK动态代理和CGLIB字节码生成的区别？</h3> <blockquote><p>（1）JDK动态代理只能对实现了接口的类生成代理，而不能针对类
+（2）CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法
+因为是继承，所以该类或方法最好不要声明成final</p></blockquote> <h3 id="_4-aop的术语"><a href="#_4-aop的术语" class="header-anchor">#</a> 4.AOP的术语</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719161149858.png" alt="image-20210719161149858"></p> <h3 id="_5-spring中使用aop"><a href="#_5-spring中使用aop" class="header-anchor">#</a> 5.Spring中使用AOP</h3> <h4 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作：</h4> <p>AspectJ不是Spring的组成部分，独立的AOP框架，一般把AspectJ与Spring一起使用，进行AOP的操作</p> <h4 id="实现方式"><a href="#实现方式" class="header-anchor">#</a> 实现方式</h4> <ol><li>基于XML文件实现</li> <li>基于注解的方式（常用）</li></ol> <h4 id="切入点表达式"><a href="#切入点表达式" class="header-anchor">#</a> 切入点表达式</h4> <blockquote><p>execution(【权限控制】【返回类型】【包名】【方法名】（【参数】）)</p></blockquote> <p>案列一:com.wcy.add的Person的add方法增强</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>execution(*com.wcy.Person.add(..))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>案列二:com.wcy.add的Person的所有方法增强</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>execution(*com.wcy.Person.*(..))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>案列三:com.wcy.add的所有类的所有方法增强</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>xxxxxxxxxx execution(*com.wcy.*.*(..))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="引入依赖"><a href="#引入依赖" class="header-anchor">#</a> 引入依赖</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!--AOP--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+      &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+      &lt;version&gt;1.9.4&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="注解实现-重点"><a href="#注解实现-重点" class="header-anchor">#</a> 注解实现（重点）</h4> <ol><li><p>定义一个需要增强的类，比如UserService、UserServiceImpl</p></li> <li><p>开启包扫描、开启AOP</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+    &lt;!--开启包扫描--&gt;
+    &lt;context:component-scan base-package=&quot;com.hand&quot;&gt;&lt;/context:component-scan&gt;
+    &lt;!--开启AOP--&gt;
+    &lt;aop:aspectj-autoproxy&gt;&lt;/aop:aspectj-autoproxy&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>可以换成配置类实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@ComponentScan(&quot;com.hand&quot;)  //扫包
+@EnableAspectJAutoProxy(proxyTargetClass=true) //开启AOP
+public class AopConfig {
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li> <li><p>定义切面，定义通知类型</p> <ul><li>@Before(&quot;pointcut()&quot;)//前置通知</li> <li>@After(&quot;pointcut()&quot;)//后置通知 最终通知</li> <li>@AfterReturning(&quot;pointcut()&quot;)//返回结果才执行  异常不执行</li> <li>@AfterThrowing(value = &quot;pointcut()&quot;, throwing = &quot;ex&quot;) //异常通知</li> <li>@Around(&quot;pointcut()&quot;) //环绕通知 异常执行前半部分</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.List;
+
+@Component
+@Aspect
+@Order(1) //多个切面定义优先级，越小优先级越高
+public class AnnotationProxy {
+    @Pointcut(&quot;execution(* com.hand.*.*.*(..))&quot;)
+    public void pointcut() {
+
+    }
+
+    @Before(&quot;pointcut()&quot;)//前置通知
+    public static void before(JoinPoint joinPoint) {
+        //方法名
+        String method = joinPoint.getSignature().getName();
+        //参数
+        List&lt;Object&gt; args = Arrays.asList(joinPoint.getArgs());
+
+        System.out.println(&quot;方法执行前&quot;);
+    }
+
+    @After(&quot;pointcut()&quot;)//后置通知 最终通知
+    public static void after() {
+        System.out.println(&quot;方法执行后&quot;);
+    }
+    @AfterReturning(&quot;pointcut()&quot;)//返回结果才执行  异常不执行
+    public static void afterReturning() {
+        System.out.println(&quot;方法返回后&quot;);
+    }
+
+    //异常执行
+    @AfterThrowing(value = &quot;pointcut()&quot;, throwing = &quot;ex&quot;)
+    public static void afterException(Exception ex) {
+        StringWriter sw = new StringWriter();
+        ex.printStackTrace(new PrintWriter(sw, true));
+        System.out.println(&quot;异常通知:&quot; + sw.getBuffer().toString());
+    }
+
+
+    //环绕通知
+    @Around(&quot;pointcut()&quot;)
+    public static void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println(&quot;环绕之前&quot;);
+        proceedingJoinPoint.proceed();
+        System.out.println(&quot;环绕之后&quot;);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div></li> <li><p>测试</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand;
+
+import com.hand.service.IPersonService;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test1 {
+    @Test
+    public void test1(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;aop.xml&quot;);//获取上方的配置的xml文件
+        IPersonService personService = (IPersonService)applicationContext.getBean(IPersonService.class);
+        personService.add();
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210719165556918.png" alt="image-20210719165556918"></p></li></ol> <h4 id="xml文件实现"><a href="#xml文件实现" class="header-anchor">#</a> XML文件实现</h4> <ol><li><p>需要增强的类</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aop.xml;
+
+public class UserService {
+    public void add(){
+        System.out.println(&quot;添加方法&quot;);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>增强的方法</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.aop.xml;
+
+public class XmlAspect {
+    public void before(){
+        System.out.println(&quot;前置通知&quot;);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>配置</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+    &lt;bean id=&quot;userService&quot; class=&quot;com.hand.aop.xml.UserService&quot;&gt;&lt;/bean&gt;
+    &lt;bean id=&quot;xmlAspect&quot; class=&quot;com.hand.aop.xml.XmlAspect&quot;&gt;&lt;/bean&gt;
+
+    &lt;aop:config&gt;
+        &lt;!--切入点--&gt;
+        &lt;aop:pointcut id=&quot;MyAop&quot; expression=&quot;execution(* com.hand.aop.xml.UserService.add(..))&quot;/&gt;
+        &lt;!--定义切面 ref增强的类--&gt;
+        &lt;aop:aspect ref=&quot;xmlAspect&quot;&gt;
+            &lt;!--哪个切入点--&gt;
+            &lt;aop:before method=&quot;before&quot; pointcut-ref=&quot;MyAop&quot;&gt;&lt;/aop:before&gt;
+        &lt;/aop:aspect&gt;
+    &lt;/aop:config&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div></li> <li><p>测试</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand;
+
+import com.hand.aop.xml.UserService;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test1 {
+    @Test
+    public void test1(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;aop.xml&quot;);
+        UserService personService = (UserService)applicationContext.getBean(UserService.class);
+        personService.add();
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></li></ol> <h2 id="_5-spring操作jdbc-不推荐"><a href="#_5-spring操作jdbc-不推荐" class="header-anchor">#</a> 5.Spring操作JDBC(不推荐)</h2> <h3 id="_5-1-添加依赖"><a href="#_5-1-添加依赖" class="header-anchor">#</a> 5.1.添加依赖</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;com.hande&lt;/groupId&gt;
+  &lt;artifactId&gt;SSM_demo&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+
+  &lt;name&gt;SSM_demo Maven Webapp&lt;/name&gt;
+  &lt;!-- FIXME change it to the project's website --&gt;
+  &lt;url&gt;http://www.example.com&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+
+    &lt;!--spring核心依赖--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!--AOP--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+      &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+      &lt;version&gt;1.9.4&lt;/version&gt;
+    &lt;/dependency&gt;
+
+
+
+
+    &lt;!--阿里巴巴连接池--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+      &lt;artifactId&gt;druid&lt;/artifactId&gt;
+      &lt;version&gt;1.1.10&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;mysql&lt;/groupId&gt;
+      &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+      &lt;version&gt;5.1.25&lt;/version&gt;
+    &lt;/dependency&gt;
+
+
+
+    &lt;!--junit测试依赖--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+      &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+      &lt;version&gt;2.2&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+      &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+      &lt;version&gt;RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+
+&lt;!--    &lt;dependency&gt;--&gt;
+&lt;!--      &lt;groupId&gt;junit&lt;/groupId&gt;--&gt;
+&lt;!--      &lt;artifactId&gt;junit&lt;/artifactId&gt;--&gt;
+&lt;!--      &lt;version&gt;4.11&lt;/version&gt;--&gt;
+&lt;!--      &lt;scope&gt;test&lt;/scope&gt;--&gt;
+&lt;!--    &lt;/dependency&gt;--&gt;
+  &lt;/dependencies&gt;
+
+  &lt;build&gt;
+    &lt;finalName&gt;SSM_demo&lt;/finalName&gt;
+    &lt;pluginManagement&gt;&lt;!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) --&gt;
+      &lt;plugins&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging --&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.0.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.8.0&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.22.1&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.2.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-install-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.5.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-deploy-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.8.2&lt;/version&gt;
+        &lt;/plugin&gt;
+      &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br></div></div><h3 id="_5-2-spring的配置"><a href="#_5-2-spring的配置" class="header-anchor">#</a> 5.2.Spring的配置</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+	xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+	xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+	xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+    	 http://www.springframework.org/schema/beans/spring-beans.xsd
+     	 http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/tx
+     	 http://www.springframework.org/schema/tx/spring-tx.xsd&quot;&gt;
+
+	&lt;!-- 开启注解 --&gt;
+	&lt;context:component-scan
+		base-package=&quot;com.hand&quot;&gt;&lt;/context:component-scan&gt;
+	&lt;!-- 1. 数据源对象: C3P0连接池 --&gt;
+	&lt;bean id=&quot;dataSource&quot;
+		class=&quot;com.alibaba.druid.pool.DruidDataSource&quot;&gt;
+		&lt;!-- 基本属性 url、user、password --&gt;
+		&lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;
+		&lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://192.168.188.128:3306/hand_ceshi?useUnicode=true&amp;amp;characterEncoding=UTF-8&quot; /&gt;
+		&lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+		&lt;property name=&quot;password&quot; value=&quot;2452952178&quot; /&gt;
+	&lt;/bean&gt;
+	
+	&lt;!-- 配置jdbc数据源 --&gt;
+	&lt;bean id=&quot;jdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;
+		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h3 id="_5-3-测试"><a href="#_5-3-测试" class="header-anchor">#</a> 5.3.测试</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    @Test
+    public void test3(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        System.out.println(applicationContext.getBean(JdbcTemplate.class));
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_6-spirng事务"><a href="#_6-spirng事务" class="header-anchor">#</a> 6.Spirng事务</h2> <h3 id="_6-1-什么是事务"><a href="#_6-1-什么是事务" class="header-anchor">#</a> 6.1.什么是事务？</h3> <blockquote><p>事务是数据库操作最基本单元，逻辑上一组操作，要么都成功，如果有一个失败所有操作都失败。</p></blockquote> <h3 id="_6-2-事务特性"><a href="#_6-2-事务特性" class="header-anchor">#</a> 6.2.事务特性</h3> <ol><li>原子性：要么都成功，要么都失败</li> <li>一致性：操作前前后数据一致性</li> <li>隔离性：多个事务之间不会产生影响</li> <li>持久性：保存到库中</li></ol> <h3 id="_6-3-spring中进行事务管理"><a href="#_6-3-spring中进行事务管理" class="header-anchor">#</a> 6.3.Spring中进行事务管理</h3> <p>Spring中进行事务管理有两种方式：</p> <ol><li>编程式事务：硬编码，在代码中添加事务、提交事务等</li> <li>声明式事务：
+<ol><li><strong>基于注解方式（推荐）</strong></li> <li>基于XML文件方式</li></ol></li></ol> <blockquote><p>Spring中进行声明式事务是通过AOP来实现的</p></blockquote> <p>Spirng中提供PlatformTransactionManager接口来实现事务：</p> <ol><li>DataSourceTransactionManager：默认事务、mybatis也使用该事务</li> <li>HibernateTransactionManager：Hibernate的事务</li></ol> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/2021-07-20_150411.png" alt="2021-07-20_150411"></p> <h3 id="_6-4-基于注解的方式"><a href="#_6-4-基于注解的方式" class="header-anchor">#</a> 6.4.基于注解的方式</h3> <p>@Transactional即可实现事务</p> <blockquote><p>在service类上面(或者service类里面方法上面)添加事务注解</p> <p>(1）@Transactional，这个注解添加到类上面，也可以添加方法上面·</p> <p>(2）如果把这个注解添加类上面，这个类里面所有的方法都添加事务</p> <p>(3）如果把这个注解添加方法上面，为这个方法添加事务</p></blockquote> <h3 id="_6-5-事务传播行为"><a href="#_6-5-事务传播行为" class="header-anchor">#</a> 6.5.事务传播行为</h3> <p><img src="https://cdn.jsdelivr.net/gh/wangchangyin/images@main/hand/image-20210720155902682.png" alt="image-20210720155902682"></p> <h3 id="_6-6-spring中七大事务传播"><a href="#_6-6-spring中七大事务传播" class="header-anchor">#</a> 6.6.spring中七大事务传播：</h3> <table><thead><tr><th>传播属性</th> <th>描述</th></tr></thead> <tbody><tr><td>REQUIRED</td> <td>如果有事务在运行，新方法则就用该方法的事务</td></tr> <tr><td>REQUIRES_NEW</td> <td>不管有没有事务，都会另起事务</td></tr> <tr><td>SUPPORTS</td> <td>如果有事务在运行，当前的方法就在这个事务内运行.否则它可以不</td></tr> <tr><td>NOT_SUPPORTED</td> <td>当前方法不应该运行在事务中，如果有运行的事务，把它挂起</td></tr> <tr><td>MANDATORY</td> <td>当前的方法必须运行在事务内部，如果没有正在运行的事务，就抛出异常</td></tr> <tr><td>NEVER</td> <td>当前方法不应该运行在事务中，如果有运行的事务，就抛出异常</td></tr> <tr><td>NESTED</td> <td>如果有事务在运行，当前的方法就应该在这个事务的嵌套事务内运行，否则，就启动一个新的事务，并在它自己的事务内运行</td></tr></tbody></table> <h3 id="_6-7-spring中隔离级别"><a href="#_6-7-spring中隔离级别" class="header-anchor">#</a> 6.7.Spring中隔离级别</h3> <p>事务有特性成为隔离性，多事务操作之间不会产生影响。不考虑隔离性产生很多问题</p> <blockquote><p>有三个读问题:脏读、不可重复读、虚（幻）读
+(1）脏读:一个未提交事务读取到另一个未提交事务的数据</p> <p>(2)	不可重复读：两次读取到修改的数据</p> <p>(3)	幻读：两次读取到添加（或删除）的数据</p></blockquote> <p>事务的隔离级别：</p> <table><thead><tr><th></th> <th>脏读</th> <th>不可重复读</th> <th>幻读</th></tr></thead> <tbody><tr><td>READ_UNCOMMITTED（读未提交）</td> <td>有</td> <td>有</td> <td>有</td></tr> <tr><td>READ_COMMITTED（读提交） oracle默认</td> <td>无</td> <td>有</td> <td>有</td></tr> <tr><td>REPEATABLE_READ（可重复读）mysql默认</td> <td>无</td> <td>无</td> <td>有</td></tr> <tr><td>SERIALIZABLE（串行化）</td> <td>无</td> <td>无</td> <td>无</td></tr></tbody></table> <p>Spring设置隔离级别：</p> <p>Spirng隔离级别默认为数据库的隔离级别，当然也可以修改</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Transactional(isolation= Isolation.REPEATABLE_READ)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_6-8-transactional其他参数设置"><a href="#_6-8-transactional其他参数设置" class="header-anchor">#</a> 6.8.@Transactional其他参数设置</h3> <ol><li><p>timeout：设置超时时间</p> <blockquote><p>(1)事务需要在一定时间内进行提交，如果不提交进行回滚·</p> <p>(2）默认值是-1，设置时间以秒单位进行计算</p></blockquote></li> <li><p>readOnly：设置只读</p> <blockquote><p>(1）读:查询操作，写:添加修改删除操作
+(2) readOnly默认值false，表示可以查询，可以添加修改删除操作</p> <p>(3）设置readOnly值是true，设置成true之后，只能查询</p></blockquote></li> <li><p>rollbackFor：设置哪种异常才回滚</p></li> <li><p>noRollbackFor：设置哪种异常不回滚</p></li></ol> <h3 id="_6-9-注解的方式实现"><a href="#_6-9-注解的方式实现" class="header-anchor">#</a> 6.9.注解的方式实现</h3> <h4 id="_1-引入依赖"><a href="#_1-引入依赖" class="header-anchor">#</a> 1.引入依赖</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;com.hande&lt;/groupId&gt;
+  &lt;artifactId&gt;SSM_demo&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+
+  &lt;name&gt;SSM_demo Maven Webapp&lt;/name&gt;
+  &lt;!-- FIXME change it to the project's website --&gt;
+  &lt;url&gt;http://www.example.com&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+
+    &lt;!--spring核心依赖--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;
+      &lt;version&gt;5.2.6.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!--AOP--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+      &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+      &lt;version&gt;1.9.4&lt;/version&gt;
+    &lt;/dependency&gt;
+
+
+
+    &lt;!--阿里巴巴连接池--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+      &lt;artifactId&gt;druid&lt;/artifactId&gt;
+      &lt;version&gt;1.1.10&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;mysql&lt;/groupId&gt;
+      &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+      &lt;version&gt;5.1.25&lt;/version&gt;
+    &lt;/dependency&gt;
+
+
+    &lt;!--junit测试依赖--&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+      &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+      &lt;version&gt;2.2&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+      &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+      &lt;version&gt;RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+  &lt;build&gt;
+    &lt;finalName&gt;SSM_demo&lt;/finalName&gt;
+    &lt;pluginManagement&gt;&lt;!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) --&gt;
+      &lt;plugins&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging --&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.0.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.8.0&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.22.1&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+          &lt;version&gt;3.2.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-install-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.5.2&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;artifactId&gt;maven-deploy-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.8.2&lt;/version&gt;
+        &lt;/plugin&gt;
+      &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br></div></div><h4 id="_2-spring配置"><a href="#_2-spring配置" class="header-anchor">#</a> 2.spring配置</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx.xsd&quot;&gt;
+
+    &lt;!-- 开启注解扫包 --&gt;
+    &lt;context:component-scan
+            base-package=&quot;com.hand&quot;&gt;&lt;/context:component-scan&gt;
+        &lt;!-- 数据源 --&gt;    
+    &lt;bean id=&quot;dataSource&quot;
+          class=&quot;com.alibaba.druid.pool.DruidDataSource&quot;&gt;
+        &lt;!-- 基本属性 url、user、password --&gt;
+        &lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;
+        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://192.168.188.128:3306/hand_ceshi?useUnicode=true&amp;amp;characterEncoding=UTF-8&quot; /&gt;
+        &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+        &lt;property name=&quot;password&quot; value=&quot;2452952178&quot; /&gt;
+    &lt;/bean&gt;
+
+    &lt;!-- 配置jdbc数据源 --&gt;
+    &lt;bean id=&quot;jdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;!--开启事务注解--&gt;
+    &lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;&gt;&lt;/tx:annotation-driven&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h4 id="_3-servicedemo"><a href="#_3-servicedemo" class="header-anchor">#</a> 3.servicedemo</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
+public class TransactionalService {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    public void transactionalDemo(){
+        jdbcTemplate.update(&quot;update user set usex=20 where uid=1&quot;);
+        int a=1/0;
+        jdbcTemplate.update(&quot;update user set usex=20 where uid=4&quot;);
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>4.测试</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    //事务测试
+    @Test
+    public void test4(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+        TransactionalService bean = applicationContext.getBean(TransactionalService.class);
+        bean.transactionalDemo();
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_6-10-xml文件的方式实现"><a href="#_6-10-xml文件的方式实现" class="header-anchor">#</a> 6.10.XML文件的方式实现</h3> <p>与上方一样，不过spring的配置文件不同：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop.xsd&quot;&gt;
+    &lt;!-- 开启注解扫包 --&gt;
+    &lt;context:component-scan
+            base-package=&quot;com.hand&quot;&gt;&lt;/context:component-scan&gt;
+    &lt;!-- 1. 数据源对象: C3P0连接池 --&gt;
+    &lt;bean id=&quot;dataSource&quot;
+          class=&quot;com.alibaba.druid.pool.DruidDataSource&quot;&gt;
+        &lt;!-- 基本属性 url、user、password --&gt;
+        &lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;
+        &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://192.168.188.128:3306/hand_ceshi?useUnicode=true&amp;amp;characterEncoding=UTF-8&quot; /&gt;
+        &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+        &lt;property name=&quot;password&quot; value=&quot;2452952178&quot; /&gt;
+    &lt;/bean&gt;
+
+    &lt;!-- 配置jdbc数据源 --&gt;
+    &lt;bean id=&quot;jdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;!--XML文件的方式--&gt;
+
+    &lt;!--定义增强 对事务进行增强（通知），需要编写切入点和具体执行事务的细节--&gt;
+    &lt;tx:advice id=&quot;myAdvice&quot;&gt;
+        &lt;tx:attributes&gt;
+            &lt;!-- 给切入点方法添加事务详情，name表示方法名称，*表示任意方法名称，
+            propagation用于设置传播行为，read-only表示隔离级别，是否只读 --&gt;
+            &lt;tx:method name=&quot;find*&quot; propagation=&quot;SUPPORTS&quot;
+                       rollback-for=&quot;Exception&quot; /&gt;
+            &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; isolation=&quot;DEFAULT&quot;
+                       read-only=&quot;false&quot; /&gt;
+        &lt;/tx:attributes&gt;
+    &lt;/tx:advice&gt;
+    &lt;!--aop--&gt;
+    &lt;aop:config&gt;
+        &lt;!--定义切入点，哪些地方需要被增强--&gt;
+        &lt;aop:pointcut id=&quot;myPoint&quot; expression=&quot;execution(* com.hand.*.*.*(..))&quot;/&gt;
+        &lt;!--将切入点与通知(事务)整合--&gt;
+        &lt;aop:advisor advice-ref=&quot;myAdvice&quot; pointcut-ref=&quot;myPoint&quot;&gt;&lt;/aop:advisor&gt;
+    &lt;/aop:config&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div></div><h3 id="_6-11-完全注解开发"><a href="#_6-11-完全注解开发" class="header-anchor">#</a> 6.11.完全注解开发</h3> <h4 id="_1-spring配置文件换成配置类"><a href="#_1-spring配置文件换成配置类" class="header-anchor">#</a> 1.spring配置文件换成配置类</h4> <p>注意注意：有可能有多个配置类，一定要注意@ComponentScan(basePackages = &quot;com.hand&quot;) 只能注册一定，不然会重复注册bean；</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.hand.config;
+
+import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
+
+@Configuration//配置类
+@ComponentScan(basePackages = &quot;com.hand&quot;)  //扫包
+@EnableTransactionManagement //开启事务
+public class TransactionalConfig {
+    /**
+     * 配置数据源
+     * @return
+     */
+    @Bean(name = &quot;dataSource&quot;)
+    public DataSource getDruidDataSource(){
+        DruidDataSource druidDataSource=new DruidDataSource();
+        druidDataSource.setDriverClassName(&quot;com.mysql.jdbc.Driver&quot;);
+        druidDataSource.setUrl(&quot;jdbc:mysql://192.168.188.128:3306/hand_ceshi?useUnicode=true&amp;amp;characterEncoding=UTF-8&quot;);
+        druidDataSource.setUsername(&quot;root&quot;);
+        druidDataSource.setPassword(&quot;2452952178&quot;);
+        return druidDataSource;
+    }
+
+    /**
+     * 配置JdbcTemplate
+     * @param dataSource
+     * @return
+     */
+    @Bean
+    public JdbcTemplate getJdbcTemplate(DataSource dataSource){
+        JdbcTemplate jdbcTemplate=new JdbcTemplate();
+        jdbcTemplate.setDataSource(dataSource);
+        return jdbcTemplate;
+    }
+
+    /**
+     * 配置事务管理器
+     * @param dataSource
+     * @return
+     */
+    @Bean
+    public DataSourceTransactionManager getDataSourceTransactionManager(DataSource dataSource){
+        DataSourceTransactionManager transactionManager=new DataSourceTransactionManager();
+        transactionManager.setDataSource(dataSource);
+        return transactionManager;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><h4 id="_2-测试"><a href="#_2-测试" class="header-anchor">#</a> 2.测试</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>    //事务全注解测试
+    @Test
+    public void test5(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(TransactionalConfig.class);
+        TransactionalService bean = applicationContext.getBean(TransactionalService.class);
+        bean.transactionalDemo();
+
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/wangchangyin/myBlog/edit/master/docs/01.后端/10.Spring全家桶/00.Spring/10.Spring.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/09/01, 16:30:41</span></div></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myBlog/pages/486416/" class="prev">过滤器、拦截器、AOP切面</a></span> <span class="next"><a href="/myBlog/pages/7f80ea/">SSM环境搭建</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myBlog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myBlog/pages/1adf94/"><div>阿里云增加虚拟内存</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/myBlog/pages/78011c/"><div>oracle锁表</div></a> <span>12-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/myBlog/pages/658e4c/"><div>模式二：URL重定向传播会话</div></a> <span>12-14</span></dt></dl> <dl><dd></dd> <dt><a href="/myBlog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:2452952178@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/wangchangyin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>Changyin Wang | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#282c34" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/myBlog/assets/js/app.6034fc33.js" defer></script><script src="/myBlog/assets/js/2.ecdec458.js" defer></script><script src="/myBlog/assets/js/22.be5e0407.js" defer></script>
+  </body>
+</html>
